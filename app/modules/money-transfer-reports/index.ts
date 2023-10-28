@@ -1,0 +1,1 @@
+export { default as MoneyTransferReport } from './MoneyTransferReport'
