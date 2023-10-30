@@ -5,20 +5,30 @@ import { Routes, SigninSchema } from '../../../constants';
 import { useKeyboard } from '../../../hooks';
 import { RootStackParamList } from '../../../types';
 import { InitialStateType } from './types';
+import { login } from '../../../redux';
+import { useAppSelector, useAppDispatch } from '../../../redux';
+import { useEffect } from 'react';
 
 const useSignin = () => {
   const { isKeyboardVisible } = useKeyboard();
+  const dispatch = useAppDispatch();
+  const { isSuccess } = useAppSelector(state => state.signin);
   const navigation =
     useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+    
+  useEffect(() => {
+    isSuccess &&
+      navigation.replace(Routes.DrawerNav, { screen: Routes.HomeScreen });
+  }, [isSuccess]);
+
   const formik = useFormik<InitialStateType>({
     validationSchema: SigninSchema,
     initialValues: {
       email: '',
       password: '',
     },
-    onSubmit: (values) => {
-      navigation.replace(Routes.DrawerNav, { screen: Routes.HomeScreen })
-      console.log(values)
+    onSubmit: values => {
+      dispatch(login());
     },
   });
 

@@ -49,6 +49,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     flex: 1,
   },
+  drawerContentView: {
+    backgroundColor: Colors.headerColor,
+  },
+  userImage:{
+    height:verticleScale(90),
+    aspectRatio:1,
+    alignSelf:'center'
+  }
 });
 
 export default styles;
