@@ -6,13 +6,12 @@ import { HomeScreen, IncomeReport, MoneyTransferReport } from '../modules';
 const DrawerScreenStack = createNativeStackNavigator();
 
 const DrawerScreen = () => {
-  
   return (
     <DrawerScreenStack.Navigator>
       <DrawerScreenStack.Screen
         name={Routes.HomeScreen}
         component={HomeScreen}
-        options={{ header : () => <HomeHeader /> }}
+        options={{ header: () => <HomeHeader /> }}
       />
       <DrawerScreenStack.Screen
         name={Routes.IncomeReport}

@@ -1,14 +1,12 @@
-import { DrawerNavigationProp } from '@react-navigation/drawer';
-import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Image, SafeAreaView, View } from 'react-native';
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import { iconsArray } from '../../constants';
-import { RootStackParamList } from '../../types';
 import styles from './HomeScreenStyles';
+import useHomeScreen from './useHomeScreen';
 
 const HomeScreen = () => {
-  const navigation = useNavigation<DrawerNavigationProp<RootStackParamList>>();
+  const { isSuccess } = useHomeScreen();
 
   return (
     <SafeAreaView style={styles.mainContainer}>
