@@ -1,9 +1,8 @@
-import { CommonActions } from '@react-navigation/native';
-import { Routes } from '../../constants';
-import { useAppSelector, useAppDispatch } from '../../redux';
-import { logOut } from '../../redux';
-import { useNavigation } from '@react-navigation/native';
+import { CommonActions, useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import Share from 'react-native-share';
+import { Routes, options } from '../../constants';
+import { logOut, useAppDispatch } from '../../redux';
 import { RootStackParamList } from '../../types';
 
 const useCustomDrawer = () => {
@@ -20,9 +19,18 @@ const useCustomDrawer = () => {
     dispatch(logOut());
   };
 
+  const onShare = async () => {
+    try {
+      await Share.open(options);
+    } catch (error) {
+      return error
+    }
+  };
+
   return {
     signOut,
     navigation,
+    onShare,
   };
 };
 

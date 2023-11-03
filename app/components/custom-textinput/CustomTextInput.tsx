@@ -13,7 +13,7 @@ const CustomTextInput = ({
   styleErrorView,
   secureTextEntry,
 }: Props) => {
-  const { handleBlur, handleChange, values, touched, errors, handleSubmit } =
+  const { handleBlur, handleChange, values, touched, errors } =
     formik;
 
   return (

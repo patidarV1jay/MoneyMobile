@@ -1,7 +1,7 @@
 import React from 'react';
-import { Image, SafeAreaView, View } from 'react-native';
+import { Image, SafeAreaView, Text, View } from 'react-native';
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
-import { iconsArray } from '../../constants';
+import { ImageList } from '../../constants';
 import styles from './HomeScreenStyles';
 import useHomeScreen from './useHomeScreen';
 
@@ -13,11 +13,14 @@ const HomeScreen = () => {
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.containerWithFlatlist}>
           <FlatList
-            data={iconsArray}
+            data={ImageList}
             renderItem={({ item }) => {
               return (
                 <View style={styles.flatListContainer}>
-                  <Image source={{ uri: item }} style={styles.imageItem} />
+                  <Image source={item.source} style={styles.imageItem} />
+                  <Text style={[styles.textColor, { marginTop: -10 }]}>
+                    {item.name}
+                  </Text>
                 </View>
               );
             }}
