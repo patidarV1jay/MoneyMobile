@@ -1,12 +1,13 @@
 import { Draft, createSlice } from '@reduxjs/toolkit';
 import { InitialStateType } from './types';
+import { SliceConstants } from '../../constants';
 
 const initialState: InitialStateType = {
   isSuccess: false,
 };
 
 const SigninSlice = createSlice({
-  name: 'Signin',
+  name: SliceConstants.signin,
   initialState,
   reducers: {
     login: (state: Draft<InitialStateType>) => {

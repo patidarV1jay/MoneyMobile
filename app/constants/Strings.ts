@@ -8,6 +8,7 @@ export const ScreenStrings = {
   newUser: 'New User?',
   register: 'Register',
   login: 'Login',
+  tryAgain: "Something went wrong. Try Again"
 };
 
 export const ValidationStrings = {
@@ -15,3 +16,7 @@ export const ValidationStrings = {
   min: 'Minimum 8 character required.',
   invalidMail: 'Invalid Email.',
 };
+
+export const Placeholder={
+  searchHeaderPlaceholder : "Enter your biller name"
+}

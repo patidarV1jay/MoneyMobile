@@ -32,7 +32,8 @@ const Signin: FC = () => {
       />
       <ScrollView
         style={styles.safeAreaViewContainer}
-        showsVerticalScrollIndicator={false}>
+        showsVerticalScrollIndicator={false}
+        scrollEnabled={isKeyboardVisible ? true : false}>
         <Image source={Images.signin} style={styles.signinImage} />
         <View style={styles.siginContainer}>
           <Text style={styles.appNameText}>{ScreenStrings.appName}</Text>

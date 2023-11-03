@@ -3,7 +3,6 @@ import React from 'react';
 import { Image, ScrollView, ScrollViewProps, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Routes, ScreenStrings } from '../../constants';
-import { Colors } from '../../theme';
 import styles from './CustomDrawerStyles';
 import useCustomDrawer from './useCustomDrawer';
 
@@ -13,11 +12,9 @@ const CustomDrawer = (
       children: React.ReactNode;
     } & React.RefAttributes<ScrollView>,
 ) => {
-  const { signOut, navigation } = useCustomDrawer();
+  const { signOut, navigation, onShare } = useCustomDrawer();
   return (
-    <DrawerContentScrollView
-      {...props}
-      style={styles.drawerContentView}>
+    <DrawerContentScrollView {...props} style={styles.drawerContentView}>
       <View style={styles.drawerView}>
         <View style={styles.drawerProfile}>
           <Image
@@ -93,7 +90,7 @@ const CustomDrawer = (
         labelStyle={[styles.textColor]}
       />
 
-      <TouchableOpacity style={[styles.buttonCommonStyles, styles.shareButton]}>
+      <TouchableOpacity style={[styles.buttonCommonStyles, styles.shareButton]} onPress={onShare}>
         <Text style={styles.buttonText}>{ScreenStrings.share}</Text>
       </TouchableOpacity>
       <TouchableOpacity

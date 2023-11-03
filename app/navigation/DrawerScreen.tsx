@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { HomeHeader } from '../components';
+import { ArrowLeft } from 'phosphor-react-native';
+import { HomeHeader, SearchHeader } from '../components';
 import { Routes } from '../constants';
 import { HomeScreen, IncomeReport, MoneyTransferReport } from '../modules';
 
@@ -16,6 +17,9 @@ const DrawerScreen = () => {
       <DrawerScreenStack.Screen
         name={Routes.IncomeReport}
         component={IncomeReport}
+        options={{
+          header: () => <SearchHeader Icon={ArrowLeft} name="SearchHeader" />,
+        }}
       />
       <DrawerScreenStack.Screen
         name={Routes.MoneyTransferReport}

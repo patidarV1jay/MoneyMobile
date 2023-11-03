@@ -24,21 +24,21 @@ const styles = StyleSheet.create({
     borderTopRightRadius: moderateScale(40),
   },
   imageItem: {
-    width: horizontalScale(100),
-    height: verticleScale(100),
+    height: verticleScale(150),
     aspectRatio: 1,
   },
   columnWrapper: {
     marginBottom: verticleScale(70),
-    marginHorizontal: horizontalScale(40),
+    marginHorizontal: horizontalScale(18),
   },
   flatListContainer: {
     width: cardWidth,
     marginHorizontal: horizontalScale(10),
-    marginTop: verticleScale(40),
+    marginTop: verticleScale(-10),
+    alignItems:'center'
   },
   containerWithFlatlist: {
-    marginTop: verticleScale(50),
+    marginTop: verticleScale(60),
   },
 });
 

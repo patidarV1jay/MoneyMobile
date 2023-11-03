@@ -15,7 +15,7 @@ const useSignin = () => {
   const { isSuccess } = useAppSelector(state => state.signin);
   const navigation =
     useNavigation<NativeStackNavigationProp<RootStackParamList>>();
-    
+
   useEffect(() => {
     isSuccess &&
       navigation.replace(Routes.DrawerNav, { screen: Routes.HomeScreen });
