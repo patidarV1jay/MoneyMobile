@@ -7,7 +7,7 @@ export default {
   cornFlowerBlue: '#6495ED',
   light: '#FFFFFF',
   red: '#FF0000',
-  opaque: '#bfb4bb80',
+  opaque: '#22242689',
   headerColor: '#222426',
   textColor: '#4CACBC',
   offShade: '#C2C4C6',

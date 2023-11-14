@@ -28,76 +28,88 @@ const CustomDrawer = (
         </View>
       </View>
       <DrawerItem
+        label={Routes.RechargeReports}
+        onPress={() => navigation.navigate(Routes.RechargeReports)}
+        labelStyle={styles.labelStyle}
+      />
+      <DrawerItem
+        label={Routes.MoneyTransferReport}
+        onPress={() => navigation.navigate(Routes.MoneyTransferReport)}
+        labelStyle={styles.labelStyle}
+      />
+      <DrawerItem
+        label={Routes.AccountStatement}
+        onPress={() => navigation.navigate(Routes.AccountStatement)}
+        labelStyle={styles.labelStyle}
+      />
+      <DrawerItem
+        label={Routes.OperatorReport}
+        onPress={() => navigation.navigate(Routes.OperatorReport)}
+        labelStyle={styles.labelStyle}
+      />
+      <DrawerItem
         label={Routes.IncomeReport}
         onPress={() => navigation.navigate(Routes.IncomeReport)}
-        labelStyle={[styles.textColor]}
+        labelStyle={styles.labelStyle}
       />
       <DrawerItem
-        label={Routes.MoneyTransferReport}
+        label={Routes.PaymentRequestReports}
         onPress={() => navigation.navigate(Routes.IncomeReport)}
-        labelStyle={[styles.textColor]}
+        labelStyle={styles.labelStyle}
       />
       <DrawerItem
-        label={Routes.MoneyTransferReport}
+        label={Routes.PaymentRequest}
         onPress={() => navigation.navigate(Routes.IncomeReport)}
-        labelStyle={[styles.textColor]}
+        labelStyle={styles.labelStyle}
       />
       <DrawerItem
-        label={Routes.MoneyTransferReport}
+        label={Routes.BalanceReturnRequest}
         onPress={() => navigation.navigate(Routes.IncomeReport)}
-        labelStyle={[styles.textColor]}
+        labelStyle={styles.labelStyle}
       />
       <DrawerItem
-        label={Routes.MoneyTransferReport}
+        label={Routes.Dispute}
         onPress={() => navigation.navigate(Routes.IncomeReport)}
-        labelStyle={[styles.textColor]}
+        labelStyle={styles.labelStyle}
       />
       <DrawerItem
-        label={Routes.MoneyTransferReport}
+        label={Routes.MyCommission}
         onPress={() => navigation.navigate(Routes.IncomeReport)}
-        labelStyle={[styles.textColor]}
-      />
-      <DrawerItem
-        label={Routes.MoneyTransferReport}
-        onPress={() => navigation.navigate(Routes.IncomeReport)}
-        labelStyle={[styles.textColor]}
-      />
-      <DrawerItem
-        label={Routes.MoneyTransferReport}
-        onPress={() => navigation.navigate(Routes.IncomeReport)}
-        labelStyle={[styles.textColor]}
-      />
-      <DrawerItem
-        label={Routes.MoneyTransferReport}
-        onPress={() => navigation.navigate(Routes.IncomeReport)}
-        labelStyle={[styles.textColor]}
-      />
-      <DrawerItem
-        label={Routes.MoneyTransferReport}
-        onPress={() => navigation.navigate(Routes.IncomeReport)}
-        labelStyle={[styles.textColor]}
+        labelStyle={styles.labelStyle}
       />
       <View style={styles.hrLine} />
       <Text style={styles.appName}>{ScreenStrings.appName}</Text>
       <DrawerItem
-        label={Routes.MoneyTransferReport}
+        label={Routes.About}
         onPress={() => navigation.navigate(Routes.IncomeReport)}
-        labelStyle={[styles.textColor]}
+        labelStyle={styles.labelStyle}
       />
       <DrawerItem
-        label={Routes.MoneyTransferReport}
+        label={Routes.ContactUs}
         onPress={() => navigation.navigate(Routes.IncomeReport)}
-        labelStyle={[styles.textColor]}
+        labelStyle={styles.bottomLabelStyle}
+      />
+      <DrawerItem
+        label={ScreenStrings.share}
+        onPress={onShare}
+        labelStyle={styles.bottomLabelStyle}
+      />
+      <DrawerItem
+        label={ScreenStrings.logout}
+        onPress={signOut}
+        labelStyle={styles.bottomLabelStyle}
       />
 
-      <TouchableOpacity style={[styles.buttonCommonStyles, styles.shareButton]} onPress={onShare}>
+      {/* <TouchableOpacity
+        style={[styles.buttonCommonStyles, styles.shareButton]}
+        onPress={onShare}>
         <Text style={styles.buttonText}>{ScreenStrings.share}</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={[styles.logoutButton, styles.buttonCommonStyles]}
         onPress={signOut}>
         <Text style={styles.buttonText}>{ScreenStrings.logout}</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </DrawerContentScrollView>
   );
 };

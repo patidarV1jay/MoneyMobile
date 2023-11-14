@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
   },
   arrowNTitle: {
     flexDirection: 'row',
-    marginHorizontal: horizontalScale(20),
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
@@ -31,10 +30,13 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(15),
     marginVertical: verticleScale(60),
   },
-  iconView: {
-    position: 'absolute',
-    left: horizontalScale(5),
-  },
+  iconnTitle:{
+    flexDirection:'row',
+    marginHorizontal:horizontalScale(20),
+    justifyContent:'space-between',
+    marginTop:verticleScale(20)
+  }
+
 });
 
 export default styles;

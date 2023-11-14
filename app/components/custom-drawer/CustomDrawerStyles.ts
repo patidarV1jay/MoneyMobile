@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   appName: {
     marginLeft: horizontalScale(18),
     fontWeight: 'bold',
-    marginTop: verticleScale(10),
+    marginVertical: verticleScale(20),
     color: Colors.light,
   },
   shareButton: {
@@ -52,11 +52,19 @@ const styles = StyleSheet.create({
   drawerContentView: {
     backgroundColor: Colors.headerColor,
   },
-  userImage:{
-    height:verticleScale(90),
-    aspectRatio:1,
-    alignSelf:'center'
-  }
+  userImage: {
+    height: verticleScale(90),
+    aspectRatio: 1,
+    alignSelf: 'center',
+  },
+  labelStyle: {
+    color: Colors.light,
+    marginTop: verticleScale(-10),
+  },
+  bottomLabelStyle: {
+    marginTop: verticleScale(-20),
+    color: Colors.light,
+  },
 });
 
 export default styles;

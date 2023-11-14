@@ -1,12 +1,12 @@
 import React from 'react';
 import { Image, SafeAreaView, Text, View } from 'react-native';
-import { FlatList, ScrollView } from 'react-native-gesture-handler';
+import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { ImageList } from '../../constants';
 import styles from './HomeScreenStyles';
 import useHomeScreen from './useHomeScreen';
 
 const HomeScreen = () => {
-  const { isSuccess } = useHomeScreen();
+  const { isSuccess,navigateService,navigation } = useHomeScreen();
 
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -16,12 +16,12 @@ const HomeScreen = () => {
             data={ImageList}
             renderItem={({ item }) => {
               return (
-                <View style={styles.flatListContainer}>
+                <TouchableOpacity style={styles.flatListContainer} onPress={navigateService}>
                   <Image source={item.source} style={styles.imageItem} />
-                  <Text style={[styles.textColor, { marginTop: -10 }]}>
+                  <Text style={[styles.textColor,styles.itemName]}>
                     {item.name}
                   </Text>
-                </View>
+                </TouchableOpacity>
               );
             }}
             numColumns={3}
