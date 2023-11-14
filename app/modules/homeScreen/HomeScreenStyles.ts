@@ -34,12 +34,16 @@ const styles = StyleSheet.create({
   flatListContainer: {
     width: cardWidth,
     marginHorizontal: horizontalScale(10),
-    marginTop: verticleScale(-10),
+    marginTop: verticleScale(-30),
     alignItems:'center'
   },
   containerWithFlatlist: {
     marginTop: verticleScale(60),
   },
+  itemName:{
+    marginTop:verticleScale(-15),
+    fontSize: moderateScale(12)
+  }
 });
 
 export default styles;

@@ -8,7 +8,8 @@ export const ScreenStrings = {
   newUser: 'New User?',
   register: 'Register',
   login: 'Login',
-  tryAgain: "Something went wrong. Try Again"
+  tryAgain: "Something went wrong. Try Again",
+  selectYourChoice:"Select Your Choice"
 };
 
 export const ValidationStrings = {

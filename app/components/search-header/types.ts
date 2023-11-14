@@ -8,4 +8,5 @@ export interface IconComponentProps {
 export interface Props {
   Icon?: ComponentType<IconComponentProps>;
   name: string;
+  Filter?: ComponentType<IconComponentProps>;
 }
