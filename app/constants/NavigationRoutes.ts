@@ -17,7 +17,11 @@ export enum Routes {
   About = 'About',
   ContactUs = 'Contact Us',
   ElectricityProvider = 'ElectricityProvider',
-  PostpaidProvider = "PostPaid Provider",
-  DthProvider = "DTH Provider",
-  MobileProvider = "MobileProvider"
+  PostpaidProvider = 'PostPaid Provider',
+  DthProvider = 'DTH Provider',
+  MobileProvider = 'MobileProvider',
+  ProviderStack = 'ProviderStack',
+  ProviderDetails = 'ProviderDetails',
+  MoneyTransfer1 = 'Customer Number',
+
 }

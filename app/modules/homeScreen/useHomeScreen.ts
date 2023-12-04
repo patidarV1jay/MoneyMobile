@@ -12,7 +12,9 @@ const useHomeScreen = () => {
   const navigateService = (name: String) => {
     switch (name) {
       case 'Mobile':
-        navigation.navigate(Routes.MobileProvider);
+        navigation.navigate(Routes.ProviderStack, {
+          screen: Routes.MobileProvider,
+        });
         break;
 
       case 'DTH':
@@ -26,6 +28,9 @@ const useHomeScreen = () => {
       case 'Electricity':
         navigation.navigate(Routes.ElectricityProvider);
         break;
+
+      case 'Money Transfer 1':
+        navigation.navigate(Routes.MoneyTransfer1);
     }
   };
   return {

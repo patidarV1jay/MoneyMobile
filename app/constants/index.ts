@@ -4,5 +4,5 @@ export { Routes } from './NavigationRoutes';
 export { EmailRegEx } from './RegEx';
 export { default as SliceConstants } from './SliceConstants';
 export { Placeholder, ScreenStrings, ValidationStrings } from './Strings';
-export { SigninSchema } from './ValidationSchema';
+export { SigninSchema, ProviderSchema, NumberSchema } from './ValidationSchema';
 export { default as FilterChoice } from './FilterChoice';
