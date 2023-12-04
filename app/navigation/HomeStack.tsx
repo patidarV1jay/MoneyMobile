@@ -6,9 +6,10 @@ import {
   DthProvider,
   ElectricityProvider,
   HomeScreen,
-  MobileProvider,
+  MoneyTransfer1,
   PostPaid,
 } from '../modules';
+import ProviderStack from './ProviderStack';
 
 const StackHome = createNativeStackNavigator();
 
@@ -60,14 +61,21 @@ const HomeStack = () => {
         }}
       />
       <StackHome.Screen
-        name={Routes.MobileProvider}
-        component={MobileProvider}
+        name={Routes.ProviderStack}
+        component={ProviderStack}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <StackHome.Screen
+        name={Routes.MoneyTransfer1}
+        component={MoneyTransfer1}
         options={{
           header: () => (
             <SearchHeader
               Icon={ArrowLeft}
-              name={Routes.MobileProvider}
-              Flag={true}
+              name={Routes.MoneyTransfer1}
+              Flag={false}
             />
           ),
         }}
