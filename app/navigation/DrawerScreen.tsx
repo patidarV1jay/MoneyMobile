@@ -1,14 +1,14 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ArrowLeft, Funnel } from 'phosphor-react-native';
-import { HomeHeader, SearchHeader, DrawerHeader } from '../components';
+import { SearchHeader } from '../components';
 import { Routes } from '../constants';
 import {
   AccountStatement,
-  HomeScreen,
   IncomeReport,
   MoneyTransferReport,
-  RechargeReports,
+  RechargeReports
 } from '../modules';
+import HomeStack from './HomeStack';
 
 const DrawerScreenStack = createNativeStackNavigator();
 
@@ -16,9 +16,9 @@ const DrawerScreen = () => {
   return (
     <DrawerScreenStack.Navigator>
       <DrawerScreenStack.Screen
-        name={Routes.HomeScreen}
-        component={HomeScreen}
-        options={{ header: () => <HomeHeader /> }}
+        name={Routes.HomeStack}
+        component={HomeStack}
+        options={{ headerShown: false }}
       />
       <DrawerScreenStack.Screen
         name={Routes.RechargeReports}
@@ -29,6 +29,7 @@ const DrawerScreen = () => {
               Icon={ArrowLeft}
               name="Recharge Report"
               Filter={Funnel}
+              Flag={true}
             />
           ),
         }}
@@ -37,7 +38,9 @@ const DrawerScreen = () => {
         name={Routes.IncomeReport}
         component={IncomeReport}
         options={{
-          header: () => <SearchHeader Icon={ArrowLeft} name="SearchHeader" />,
+          header: () => (
+            <SearchHeader Icon={ArrowLeft} name="SearchHeader" Flag={true} />
+          ),
         }}
       />
       <DrawerScreenStack.Screen

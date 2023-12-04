@@ -7,10 +7,12 @@ import {
 } from '../../../theme';
 
 const styles = StyleSheet.create({
-  safeAreaViewContainer: {
+  container: {
     flex: 1,
-    backgroundColor: Colors.headerColor,
-    height: '100%',
+    backgroundColor: '#222426',
+  },
+  keyboardContainer: {
+    flex: 1,
   },
   signinImage: {
     height: verticleScale(760),
@@ -18,19 +20,10 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
   },
   siginContainer: {
-    backgroundColor: Colors.dark,
-    flex: 1,
-    borderTopLeftRadius: moderateScale(40),
-    borderTopRightRadius: moderateScale(40),
-    marginTop: verticleScale(-20),
-  },
-  siginContainerBottom: {
-    backgroundColor: Colors.dark,
-    flex: 1,
-    borderTopLeftRadius: moderateScale(40),
-    borderTopRightRadius: moderateScale(40),
-    marginTop: verticleScale(-20),
-    bottom: 100,
+    backgroundColor: 'black',
+    height: '100%',
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
   },
   appNameText: {
     color: Colors.light,
@@ -102,12 +95,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.dark,
     marginBottom: verticleScale(20),
   },
-  registerButtonBottom: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: Colors.dark,
-    marginBottom: verticleScale(240),
-  },
+
   customTextInputView: {
     marginBottom: verticleScale(40),
   },

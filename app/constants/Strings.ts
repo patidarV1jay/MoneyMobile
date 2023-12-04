@@ -9,7 +9,9 @@ export const ScreenStrings = {
   register: 'Register',
   login: 'Login',
   tryAgain: "Something went wrong. Try Again",
-  selectYourChoice:"Select Your Choice"
+  selectYourChoice:"Select Your Choice",
+  balance: "Balance",
+  aesBalance: "AES Balance"
 };
 
 export const ValidationStrings = {

@@ -16,7 +16,7 @@ const HomeScreen = () => {
             data={ImageList}
             renderItem={({ item }) => {
               return (
-                <TouchableOpacity style={styles.flatListContainer} onPress={navigateService}>
+                <TouchableOpacity style={styles.flatListContainer} onPress={() =>navigateService(item.name)}>
                   <Image source={item.source} style={styles.imageItem} />
                   <Text style={[styles.textColor,styles.itemName]}>
                     {item.name}
