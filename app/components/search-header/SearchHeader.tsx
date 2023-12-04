@@ -7,7 +7,7 @@ import styles from './SearchHeaderStyles';
 import { Props } from './types';
 import useSearchHeader from './useSearchHeader';
 
-const SearchHeader = ({ Icon, name, Filter }: Props) => {
+const SearchHeader = ({ Icon, name, Filter,Flag }: Props) => {
   const { viewFilter, setViewFilters } = useContext(FilterToggle);
   const toggleFilter = () => {
     setViewFilters(!viewFilter);
@@ -24,15 +24,22 @@ const SearchHeader = ({ Icon, name, Filter }: Props) => {
           )}
           <Text style={styles.titleText}>{name}</Text>
         </View>
-        <Pressable onPress={toggleFilter}>
-          <Filter size={moderateScale(25)} color={Colors.light} />
-        </Pressable>
+        {Filter && (
+          <Pressable onPress={toggleFilter}>
+            <Filter size={moderateScale(25)} color={Colors.light} />
+          </Pressable>
+        )}
       </View>
-      <TextInput
+      {
+       Flag &&
+        <TextInput
         placeholder={Placeholder.searchHeaderPlaceholder}
         style={styles.textInput}
         placeholderTextColor={Colors.offShade}
-      />
+        />
+      }
+      {/* <View style={{ backgroundColor:Colors.headerColor,position:'absolute',height:100,width:'90%',alignSelf:'center',top:verticleScale(100)}}>
+      </View> */}
     </View>
   );
 };

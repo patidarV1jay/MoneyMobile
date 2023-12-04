@@ -8,7 +8,7 @@ import styles from './HomeHeaderStyles';
 import useHomeHeader from './useHomeHeader';
 
 const HomeHeader = () => {
-  const { navigation } = useHomeHeader();
+  const { navigation, popup, togglePopup, setPopup } = useHomeHeader();
 
   return (
     <>
@@ -18,7 +18,7 @@ const HomeHeader = () => {
         backgroundColor={Colors.dark}
         translucent={false}
       />
-      <View style={styles.mainContainer}>
+      <View style={styles.mainContainer} onTouchEnd={() => setPopup(false)}>
         <View style={[styles.headerTitle, styles.directionRow]}>
           <View style={styles.directionRow}>
             <TouchableOpacity onPress={navigation.openDrawer}>
@@ -40,7 +40,12 @@ const HomeHeader = () => {
                 color={Colors.light}
               />
             </TouchableOpacity>
-            <TouchableOpacity>
+            {popup && (
+              <View style={styles.popupContainer}>
+                <Text>hd</Text>
+              </View>
+            )}
+            <TouchableOpacity onPress={togglePopup}>
               <DotsThreeVertical
                 size={moderateScale(32)}
                 weight="bold"
@@ -51,13 +56,13 @@ const HomeHeader = () => {
         </View>
         <View style={styles.balanceView}>
           <View>
-            <Text style={[styles.textStyles]}>Balance</Text>
+            <Text style={[styles.textStyles]}>{ScreenStrings.balance}</Text>
             <Text style={[styles.textStyles, styles.textBalance]}>
               ₹XXXXXXXX
             </Text>
           </View>
           <View>
-            <Text style={[styles.textStyles]}>AES Balance</Text>
+            <Text style={[styles.textStyles]}>{ScreenStrings.aesBalance}</Text>
             <Text style={[styles.textStyles, styles.textBalance]}>
               ₹XXXXXXXX
             </Text>

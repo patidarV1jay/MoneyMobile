@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
+    marginBottom:verticleScale(60)
   },
   titleText: {
     marginLeft: horizontalScale(20),
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
     borderRadius: moderateScale(10),
     paddingLeft: horizontalScale(10),
     fontSize: moderateScale(15),
-    marginVertical: verticleScale(60),
+    marginBottom: verticleScale(60),
   },
   iconnTitle:{
     flexDirection:'row',
