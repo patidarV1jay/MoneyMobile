@@ -9,5 +9,8 @@ export default {
   loanPayment: require('./rs.png'),
   broadband: require('./usb.png'),
   pan: require('./pan.png'),
-  microAtm : require('./microatm.png')
+  microAtm : require('./microatm.png'),
+  enquiry: require('./enquiry.png'),
+  withdrawal: require('./withdrawal.png'),
+  miniStatement: require('./miniStatement.png')
 };

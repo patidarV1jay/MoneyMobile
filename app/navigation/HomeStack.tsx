@@ -11,6 +11,7 @@ import {
   PostPaid,
 } from '../modules';
 import ProviderStack from './ProviderStack';
+import { MicroAtm } from '../modules';
 
 const StackHome = createNativeStackNavigator();
 
@@ -86,14 +87,17 @@ const HomeStack = () => {
         component={PanCard}
         options={{
           header: () => (
-            <SearchHeader
-              Icon={ArrowLeft}
-              name={Routes.PanCard}
-              Flag={false}
-            />
+            <SearchHeader Icon={ArrowLeft} name={Routes.PanCard} Flag={false} />
           ),
         }}
       />
+      <StackHome.Screen name={Routes.MicroAtm} component={MicroAtm}
+       options={{
+        header: () => (
+          <SearchHeader Icon={ArrowLeft} name={Routes.MicroAtm} Flag={false} />
+        ),
+      }}
+       />
     </StackHome.Navigator>
   );
 };
