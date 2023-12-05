@@ -3,6 +3,7 @@ import { ArrowLeft } from 'phosphor-react-native';
 import { HomeHeader, SearchHeader } from '../components';
 import { Routes } from '../constants';
 import {
+  AEPS,
   DthProvider,
   ElectricityProvider,
   HomeScreen,
@@ -12,6 +13,7 @@ import {
 } from '../modules';
 import ProviderStack from './ProviderStack';
 import { MicroAtm } from '../modules';
+import AEPSStack from './AEPSStack';
 
 const StackHome = createNativeStackNavigator();
 
@@ -91,13 +93,26 @@ const HomeStack = () => {
           ),
         }}
       />
-      <StackHome.Screen name={Routes.MicroAtm} component={MicroAtm}
-       options={{
-        header: () => (
-          <SearchHeader Icon={ArrowLeft} name={Routes.MicroAtm} Flag={false} />
-        ),
-      }}
-       />
+      <StackHome.Screen
+        name={Routes.MicroAtm}
+        component={MicroAtm}
+        options={{
+          header: () => (
+            <SearchHeader
+              Icon={ArrowLeft}
+              name={Routes.MicroAtm}
+              Flag={false}
+            />
+          ),
+        }}
+      />
+      <StackHome.Screen
+        name={Routes.AepsStack}
+        component={AEPSStack}
+        options={{
+          headerShown: false,
+        }}
+      />
     </StackHome.Navigator>
   );
 };
