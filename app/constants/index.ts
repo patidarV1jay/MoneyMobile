@@ -6,3 +6,4 @@ export { default as SliceConstants } from './SliceConstants';
 export { Placeholder, ScreenStrings, ValidationStrings } from './Strings';
 export { SigninSchema, ProviderSchema, NumberSchema } from './ValidationSchema';
 export { default as FilterChoice } from './FilterChoice';
+export { MicroatmIcons, AEPSIcons } from './MicroAtmIcons';

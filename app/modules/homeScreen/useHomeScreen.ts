@@ -36,6 +36,10 @@ const useHomeScreen = () => {
       case 'PAN Card':
         navigation.navigate(Routes.PanCard);
         break;
+
+      case 'Micro ATM':
+        navigation.navigate(Routes.MicroAtm);
+        break;
     }
   };
   return {
