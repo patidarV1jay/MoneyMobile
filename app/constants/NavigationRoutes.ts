@@ -25,4 +25,6 @@ export enum Routes {
   MoneyTransfer1 = 'Customer Number',
   PanCard = 'Pan Card',
   MicroAtm = 'Micro ATM',
+  Aeps = 'AEPS',
+  AepsStack = 'AepsStack',
 }

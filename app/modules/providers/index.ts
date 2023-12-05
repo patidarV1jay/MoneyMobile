@@ -4,4 +4,5 @@ export * from './dth-provider';
 export * from './mobile-provider';
 export * from './money-transfer-1';
 export * from './pan-card';
-export * from './micro-atm'
+export * from './micro-atm';
+export * from './aeps';
