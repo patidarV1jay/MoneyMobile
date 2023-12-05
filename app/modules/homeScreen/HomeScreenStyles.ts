@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
   itemName:{
     marginTop:verticleScale(-15),
-    fontSize: moderateScale(12)
+    fontSize: moderateScale(11)
   }
 });
 

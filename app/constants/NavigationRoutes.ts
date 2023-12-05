@@ -23,5 +23,5 @@ export enum Routes {
   ProviderStack = 'ProviderStack',
   ProviderDetails = 'ProviderDetails',
   MoneyTransfer1 = 'Customer Number',
-
+  PanCard = "Pan Card"
 }

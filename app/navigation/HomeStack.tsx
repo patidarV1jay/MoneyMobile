@@ -7,6 +7,7 @@ import {
   ElectricityProvider,
   HomeScreen,
   MoneyTransfer1,
+  PanCard,
   PostPaid,
 } from '../modules';
 import ProviderStack from './ProviderStack';
@@ -75,6 +76,19 @@ const HomeStack = () => {
             <SearchHeader
               Icon={ArrowLeft}
               name={Routes.MoneyTransfer1}
+              Flag={false}
+            />
+          ),
+        }}
+      />
+      <StackHome.Screen
+        name={Routes.PanCard}
+        component={PanCard}
+        options={{
+          header: () => (
+            <SearchHeader
+              Icon={ArrowLeft}
+              name={Routes.PanCard}
               Flag={false}
             />
           ),
