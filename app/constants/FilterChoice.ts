@@ -35,4 +35,3 @@ export default [
     isChoosen: false,
   },
 ];
-// x8njk8i

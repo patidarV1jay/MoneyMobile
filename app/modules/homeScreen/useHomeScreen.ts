@@ -31,6 +31,11 @@ const useHomeScreen = () => {
 
       case 'Money Transfer 1':
         navigation.navigate(Routes.MoneyTransfer1);
+        break;
+
+      case 'PAN Card':
+        navigation.navigate(Routes.PanCard);
+        break;
     }
   };
   return {

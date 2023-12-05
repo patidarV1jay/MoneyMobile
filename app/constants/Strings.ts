@@ -8,10 +8,13 @@ export const ScreenStrings = {
   newUser: 'New User?',
   register: 'Register',
   login: 'Login',
-  tryAgain: "Something went wrong. Try Again",
-  selectYourChoice:"Select Your Choice",
-  balance: "Balance",
-  aesBalance: "AES Balance"
+  tryAgain: 'Something went wrong. Try Again',
+  selectYourChoice: 'Select Your Choice',
+  balance: 'Balance',
+  aesBalance: 'AES Balance',
+  utitslUserId: 'UTITSL User ID',
+  quantity: 'Quantity',
+  selectQuantity: 'Select Quantity',
 };
 
 export const ValidationStrings = {
@@ -20,6 +23,6 @@ export const ValidationStrings = {
   invalidMail: 'Invalid Email.',
 };
 
-export const Placeholder={
-  searchHeaderPlaceholder : "Enter your biller name"
-}
+export const Placeholder = {
+  searchHeaderPlaceholder: 'Enter your biller name',
+};
