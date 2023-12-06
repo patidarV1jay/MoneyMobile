@@ -27,4 +27,6 @@ export enum Routes {
   MicroAtm = 'Micro ATM',
   Aeps = 'AEPS',
   AepsStack = 'AepsStack',
+  AgentOnBoard = 'Agent On Board',
+  AepsLedgerReport = 'AEPS Ledger Report',
 }
