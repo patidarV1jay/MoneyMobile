@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import Orientation from 'react-native-orientation-locker';
 import { ScreenStrings } from '../../../constants';
-import styles from './AepsLedgerReportStyles';
+import styles from './AepsReportStyles';
+import useAepsReport from './useAepsReport';
 
 const AepsLedgerReport = () => {
   useEffect(() => {

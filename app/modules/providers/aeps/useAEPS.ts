@@ -10,9 +10,14 @@ const useAEPS = () => {
   const navigateAepsLedgerReport = () => {
     navigation.navigate(Routes.AepsLedgerReport);
   };
+  const navigateAepsReport = () => {
+    navigation.navigate(Routes.AepsLedgerReport);
+  };
+  
   return {
     navigateAgentOnBoard,
     navigateAepsLedgerReport,
+    navigateAepsReport,
   };
 };
 

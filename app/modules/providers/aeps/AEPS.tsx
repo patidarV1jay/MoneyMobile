@@ -7,7 +7,7 @@ import Section from './Section';
 import useAEPS from './useAEPS';
 
 const AEPS = () => {
-  const { navigateAgentOnBoard, navigateAepsLedgerReport } = useAEPS();
+  const { navigateAgentOnBoard, navigateAepsLedgerReport, navigateAepsReport } = useAEPS();
   return (
     <View style={styles.container}>
       <View>
@@ -38,7 +38,7 @@ const AEPS = () => {
         </View>
       </View>
       <Section title="AEPS Ledger Report" onPress={navigateAepsLedgerReport}/>
-      <Section title="AEPS Report" />
+      <Section title="AEPS Report" onPress={navigateAepsReport}/>
       <Section title="Agent On Boarding" onPress={navigateAgentOnBoard}/>
     </View>
   );
