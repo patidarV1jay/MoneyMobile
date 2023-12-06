@@ -29,4 +29,5 @@ export enum Routes {
   AepsStack = 'AepsStack',
   AgentOnBoard = 'Agent On Board',
   AepsLedgerReport = 'AEPS Ledger Report',
+  AepsReport = "AEPS Report"
 }
