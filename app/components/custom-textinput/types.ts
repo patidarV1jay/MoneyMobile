@@ -1,5 +1,5 @@
 import { ComponentType } from 'react';
-import { StyleProp, TextStyle } from 'react-native';
+import { KeyboardTypeOptions, StyleProp, TextStyle } from 'react-native';
 import { FormikProps } from '../../types';
 
 export interface IconComponentProps {
@@ -17,4 +17,16 @@ export interface Props {
   Icon: ComponentType<IconComponentProps>;
   formik: FormikProps;
   secureTextEntry: boolean;
+}
+
+export interface AgentOnBoardProps {
+  placeholder: string;
+  name: string;
+  style: StyleProp<TextStyle>;
+  styleView: StyleProp<TextStyle>;
+  styleErrorView: StyleProp<Text>;
+  styleErrorText: StyleProp<TextStyle>;
+  formik: FormikProps;
+  secureTextEntry: boolean;
+  keyboardType?: KeyboardTypeOptions;
 }

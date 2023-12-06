@@ -1,14 +1,18 @@
-import { View, Text } from 'react-native';
-import React from 'react';
-import styles from './AEPSStyles';
 import { CaretRight } from 'phosphor-react-native';
+import React from 'react';
+import { Text, View } from 'react-native';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import { Colors, moderateScale } from '../../../theme';
+import styles from './AEPSStyles';
+import useAEPS from './useAEPS';
 interface props {
   title: String;
+  onPress: () => void;
 }
-const Section = ({ title }: props) => {
+const Section = ({ title, onPress }: props) => {
+  const { navigateAgentOnBoard } = useAEPS();
   return (
-    <View style={styles.footerStyles}>
+    <TouchableWithoutFeedback style={styles.footerStyles} onPress={onPress}>
       <View style={styles.bottomSectionView}>
         <Text style={styles.ledgerText}>{title}</Text>
         <CaretRight
@@ -18,7 +22,7 @@ const Section = ({ title }: props) => {
         />
       </View>
       <View style={styles.line} />
-    </View>
+    </TouchableWithoutFeedback>
   );
 };
 

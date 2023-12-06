@@ -21,6 +21,7 @@ export const ValidationStrings = {
   required: 'It is a required field.',
   min: 'Minimum 8 character required.',
   invalidMail: 'Invalid Email.',
+  min3: "Minimum 3 characters required"
 };
 
 export const Placeholder = {

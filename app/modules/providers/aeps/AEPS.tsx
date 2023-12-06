@@ -1,13 +1,13 @@
-import { View, Text, FlatList, Image } from 'react-native';
 import React from 'react';
-import styles from './AEPSStyles';
-import { AEPSIcons } from '../../../constants';
+import { FlatList, Image, Text, View } from 'react-native';
 import { Images } from '../../../assets';
-import { CaretRight } from 'phosphor-react-native';
-import { Colors, moderateScale } from '../../../theme';
+import { AEPSIcons } from '../../../constants';
+import styles from './AEPSStyles';
 import Section from './Section';
+import useAEPS from './useAEPS';
 
 const AEPS = () => {
+  const { navigateAgentOnBoard, navigateAepsLedgerReport } = useAEPS();
   return (
     <View style={styles.container}>
       <View>
@@ -37,9 +37,9 @@ const AEPS = () => {
           <Text style={styles.itemNameText}>Move to Bank</Text>
         </View>
       </View>
-      <Section title="AEPS Ledger Report"/>
+      <Section title="AEPS Ledger Report" onPress={navigateAepsLedgerReport}/>
       <Section title="AEPS Report" />
-      <Section title="Agent On Boarding" />
+      <Section title="Agent On Boarding" onPress={navigateAgentOnBoard}/>
     </View>
   );
 };

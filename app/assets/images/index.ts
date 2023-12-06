@@ -15,4 +15,5 @@ export default {
   miniStatement: require('./miniStatement.png'),
   wallet: require('./wallet.png'),
   bank: require('./bank.png'),
+  userImage: require('./avatar.png'),
 };

@@ -10,7 +10,7 @@ const FilterWindow = () => {
   const { toggleButton, array, viewFilter, setViewFilters } = useFilterWindow();
 
   return (
-    <Modal visible={viewFilter} transparent animationType="fade" >
+    <Modal visible={viewFilter} transparent animationType="fade">
       <View style={styles.mainContainer}>
         <View
           style={styles.closingView}

@@ -40,9 +40,9 @@ const useHomeScreen = () => {
       case 'Micro ATM':
         navigation.navigate(Routes.MicroAtm);
         break;
-      
-      case "AEPS":
-        navigation.navigate(Routes.AepsStack, {screen: Routes.Aeps})
+
+      case 'AEPS':
+        navigation.navigate(Routes.AepsStack, { screen: Routes.Aeps });
         break;
     }
   };
