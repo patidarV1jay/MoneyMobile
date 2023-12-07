@@ -2,7 +2,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ArrowLeft } from 'phosphor-react-native';
 import { AepsReportHeader, SearchHeader } from '../components';
 import { Routes } from '../constants';
-import { AEPS, AepsLedgerReport, AepsReport, AgentOnBoard } from '../modules';
+import {
+  AEPS,
+  AepsLedgerReport,
+  AepsReport,
+  AgentOnBoard,
+  BalanceEnquiry,
+} from '../modules';
 
 const StackAEPS = createNativeStackNavigator();
 
@@ -43,6 +49,19 @@ const AEPSStack = () => {
         component={AepsReport}
         options={{
           header: () => <AepsReportHeader name={Routes.AepsReport} />,
+        }}
+      />
+      <StackAEPS.Screen
+        name={Routes.BalanceEnquiry}
+        component={BalanceEnquiry}
+        options={{
+          header: () => (
+            <SearchHeader
+              name={Routes.BalanceEnquiry}
+              Icon={ArrowLeft}
+              Flag={false}
+            />
+          ),
         }}
       />
     </StackAEPS.Navigator>

@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import { EmailRegEx } from './RegEx';
+import { EmailRegEx, aadhaarRegExp } from './RegEx';
 import { ValidationStrings } from './Strings';
 import { phoneRegExp } from './RegEx';
 
@@ -45,4 +45,13 @@ export const AgentOnBoardSchema = Yup.object().shape({
   cityName: Yup.string().required(ValidationStrings.required),
   districtName: Yup.string().required(ValidationStrings.required),
   pinCode: Yup.string().required(ValidationStrings.required),
+});
+
+export const BalanceEnquirySchema = Yup.object().shape({
+  phone: Yup.string()
+    .matches(phoneRegExp, 'Phone number is not valid')
+    .required('Required Field'),
+  aadhar: Yup.string()
+    .matches(aadhaarRegExp, 'Aadhar number is not valid')
+    .required('Required Field'),
 });
