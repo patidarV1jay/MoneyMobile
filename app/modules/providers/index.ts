@@ -9,3 +9,4 @@ export * from './aeps';
 export * from './agent-on-board';
 export * from './aeps-ledger-report';
 export * from './aeps-report';
+export * from './balance-enquiry';

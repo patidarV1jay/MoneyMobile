@@ -29,5 +29,9 @@ export enum Routes {
   AepsStack = 'AepsStack',
   AgentOnBoard = 'Agent On Board',
   AepsLedgerReport = 'AEPS Ledger Report',
-  AepsReport = "AEPS Report"
+  AepsReport = 'AEPS Report',
+  BalanceEnquiry = 'Balance Enquiry',
+  CashWithdrawal = 'Cash Withdrawal',
+  AadhaarPay = 'Aadhaar Pay',
+  MiniStatement = 'Mini Statement',
 }

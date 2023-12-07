@@ -1,5 +1,11 @@
 import React from 'react';
-import { FlatList, Image, Text, View } from 'react-native';
+import {
+  FlatList,
+  Image,
+  Text,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 import { Images } from '../../../assets';
 import { AEPSIcons } from '../../../constants';
 import styles from './AEPSStyles';
@@ -7,7 +13,12 @@ import Section from './Section';
 import useAEPS from './useAEPS';
 
 const AEPS = () => {
-  const { navigateAgentOnBoard, navigateAepsLedgerReport, navigateAepsReport } = useAEPS();
+  const {
+    navigateAgentOnBoard,
+    navigateAepsLedgerReport,
+    navigateAepsReport,
+    navigateBankOperations,
+  } = useAEPS();
   return (
     <View style={styles.container}>
       <View>
@@ -15,10 +26,14 @@ const AEPS = () => {
           data={AEPSIcons}
           renderItem={({ item }) => {
             return (
-              <View style={styles.flatlistContainer}>
-                <Image source={item.source} style={styles.itemImage} />
-                <Text style={styles.itemNameText}>{item.name}</Text>
-              </View>
+              <TouchableWithoutFeedback
+                style={styles.flatlistContainer}
+                onPress={() => navigateBankOperations(item.name)}>
+                <View style={styles.flatlistContainer}>
+                  <Image source={item.source} style={styles.itemImage} />
+                  <Text style={styles.itemNameText}>{item.name}</Text>
+                </View>
+              </TouchableWithoutFeedback>
             );
           }}
           numColumns={2}
@@ -37,9 +52,9 @@ const AEPS = () => {
           <Text style={styles.itemNameText}>Move to Bank</Text>
         </View>
       </View>
-      <Section title="AEPS Ledger Report" onPress={navigateAepsLedgerReport}/>
-      <Section title="AEPS Report" onPress={navigateAepsReport}/>
-      <Section title="Agent On Boarding" onPress={navigateAgentOnBoard}/>
+      <Section title="AEPS Ledger Report" onPress={navigateAepsLedgerReport} />
+      <Section title="AEPS Report" onPress={navigateAepsReport} />
+      <Section title="Agent On Boarding" onPress={navigateAgentOnBoard} />
     </View>
   );
 };
