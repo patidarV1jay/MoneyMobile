@@ -1,26 +1,31 @@
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import React from 'react';
-import { Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Routes } from '../../constants';
-import { RootStackParamList } from '../../types';
+import React, { useEffect } from 'react';
+import { ScrollView, Text, View } from 'react-native';
+import Orientation from 'react-native-orientation-locker';
+import { ScreenStrings } from '../../constants';
+import styles from './IncomeReport Styles';
 
-const IncomeReport = () => {
-  const navigation =
-    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
-  const navigateHome = () => {
-    navigation.navigate(Routes.HomeScreen);
-  };
+const AepsLedgerReport = () => {
+  useEffect(() => {
+    Orientation.lockToLandscape();
+    return () => Orientation.lockToPortrait();
+  });
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Text>IncomeReport</Text>
-      <TouchableOpacity onPress={navigateHome}>
-        <Text>go back</Text>
-      </TouchableOpacity>
-    </SafeAreaView>
+    <ScrollView style={styles.container}>
+      <View style={styles.sheetHeader}>
+        <Text>{ScreenStrings.id}</Text>
+        <Text>{ScreenStrings.name}</Text>
+        <Text>{ScreenStrings.opBal}</Text>
+        <Text>{ScreenStrings.clBal}</Text>
+        <Text>{ScreenStrings.crAmount}</Text>
+        <Text>{ScreenStrings.drAmount}</Text>
+        <Text>{ScreenStrings.sales}</Text>
+        <Text>{ScreenStrings.profit}</Text>
+        <Text>{ScreenStrings.charges}</Text>
+        <Text>{ScreenStrings.pending}</Text>
+        <Text>{ScreenStrings.action}</Text>
+      </View>
+    </ScrollView>
   );
 };
 
-export default IncomeReport;
+export default AepsLedgerReport;

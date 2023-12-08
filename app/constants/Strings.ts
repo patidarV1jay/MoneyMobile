@@ -24,6 +24,15 @@ export const ScreenStrings = {
   credit: 'Credit',
   profit: 'Profit',
   cl: 'CL',
+  name: 'Name',
+  opBal: 'OP Bal',
+  clBal: 'CL Bal',
+  crAmount: 'CR Amount',
+  drAmount: 'DR Amount',
+  sales: 'Sales',
+  charges: 'Charges',
+  pending: 'Pending',
+  action: 'Action',
 };
 
 export const ValidationStrings = {

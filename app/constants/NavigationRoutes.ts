@@ -9,7 +9,7 @@ export enum Routes {
   RechargeReports = 'Recharge Reports',
   AccountStatement = 'Account Statement',
   OperatorReport = 'Operator Report',
-  PaymentRequestReports = 'Payment Request Reports',
+  PaymentRequestReports = 'Payment Request Report',
   PaymentRequest = 'Payment Request',
   BalanceReturnRequest = 'Balance Return Request',
   Dispute = 'Dispute',
@@ -34,4 +34,5 @@ export enum Routes {
   CashWithdrawal = 'Cash Withdrawal',
   AadhaarPay = 'Aadhaar Pay',
   MiniStatement = 'Mini Statement',
+  PaymentRequestStack = 'PaymentRequestStack',
 }
