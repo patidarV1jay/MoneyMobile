@@ -20,7 +20,12 @@ const AEPSStack = () => {
         component={AEPS}
         options={{
           header: () => (
-            <SearchHeader Icon={ArrowLeft} name={Routes.Aeps} Flag={false} />
+            <SearchHeader
+              Icon={ArrowLeft}
+              name={Routes.Aeps}
+              Flag={false}
+              IsDate={false}
+            />
           ),
         }}
       />
@@ -33,6 +38,7 @@ const AEPSStack = () => {
               Icon={ArrowLeft}
               name={Routes.AgentOnBoard}
               Flag={false}
+              IsDate={false}
             />
           ),
         }}
@@ -60,6 +66,7 @@ const AEPSStack = () => {
               name={Routes.BalanceEnquiry}
               Icon={ArrowLeft}
               Flag={false}
+              IsDate={false}
             />
           ),
         }}

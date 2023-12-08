@@ -6,8 +6,9 @@ import { Colors, moderateScale } from '../../theme';
 import styles from './SearchHeaderStyles';
 import { Props } from './types';
 import useSearchHeader from './useSearchHeader';
+import { CalendarBlank, MagnifyingGlass } from 'phosphor-react-native';
 
-const SearchHeader = ({ Icon, name, Filter,Flag }: Props) => {
+const SearchHeader = ({ Icon, name, Filter, Flag, IsDate }: Props) => {
   const { viewFilter, setViewFilters } = useContext(FilterToggle);
   const toggleFilter = () => {
     setViewFilters(!viewFilter);
@@ -30,16 +31,29 @@ const SearchHeader = ({ Icon, name, Filter,Flag }: Props) => {
           </Pressable>
         )}
       </View>
-      {
-       Flag &&
-        <TextInput
-        placeholder={Placeholder.searchHeaderPlaceholder}
-        style={styles.textInput}
-        placeholderTextColor={Colors.offShade}
-        />
-      }
-      {/* <View style={{ backgroundColor:Colors.headerColor,position:'absolute',height:100,width:'90%',alignSelf:'center',top:verticleScale(100)}}>
-      </View> */}
+      {Flag && (
+        <View style={styles.searchBarView}>
+          <View style={styles.textInputView}>
+            <MagnifyingGlass
+              size={moderateScale(25)}
+              weight="bold"
+              color={Colors.light}
+            />
+            <TextInput
+              placeholder={Placeholder.searchHeaderPlaceholder}
+              style={styles.textInput}
+              placeholderTextColor={Colors.offShade}
+            />
+          </View>
+          {IsDate && (
+            <CalendarBlank
+              size={moderateScale(25)}
+              weight="bold"
+              color={Colors.light}
+            />
+          )}
+        </View>
+      )}
     </View>
   );
 };

@@ -11,4 +11,5 @@ export default {
   headerColor: '#222426',
   textColor: '#4CACBC',
   offShade: '#C2C4C6',
+  green: '#006600',
 };

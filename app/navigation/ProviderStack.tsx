@@ -19,6 +19,7 @@ const ProviderStack = () => {
               Icon={ArrowLeft}
               name={Routes.MobileProvider}
               Flag={true}
+              IsDate={false}
             />
           ),
         }}
@@ -28,7 +29,7 @@ const ProviderStack = () => {
         component={ProviderDetails}
         options={{
           header: () => (
-            <SearchHeader Icon={ArrowLeft} name="Mobile" Flag={false} />
+            <SearchHeader Icon={ArrowLeft} name="Mobile" Flag={false} IsDate={false}/>
           ),
         }}
       />
