@@ -6,9 +6,10 @@ import {
   AccountStatement,
   IncomeReport,
   MoneyTransferReport,
-  RechargeReports
+  RechargeReports,
 } from '../modules';
 import HomeStack from './HomeStack';
+import { OperatorReport } from '../modules';
 
 const DrawerScreenStack = createNativeStackNavigator();
 
@@ -30,26 +31,68 @@ const DrawerScreen = () => {
               name="Recharge Report"
               Filter={Funnel}
               Flag={true}
+              IsDate={false}
             />
-          ),
-        }}
-      />
-      <DrawerScreenStack.Screen
-        name={Routes.IncomeReport}
-        component={IncomeReport}
-        options={{
-          header: () => (
-            <SearchHeader Icon={ArrowLeft} name="SearchHeader" Flag={true} />
           ),
         }}
       />
       <DrawerScreenStack.Screen
         name={Routes.MoneyTransferReport}
         component={MoneyTransferReport}
+        options={{
+          header: () => (
+            <SearchHeader
+              Icon={ArrowLeft}
+              name="Money Transfer Report"
+              Filter={Funnel}
+              Flag={true}
+              IsDate={false}
+            />
+          ),
+        }}
       />
       <DrawerScreenStack.Screen
         name={Routes.AccountStatement}
         component={AccountStatement}
+        options={{
+          header: () => (
+            <SearchHeader
+              Icon={ArrowLeft}
+              name="Account Statement"
+              Flag={true}
+              IsDate={true}
+            />
+          ),
+        }}
+      />
+      <DrawerScreenStack.Screen
+        name={Routes.OperatorReport}
+        component={OperatorReport}
+        options={{
+          header: () => (
+            <SearchHeader
+              Icon={ArrowLeft}
+              name="Operator Report"
+              Flag={true}
+              IsDate={false}
+            />
+          ),
+        }}
+
+      />
+      <DrawerScreenStack.Screen
+        name={Routes.IncomeReport}
+        component={IncomeReport}
+        options={{
+          header: () => (
+            <SearchHeader
+              Icon={ArrowLeft}
+              name="SearchHeader"
+              Flag={true}
+              IsDate={false}
+            />
+          ),
+        }}
       />
     </DrawerScreenStack.Navigator>
   );

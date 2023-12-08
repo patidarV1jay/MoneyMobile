@@ -34,6 +34,7 @@ const HomeStack = () => {
               Icon={ArrowLeft}
               name={Routes.ElectricityProvider}
               Flag={true}
+              IsDate={false}
             />
           ),
         }}
@@ -47,6 +48,7 @@ const HomeStack = () => {
               Icon={ArrowLeft}
               name={Routes.PostpaidProvider}
               Flag={true}
+              IsDate={false}
             />
           ),
         }}
@@ -60,6 +62,7 @@ const HomeStack = () => {
               Icon={ArrowLeft}
               name={Routes.DthProvider}
               Flag={true}
+              IsDate={false}
             />
           ),
         }}
@@ -80,6 +83,7 @@ const HomeStack = () => {
               Icon={ArrowLeft}
               name={Routes.MoneyTransfer1}
               Flag={false}
+              IsDate={false}
             />
           ),
         }}
@@ -89,7 +93,7 @@ const HomeStack = () => {
         component={PanCard}
         options={{
           header: () => (
-            <SearchHeader Icon={ArrowLeft} name={Routes.PanCard} Flag={false} />
+            <SearchHeader Icon={ArrowLeft} name={Routes.PanCard} Flag={false} IsDate={false} />
           ),
         }}
       />
@@ -102,6 +106,7 @@ const HomeStack = () => {
               Icon={ArrowLeft}
               name={Routes.MicroAtm}
               Flag={false}
+              IsDate={false}
             />
           ),
         }}
