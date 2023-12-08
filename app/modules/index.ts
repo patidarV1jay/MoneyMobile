@@ -5,4 +5,6 @@ export * from './money-transfer-reports';
 export * from './recharge-reports';
 export * from './account-statement';
 export * from './providers';
-export * from './operator-report'
+export * from './operator-report';
+export * from './payment-request-report';
+export * from './payment-request';

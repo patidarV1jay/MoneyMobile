@@ -1,15 +1,18 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ArrowLeft, Funnel } from 'phosphor-react-native';
-import { SearchHeader } from '../components';
+import { AepsReportHeader, SearchHeader } from '../components';
 import { Routes } from '../constants';
 import {
   AccountStatement,
   IncomeReport,
   MoneyTransferReport,
+  PaymentRequest,
+  PaymentRequestReport,
   RechargeReports,
 } from '../modules';
 import HomeStack from './HomeStack';
 import { OperatorReport } from '../modules';
+import PaymentRequestStack from './PaymentRequestStack';
 
 const DrawerScreenStack = createNativeStackNavigator();
 
@@ -78,20 +81,33 @@ const DrawerScreen = () => {
             />
           ),
         }}
-
       />
       <DrawerScreenStack.Screen
         name={Routes.IncomeReport}
         component={IncomeReport}
         options={{
+          header: () => <AepsReportHeader name={Routes.IncomeReport} />,
+        }}
+      />
+      <DrawerScreenStack.Screen
+        name={Routes.PaymentRequestReports}
+        component={PaymentRequestReport}
+        options={{
           header: () => (
             <SearchHeader
               Icon={ArrowLeft}
-              name="SearchHeader"
+              name={Routes.PaymentRequestReports}
               Flag={true}
               IsDate={false}
             />
           ),
+        }}
+      />
+      <DrawerScreenStack.Screen
+        name={Routes.PaymentRequestStack}
+        component={PaymentRequestStack}
+        options={{
+          headerShown: false,
         }}
       />
     </DrawerScreenStack.Navigator>

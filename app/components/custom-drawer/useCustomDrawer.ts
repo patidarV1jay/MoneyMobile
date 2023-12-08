@@ -1,4 +1,4 @@
-import { CommonActions, useNavigation } from '@react-navigation/native';
+import { CommonActions, ParamListBase, useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import Share from 'react-native-share';
 import { Routes, options } from '../../constants';
@@ -8,7 +8,7 @@ import { RootStackParamList } from '../../types';
 const useCustomDrawer = () => {
   const dispatch = useAppDispatch();
   const navigation =
-    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+    useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
   const signOut = () => {
     const resetAction = CommonActions.reset({

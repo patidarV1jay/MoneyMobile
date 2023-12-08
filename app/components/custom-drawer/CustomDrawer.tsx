@@ -54,12 +54,16 @@ const CustomDrawer = (
       />
       <DrawerItem
         label={Routes.PaymentRequestReports}
-        onPress={() => navigation.navigate(Routes.IncomeReport)}
+        onPress={() => navigation.navigate(Routes.PaymentRequestReports)}
         labelStyle={styles.labelStyle}
       />
       <DrawerItem
         label={Routes.PaymentRequest}
-        onPress={() => navigation.navigate(Routes.IncomeReport)}
+        onPress={() =>
+          navigation.navigate(Routes.PaymentRequestStack, {
+            screen: Routes.PaymentRequest,
+          })
+        }
         labelStyle={styles.labelStyle}
       />
       <DrawerItem
