@@ -35,4 +35,7 @@ export enum Routes {
   AadhaarPay = 'Aadhaar Pay',
   MiniStatement = 'Mini Statement',
   PaymentRequestStack = 'PaymentRequestStack',
+  BankDetails = 'Bank Details',
+  FundRequest = 'Fund Request',
+  FundRequestReport = 'Fund Request Report',
 }

@@ -8,10 +8,11 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 interface Props {
   name: string;
   source: number;
+  onPress: () => void;
 }
-const Card = ({ name, source }: Props) => {
+const Card = ({ name, source, onPress }: Props) => {
   return (
-    <TouchableOpacity style={styles.cardContainer}>
+    <TouchableOpacity style={styles.cardContainer} onPress={onPress}>
       <Image source={source} style={styles.imageItem} />
       <Text style={styles.itemNameText}>{name}</Text>
       <View style={styles.caretView}>
