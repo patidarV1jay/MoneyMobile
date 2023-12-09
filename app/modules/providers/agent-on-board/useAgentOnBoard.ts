@@ -31,7 +31,6 @@ const useAgentOnBoard = () => {
   });
 
   const toggleModal = () => {
-    console.log(galleryView);
     setGalleryView(!galleryView);
   };
 

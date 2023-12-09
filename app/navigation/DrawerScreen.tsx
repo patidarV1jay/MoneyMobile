@@ -13,6 +13,7 @@ import {
 import HomeStack from './HomeStack';
 import { OperatorReport } from '../modules';
 import PaymentRequestStack from './PaymentRequestStack';
+import MyCommissionStack from './MyCommissionStack';
 
 const DrawerScreenStack = createNativeStackNavigator();
 
@@ -106,6 +107,13 @@ const DrawerScreen = () => {
       <DrawerScreenStack.Screen
         name={Routes.PaymentRequestStack}
         component={PaymentRequestStack}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <DrawerScreenStack.Screen
+        name={Routes.MyCommissionStack}
+        component={MyCommissionStack}
         options={{
           headerShown: false,
         }}

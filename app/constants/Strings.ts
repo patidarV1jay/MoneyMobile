@@ -33,6 +33,12 @@ export const ScreenStrings = {
   charges: 'Charges',
   pending: 'Pending',
   action: 'Action',
+  minAmount: 'Min Amount',
+  maxAmount: 'Max Amount',
+  commission: 'Commission/Charges',
+  providerId: 'Provider ID',
+  providerName: 'Provider Name',
+  service: 'Service',
 };
 
 export const ValidationStrings = {
