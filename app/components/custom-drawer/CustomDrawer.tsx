@@ -1,7 +1,6 @@
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 import React from 'react';
 import { Image, ScrollView, ScrollViewProps, Text, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Routes, ScreenStrings } from '../../constants';
 import styles from './CustomDrawerStyles';
 import useCustomDrawer from './useCustomDrawer';
@@ -78,7 +77,11 @@ const CustomDrawer = (
       />
       <DrawerItem
         label={Routes.MyCommission}
-        onPress={() => navigation.navigate(Routes.IncomeReport)}
+        onPress={() =>
+          navigation.navigate(Routes.MyCommissionStack, {
+            screen: Routes.MyCommission,
+          })
+        }
         labelStyle={styles.labelStyle}
       />
       <View style={styles.hrLine} />

@@ -9,7 +9,7 @@ import { useAppSelector } from '../../redux';
 const useHomeScreen = () => {
   const { isSuccess } = useAppSelector(state => state.signin);
   const navigation = useNavigation<NavigationProp<ParamListBase>>();
-  const navigateService = (name: String) => {
+  const navigateService = (name: string) => {
     switch (name) {
       case 'Mobile':
         navigation.navigate(Routes.ProviderStack, {
