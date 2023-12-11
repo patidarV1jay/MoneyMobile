@@ -14,6 +14,7 @@ import {
 import ProviderStack from './ProviderStack';
 import { MicroAtm } from '../modules';
 import AEPSStack from './AEPSStack';
+import ProfileStack from './ProfileStack';
 
 const StackHome = createNativeStackNavigator();
 
@@ -93,7 +94,12 @@ const HomeStack = () => {
         component={PanCard}
         options={{
           header: () => (
-            <SearchHeader Icon={ArrowLeft} name={Routes.PanCard} Flag={false} IsDate={false} />
+            <SearchHeader
+              Icon={ArrowLeft}
+              name={Routes.PanCard}
+              Flag={false}
+              IsDate={false}
+            />
           ),
         }}
       />
@@ -114,6 +120,13 @@ const HomeStack = () => {
       <StackHome.Screen
         name={Routes.AepsStack}
         component={AEPSStack}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <StackHome.Screen
+        name={Routes.ProfileStack}
+        component={ProfileStack}
         options={{
           headerShown: false,
         }}

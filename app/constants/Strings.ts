@@ -52,7 +52,12 @@ export const ScreenStrings = {
   customeraadhaarNumber: 'Customer Aadhaar Number',
   device: 'Device',
   scanNow: 'SCAN NOW',
-  selectDevice:"Select Device"
+  selectDevice: 'Select Device',
+  profile: 'Profile',
+  addMoney: 'Add Money',
+  upiCollection: 'UPI Collection',
+  changePassword: 'Change Password',
+  update: 'Update Password',
 };
 
 export const ValidationStrings = {
@@ -60,10 +65,18 @@ export const ValidationStrings = {
   min: 'Minimum 8 character required.',
   invalidMail: 'Invalid Email.',
   min3: 'Minimum 3 characters required',
+  noMatch: 'Password does not match.',
+  aadhaarInvalid: 'Aadhar number is not valid',
+  phoneInvalid: 'Phone Number is not valid',
+  negativeAmount: "Amount can't start with a minus",
+  invalidAmount: 'Please enter a valid amount.',
 };
 
 export const Placeholder = {
   searchHeaderPlaceholder: 'Enter your biller name',
-  aadhaarNumber : "Aadhaar Number",
-  phoneNumber : "Phone Number"
+  aadhaarNumber: 'Aadhaar Number',
+  phoneNumber: 'Phone Number',
+  confirmPassword: 'Confirm Password',
+  newPassword: 'New Password',
+  currentPassword: 'Current Password',
 };

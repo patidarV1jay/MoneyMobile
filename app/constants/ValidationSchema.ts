@@ -15,18 +15,18 @@ export const SigninSchema = Yup.object().shape({
 
 export const ProviderSchema = Yup.object().shape({
   phone: Yup.string()
-    .matches(phoneRegExp, 'Phone number is not valid')
-    .required('Required Field'),
+    .matches(phoneRegExp, ValidationStrings.phoneInvalid)
+    .required(ValidationStrings.required),
   amount: Yup.number()
-    .typeError('Please enter a valid amount.')
-    .required('Required Field')
-    .positive("Amount can't start with a minus"),
+    .typeError(ValidationStrings.invalidAmount)
+    .required(ValidationStrings.required)
+    .positive(ValidationStrings.negativeAmount),
 });
 
 export const NumberSchema = Yup.object().shape({
   phone: Yup.string()
-    .matches(phoneRegExp, 'Phone number is not valid')
-    .required('Required Field'),
+    .matches(phoneRegExp, ValidationStrings.phoneInvalid)
+    .required(ValidationStrings.required),
 });
 
 export const AgentOnBoardSchema = Yup.object().shape({
@@ -49,9 +49,21 @@ export const AgentOnBoardSchema = Yup.object().shape({
 
 export const BalanceEnquirySchema = Yup.object().shape({
   phone: Yup.string()
-    .matches(phoneRegExp, 'Phone number is not valid')
-    .required('Required Field'),
+    .matches(phoneRegExp, ValidationStrings.phoneInvalid)
+    .required(ValidationStrings.required),
   aadhar: Yup.string()
-    .matches(aadhaarRegExp, 'Aadhar number is not valid')
-    .required('Required Field'),
+    .matches(aadhaarRegExp, ValidationStrings.aadhaarInvalid)
+    .required(ValidationStrings.required),
+});
+
+export const UpdatePasswordSchema = Yup.object().shape({
+  currentPassword: Yup.string()
+    .required(ValidationStrings.required)
+    .min(8, ValidationStrings.min),
+  newPassword: Yup.string()
+    .required(ValidationStrings.required)
+    .min(8, ValidationStrings.min),
+  confirmPassword: Yup.string()
+    .required(ValidationStrings.required)
+    .oneOf([Yup.ref('newPassword')], ValidationStrings.noMatch),
 });

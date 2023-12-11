@@ -1,11 +1,15 @@
 import { DrawerNavigationProp } from '@react-navigation/drawer';
-import { useNavigation } from '@react-navigation/native';
-import { RootStackParamList } from '../../types';
+import { ParamListBase, useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
+import { Routes } from '../../constants';
 
 const useHomeHeader = () => {
   const [popup, setPopup] = useState(false);
-  const navigation = useNavigation<DrawerNavigationProp<RootStackParamList>>();
+  const navigation = useNavigation<DrawerNavigationProp<ParamListBase>>();
+  const navigateProfile = () => {
+    setPopup(false)
+    navigation.navigate(Routes.ProfileStack, { screen: Routes.Profile });
+  };
   const togglePopup = () => {
     setPopup(!popup);
   };
@@ -13,7 +17,8 @@ const useHomeHeader = () => {
     navigation,
     popup,
     togglePopup,
-    setPopup
+    setPopup,
+    navigateProfile,
   };
 };
 
