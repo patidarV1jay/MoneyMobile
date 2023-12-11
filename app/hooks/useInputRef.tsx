@@ -14,6 +14,9 @@ const useInputRef = () => {
   const refAddress = useRef<TextInput | null>(null);
   const refCity = useRef<TextInput | null>(null);
   const refPinCode = useRef<TextInput | null>(null);
+  const refCurrentPassword = useRef<TextInput | null>(null);
+  const refNewPassword = useRef<TextInput | null>(null);
+  const refCofirmPassword = useRef<TextInput | null>(null);
 
   const focusNextTextInput = (nextRef: MutableRefObject<TextInput | null>) => {
     if (nextRef && nextRef.current) {
@@ -35,6 +38,9 @@ const useInputRef = () => {
     refAddress,
     refCity,
     refPinCode,
+    refCurrentPassword,
+    refNewPassword,
+    refCofirmPassword,
   };
 };
 

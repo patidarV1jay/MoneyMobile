@@ -42,16 +42,23 @@ const styles = StyleSheet.create({
   textBalance: {
     fontSize: moderateScale(20),
   },
-  popupContainer:{
-    position:'absolute',
-    backgroundColor:Colors.offShade,
-    height:verticleScale(200),
-    width:horizontalScale(100),
-    zIndex:1,
-    right:horizontalScale(20),
-    top:verticleScale(5),
-    borderRadius:moderateScale(4)
-  }
+  popupContainer: {
+    backgroundColor: Colors.gray,
+    height: verticleScale(270),
+    width: horizontalScale(150),
+    borderRadius: moderateScale(4),
+    marginRight: horizontalScale(10),
+    marginTop: verticleScale(14),
+  },
+  closeModalContainer: {
+    flex: 1,
+  },
+  text: {
+    fontWeight: '500',
+    color: Colors.dark,
+    padding: moderateScale(10),
+    fontSize: moderateScale(15),
+  },
 });
 
 export default styles;

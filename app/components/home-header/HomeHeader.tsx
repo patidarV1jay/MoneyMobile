@@ -1,14 +1,16 @@
 import { Bell, DotsThreeVertical, List } from 'phosphor-react-native';
 import React from 'react';
-import { StatusBar, Text, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import {
+  Modal, StatusBar, Text, TouchableOpacity,
+  TouchableWithoutFeedback, View
+} from 'react-native';
 import { ScreenStrings } from '../../constants';
 import { Colors, moderateScale } from '../../theme';
 import styles from './HomeHeaderStyles';
 import useHomeHeader from './useHomeHeader';
 
 const HomeHeader = () => {
-  const { navigation, popup, togglePopup, setPopup } = useHomeHeader();
+  const { navigation, popup, togglePopup, setPopup, navigateProfile } = useHomeHeader();
 
   return (
     <>
@@ -18,7 +20,7 @@ const HomeHeader = () => {
         backgroundColor={Colors.dark}
         translucent={false}
       />
-      <View style={styles.mainContainer} onTouchEnd={() => setPopup(false)}>
+      <View style={styles.mainContainer}>
         <View style={[styles.headerTitle, styles.directionRow]}>
           <View style={styles.directionRow}>
             <TouchableOpacity onPress={navigation.openDrawer}>
@@ -40,11 +42,31 @@ const HomeHeader = () => {
                 color={Colors.light}
               />
             </TouchableOpacity>
-            {popup && (
-              <View style={styles.popupContainer}>
-                <Text>hd</Text>
+
+            <Modal transparent visible={popup} animationType="fade">
+              <View style={{ flex: 1 }}>
+                <View style={{ flexDirection: 'row' }}>
+                  <View
+                    onTouchEnd={() => setPopup(false)}
+                    style={styles.closeModalContainer}
+                  />
+                  <View style={styles.popupContainer}>
+                    <TouchableWithoutFeedback onPress={navigateProfile}>
+                      <Text style={styles.text}>{ScreenStrings.profile}</Text>
+                    </TouchableWithoutFeedback>
+                    <Text style={styles.text}>{ScreenStrings.addMoney}</Text>
+                    <Text style={styles.text}>
+                      {ScreenStrings.upiCollection}
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  onTouchEnd={() => setPopup(false)}
+                  style={styles.closeModalContainer}
+                />
               </View>
-            )}
+            </Modal>
+
             <TouchableOpacity onPress={togglePopup}>
               <DotsThreeVertical
                 size={moderateScale(32)}

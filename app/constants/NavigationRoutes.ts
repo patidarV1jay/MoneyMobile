@@ -49,4 +49,12 @@ export enum Routes {
   Fastag = 'Fastag',
   LoanPayment = 'Loan Payment',
   Broadband = 'Broadband',
+  Profile = 'Profile',
+  AddMoney = 'AddMoney',
+  UPICollection = 'UPI Collection',
+  ChangePassword = 'Change Password',
+  ProfileStack = 'Profile Stack',
+  Kyc = 'KYC',
+  PersonalInformation = 'Personal Information',
+  AddressDetails = 'Address Details',
 }
