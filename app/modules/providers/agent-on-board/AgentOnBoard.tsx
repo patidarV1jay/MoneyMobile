@@ -1,10 +1,7 @@
 import React from 'react';
-import {
-  KeyboardAvoidingView,
-  ScrollView,
-  View
-} from 'react-native';
+import { KeyboardAvoidingView, ScrollView, View } from 'react-native';
 import { AgentOnBoardTextInput } from '../../../components';
+import { useInputRef } from '../../../hooks';
 import styles from './AgentOnBoardStyles';
 import PhotoComponent from './PhotoComponent';
 import useAgentOnBoard from './useAgentOnBoard';
@@ -13,6 +10,18 @@ const AgentOnBoard = () => {
   const { formik, galleryView, toggleModal, setGalleryView } =
     useAgentOnBoard();
   const { handleSubmit } = formik;
+  const {
+    refEmail,
+    refPanNumber,
+    focusNextTextInput,
+    aadhaarNumberRef,
+    refShopName,
+    refGst,
+    refAddress,
+    refCity,
+    refDistrict,
+    refPinCode,
+  } = useInputRef();
 
   return (
     <>
@@ -29,9 +38,12 @@ const AgentOnBoard = () => {
                 styleErrorView={styles.errorView}
                 styleErrorText={styles.errorText}
                 secureTextEntry={false}
+                returnKeyType="next"
+                onSubmitEditing={() => focusNextTextInput(refEmail)}
               />
               <AgentOnBoardTextInput
                 placeholder="Email"
+                inputRef={refEmail}
                 style={styles.textInputStyles}
                 formik={formik}
                 name="email"
@@ -39,9 +51,12 @@ const AgentOnBoard = () => {
                 styleErrorView={styles.errorView}
                 styleErrorText={styles.errorText}
                 secureTextEntry={false}
+                onSubmitEditing={() => focusNextTextInput(refPanNumber)}
+                returnKeyType="next"
               />
               <AgentOnBoardTextInput
                 placeholder="PAN Number"
+                inputRef={refPanNumber}
                 style={styles.textInputStyles}
                 formik={formik}
                 name="panNumber"
@@ -49,9 +64,12 @@ const AgentOnBoard = () => {
                 styleErrorView={styles.errorView}
                 styleErrorText={styles.errorText}
                 secureTextEntry={false}
+                onSubmitEditing={() => focusNextTextInput(aadhaarNumberRef)}
+                returnKeyType="next"
               />
               <AgentOnBoardTextInput
                 placeholder="Aadhaar Number"
+                inputRef={aadhaarNumberRef}
                 style={styles.textInputStyles}
                 formik={formik}
                 name="aadhaarNumber"
@@ -59,8 +77,11 @@ const AgentOnBoard = () => {
                 styleErrorView={styles.errorView}
                 styleErrorText={styles.errorText}
                 secureTextEntry={false}
+                onSubmitEditing={() => focusNextTextInput(refShopName)}
+                returnKeyType="next"
               />
               <AgentOnBoardTextInput
+                inputRef={refShopName}
                 placeholder="Shop Name"
                 style={styles.textInputStyles}
                 formik={formik}
@@ -69,8 +90,11 @@ const AgentOnBoard = () => {
                 styleErrorView={styles.errorView}
                 styleErrorText={styles.errorText}
                 secureTextEntry={false}
+                onSubmitEditing={() => focusNextTextInput(refGst)}
+                returnKeyType="next"
               />
               <AgentOnBoardTextInput
+                inputRef={refGst}
                 placeholder="GST Number"
                 style={styles.textInputStyles}
                 formik={formik}
@@ -79,8 +103,11 @@ const AgentOnBoard = () => {
                 styleErrorView={styles.errorView}
                 styleErrorText={styles.errorText}
                 secureTextEntry={false}
+                onSubmitEditing={() => focusNextTextInput(refAddress)}
+                returnKeyType="next"
               />
               <AgentOnBoardTextInput
+                inputRef={refAddress}
                 placeholder="Address"
                 style={styles.textInputStyles}
                 formik={formik}
@@ -89,8 +116,11 @@ const AgentOnBoard = () => {
                 styleErrorView={styles.errorView}
                 styleErrorText={styles.errorText}
                 secureTextEntry={false}
+                onSubmitEditing={() => focusNextTextInput(refCity)}
+                returnKeyType="next"
               />
               <AgentOnBoardTextInput
+                inputRef={refCity}
                 placeholder="City Name"
                 style={styles.textInputStyles}
                 formik={formik}
@@ -99,8 +129,11 @@ const AgentOnBoard = () => {
                 styleErrorView={styles.errorView}
                 styleErrorText={styles.errorText}
                 secureTextEntry={false}
+                onSubmitEditing={() => focusNextTextInput(refDistrict)}
+                returnKeyType="next"
               />
               <AgentOnBoardTextInput
+                inputRef={refDistrict}
                 placeholder="District Name"
                 style={styles.textInputStyles}
                 formik={formik}
@@ -109,8 +142,11 @@ const AgentOnBoard = () => {
                 styleErrorView={styles.errorView}
                 styleErrorText={styles.errorText}
                 secureTextEntry={false}
+                onSubmitEditing={() => focusNextTextInput(refPinCode)}
+                returnKeyType="next"
               />
               <AgentOnBoardTextInput
+                inputRef={refPinCode}
                 placeholder="Pin Code"
                 style={styles.textInputStyles}
                 formik={formik}
@@ -120,6 +156,7 @@ const AgentOnBoard = () => {
                 styleErrorText={styles.errorText}
                 secureTextEntry={false}
                 keyboardType="number-pad"
+                returnKeyType="done"
               />
             </KeyboardAvoidingView>
             <PhotoComponent serialNumber={1} photoText="PAN Photo" />
@@ -128,7 +165,6 @@ const AgentOnBoard = () => {
           </ScrollView>
         </View>
       </View>
-     
     </>
   );
 };

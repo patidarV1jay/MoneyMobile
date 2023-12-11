@@ -3,11 +3,13 @@ import { useFormik } from 'formik';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import { Keyboard } from 'react-native';
 import { BalanceEnquirySchema } from '../../../constants';
+import { TextInput } from 'react-native';
 
 const useBalanceEnquiry = () => {
   const [isBankVisible, setIsBankVisible] = useState<boolean>(false);
   const [isCity, setIsCity] = useState<string>('Select Bank');
   const sheetRef = useRef<BottomSheet>(null);
+  const aadhaarNumberRef = useRef<TextInput | null>(null);
 
   const data = useMemo(
     () =>
@@ -61,7 +63,7 @@ const useBalanceEnquiry = () => {
     handleSheetChange,
     selectCityButton,
     isCity,
-    
+    aadhaarNumberRef,
   };
 };
 

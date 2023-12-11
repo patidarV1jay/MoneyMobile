@@ -4,6 +4,7 @@ import { AepsReportHeader, SearchHeader } from '../components';
 import { Routes } from '../constants';
 import {
   AccountStatement,
+  BalanceReturnRequest,
   IncomeReport,
   MoneyTransferReport,
   PaymentRequest,
@@ -109,6 +110,20 @@ const DrawerScreen = () => {
         component={PaymentRequestStack}
         options={{
           headerShown: false,
+        }}
+      />
+      <DrawerScreenStack.Screen
+        name={Routes.BalanceReturnRequest}
+        component={BalanceReturnRequest}
+        options={{
+          header: () => (
+            <SearchHeader
+              Icon={ArrowLeft}
+              name={Routes.BalanceReturnRequest}
+              Flag={false}
+              IsDate={false}
+            />
+          ),
         }}
       />
       <DrawerScreenStack.Screen

@@ -8,4 +8,5 @@ export * from './providers';
 export * from './operator-report';
 export * from './payment-request-report';
 export * from './payment-request';
-export * from './my-commission'
+export * from './my-commission';
+export * from './balance-return-request';

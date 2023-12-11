@@ -1,5 +1,11 @@
-import { ComponentType } from 'react';
-import { KeyboardTypeOptions, StyleProp, TextStyle } from 'react-native';
+import { ComponentType, MutableRefObject } from 'react';
+import {
+  KeyboardTypeOptions,
+  ReturnKeyTypeOptions,
+  StyleProp,
+  TextInput,
+  TextStyle,
+} from 'react-native';
 import { FormikProps } from '../../types';
 
 export interface IconComponentProps {
@@ -29,4 +35,7 @@ export interface AgentOnBoardProps {
   formik: FormikProps;
   secureTextEntry: boolean;
   keyboardType?: KeyboardTypeOptions;
+  returnKeyType?: ReturnKeyTypeOptions;
+  onSubmitEditing?: () => void;
+  inputRef?: MutableRefObject<TextInput | null>;
 }

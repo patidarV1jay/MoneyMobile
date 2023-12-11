@@ -67,7 +67,7 @@ const CustomDrawer = (
       />
       <DrawerItem
         label={Routes.BalanceReturnRequest}
-        onPress={() => navigation.navigate(Routes.IncomeReport)}
+        onPress={() => navigation.navigate(Routes.BalanceReturnRequest)}
         labelStyle={styles.labelStyle}
       />
       <DrawerItem
