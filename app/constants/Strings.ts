@@ -39,6 +39,20 @@ export const ScreenStrings = {
   providerId: 'Provider ID',
   providerName: 'Provider Name',
   service: 'Service',
+  requestedBy: 'Requested By :',
+  date: 'Date :',
+  remark: 'Remark :',
+  amount: 'Amount :',
+  approve: 'Approve',
+  exit: 'Exit',
+  proceed: 'Proceed',
+  status: 'Status',
+  loginPassword: 'Login Password',
+  customerMobileNumber: 'Customer Mobile Number',
+  customeraadhaarNumber: 'Customer Aadhaar Number',
+  device: 'Device',
+  scanNow: 'SCAN NOW',
+  selectDevice:"Select Device"
 };
 
 export const ValidationStrings = {
@@ -50,4 +64,6 @@ export const ValidationStrings = {
 
 export const Placeholder = {
   searchHeaderPlaceholder: 'Enter your biller name',
+  aadhaarNumber : "Aadhaar Number",
+  phoneNumber : "Phone Number"
 };

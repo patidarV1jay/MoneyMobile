@@ -1,14 +1,13 @@
 import { ParamListBase, useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Routes } from '../../constants';
+import { ImageList } from '../../constants';
 
 const useMyCommission = () => {
   const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
   const navigateProvider = (name: string) => {
-    switch (name) {
-      case 'Mobile':
-        navigation.navigate(Routes.Mobile);
-    }
+    ImageList.forEach(value => {
+      name === value.name && navigation.navigate(value.name);
+    });
   };
   return {
     navigateProvider,

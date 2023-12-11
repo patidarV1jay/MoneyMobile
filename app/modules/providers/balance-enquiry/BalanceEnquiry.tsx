@@ -4,6 +4,8 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { AgentOnBoardTextInput } from '../../../components';
 import styles from './BalanceEnquiryStyles';
 import useBalanceEnquiry from './useBalanceEnquiry';
+import { useInputRef } from '../../../hooks';
+import { Placeholder, ScreenStrings } from '../../../constants';
 
 interface Item {
   item: string;
@@ -22,6 +24,7 @@ const BalanceEnquiry = () => {
     isCity,
   } = useBalanceEnquiry();
   const { handleSubmit } = formik;
+  const { aadhaarNumberRef, focusNextTextInput } = useInputRef();
 
   const renderItem = useCallback(
     ({ item }: Item) => (
@@ -33,15 +36,14 @@ const BalanceEnquiry = () => {
     ),
     [],
   );
-
   return (
     <View style={styles.mainContainer}>
       <View style={styles.container}>
         <View style={styles.viewContainingTextInputs}>
           <View onTouchEnd={handleClosePress}>
-            <Text>Customer Mobile Number</Text>
+            <Text>{ScreenStrings.customerMobileNumber}</Text>
             <AgentOnBoardTextInput
-              placeholder="Phone Number"
+              placeholder={Placeholder.phoneNumber}
               style={styles.textInputStyles}
               formik={formik}
               name="phone"
@@ -50,10 +52,13 @@ const BalanceEnquiry = () => {
               styleErrorText={styles.errorText}
               secureTextEntry={false}
               keyboardType="number-pad"
+              onSubmitEditing={() => focusNextTextInput(aadhaarNumberRef)}
+              returnKeyType="next"
             />
-            <Text>Customer Aadhaar Number</Text>
+            <Text>{ScreenStrings.customeraadhaarNumber}</Text>
             <AgentOnBoardTextInput
-              placeholder="Aadhar Number"
+              inputRef={aadhaarNumberRef}
+              placeholder={Placeholder.aadhaarNumber}
               style={styles.textInputStyles}
               formik={formik}
               name="aadhar"
@@ -62,18 +67,19 @@ const BalanceEnquiry = () => {
               styleErrorText={styles.errorText}
               secureTextEntry={false}
               keyboardType="number-pad"
+              returnKeyType="done"
             />
           </View>
           <Text>Bank</Text>
           <View style={styles.dropDownView} onTouchEnd={toggleVisibility}>
             <Text style={styles.selectBankText}>{isCity}</Text>
           </View>
-          <Text style={styles.deviceText}>Device</Text>
+          <Text style={styles.deviceText}>{ScreenStrings.device}</Text>
           <View style={styles.dropDownView} onTouchEnd={toggleVisibility}>
-            <Text style={styles.selectBankText}>Select Device</Text>
+            <Text style={styles.selectBankText}>{ScreenStrings.selectDevice}</Text>
           </View>
           <TouchableOpacity style={styles.scanNowButton}>
-            <Text style={styles.scanNowText}>SCAN NOW</Text>
+            <Text style={styles.scanNowText}>{ScreenStrings.scanNow}</Text>
           </TouchableOpacity>
         </View>
 

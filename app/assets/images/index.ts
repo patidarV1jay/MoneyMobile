@@ -16,6 +16,9 @@ export default {
   wallet: require('./wallet.png'),
   bank: require('./bank.png'),
   userImage: require('./avatar.png'),
-  bankIcon: require("./bank-icon.png"),
-  greenTick : require("./yes.png")
+  bankIcon: require('./bank-icon.png'),
+  greenTick: require('./yes.png'),
+  aeps: require('./aeps.png'),
+  fastag: require('./fastag.png'),
+  banks: require('./banks.png'),
 };
