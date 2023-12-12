@@ -1,5 +1,10 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ChangePassword, ProfileScreen } from '../modules';
+import {
+  ChangePassword,
+  Kyc,
+  PersonalInformation,
+  ProfileScreen,
+} from '../modules';
 import { Routes } from '../constants';
 import { SearchHeader } from '../components';
 import { ArrowLeft } from 'phosphor-react-native';
@@ -31,6 +36,34 @@ const ProfileStack = () => {
             <SearchHeader
               Icon={ArrowLeft}
               name={Routes.ChangePassword}
+              Flag={false}
+              IsDate={false}
+            />
+          ),
+        }}
+      />
+      <StackProfile.Screen
+        name={Routes.Kyc}
+        component={Kyc}
+        options={{
+          header: () => (
+            <SearchHeader
+              Icon={ArrowLeft}
+              name={Routes.Kyc}
+              Flag={false}
+              IsDate={false}
+            />
+          ),
+        }}
+      />
+      <StackProfile.Screen
+        name={Routes.PersonalInformation}
+        component={PersonalInformation}
+        options={{
+          header: () => (
+            <SearchHeader
+              Icon={ArrowLeft}
+              name={Routes.PersonalInformation}
               Flag={false}
               IsDate={false}
             />

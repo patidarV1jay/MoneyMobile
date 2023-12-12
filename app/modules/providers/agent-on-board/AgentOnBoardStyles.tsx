@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: horizontalScale(10),
     paddingVertical: verticleScale(20),
     borderRadius: moderateScale(10),
-    marginBottom: verticleScale(20)
+    marginBottom: verticleScale(20),
+    height: verticleScale(280)
   },
   userImage: {
     height: verticleScale(160),

@@ -20,5 +20,5 @@ export default {
   greenTick: require('./yes.png'),
   aeps: require('./aeps.png'),
   fastag: require('./fastag.png'),
-  banks: require('./banks.png'),
+  banks: require('./bank.png'),
 };

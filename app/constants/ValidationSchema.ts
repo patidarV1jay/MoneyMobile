@@ -67,3 +67,16 @@ export const UpdatePasswordSchema = Yup.object().shape({
     .required(ValidationStrings.required)
     .oneOf([Yup.ref('newPassword')], ValidationStrings.noMatch),
 });
+
+export const PersonalInfoSchema = Yup.object().shape({
+  firstName: Yup.string()
+    .required(ValidationStrings.required)
+    .min(3, ValidationStrings.min3),
+  lastName: Yup.string()
+    .required(ValidationStrings.required)
+    .min(3, ValidationStrings.min3),
+  email: Yup.string()
+    .email(ValidationStrings.invalidMail)
+    .required(ValidationStrings.required)
+    .matches(EmailRegEx, ValidationStrings.invalidMail),
+});
