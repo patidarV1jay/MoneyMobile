@@ -10,7 +10,8 @@ export {
   NumberSchema,
   AgentOnBoardSchema,
   BalanceEnquirySchema,
-  UpdatePasswordSchema
+  UpdatePasswordSchema,
+  PersonalInfoSchema,
 } from './ValidationSchema';
 export { default as FilterChoice } from './FilterChoice';
 export { MicroatmIcons, AEPSIcons } from './MicroAtmIcons';

@@ -23,9 +23,9 @@ const ProfileScreen = () => {
   const cards = (
     title: string,
     Icon: React.ComponentType<any>,
-    navigatePasswordChange: navigatePasswordChange,
+    navigate: navigatePasswordChange,
   ) => (
-    <TouchableOpacity style={styles.button} onPress={navigatePasswordChange}>
+    <TouchableOpacity style={styles.button} onPress={navigate}>
       <Icon size={moderateScale(25)} weight="bold" />
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>

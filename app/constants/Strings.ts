@@ -79,4 +79,7 @@ export const Placeholder = {
   confirmPassword: 'Confirm Password',
   newPassword: 'New Password',
   currentPassword: 'Current Password',
+  firstName: "First Name",
+  lastName: "Last Name",
+  email: "Email"
 };
