@@ -58,6 +58,8 @@ export const ScreenStrings = {
   upiCollection: 'UPI Collection',
   changePassword: 'Change Password',
   update: 'Update Password',
+  permanentAddress: 'Permanent Address',
+  presentAddress: "Present Address"
 };
 
 export const ValidationStrings = {
@@ -79,7 +81,12 @@ export const Placeholder = {
   confirmPassword: 'Confirm Password',
   newPassword: 'New Password',
   currentPassword: 'Current Password',
-  firstName: "First Name",
-  lastName: "Last Name",
-  email: "Email"
+  firstName: 'First Name',
+  lastName: 'Last Name',
+  email: 'Email',
+  address: 'Address',
+  city: 'City',
+  pinCode: 'Pin Code',
+  district: 'District',
+  shopName: 'Shop Name',
 };
