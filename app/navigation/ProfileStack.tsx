@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {
+  AddressDetails,
   ChangePassword,
   Kyc,
   PersonalInformation,
@@ -64,6 +65,20 @@ const ProfileStack = () => {
             <SearchHeader
               Icon={ArrowLeft}
               name={Routes.PersonalInformation}
+              Flag={false}
+              IsDate={false}
+            />
+          ),
+        }}
+      />
+      <StackProfile.Screen
+        name={Routes.AddressDetails}
+        component={AddressDetails}
+        options={{
+          header: () => (
+            <SearchHeader
+              Icon={ArrowLeft}
+              name={Routes.AddressDetails}
               Flag={false}
               IsDate={false}
             />
