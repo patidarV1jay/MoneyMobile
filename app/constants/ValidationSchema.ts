@@ -80,3 +80,12 @@ export const PersonalInfoSchema = Yup.object().shape({
     .required(ValidationStrings.required)
     .matches(EmailRegEx, ValidationStrings.invalidMail),
 });
+
+export const UpiCollectionSchema = Yup.object().shape({
+  upiId: Yup.string().required(ValidationStrings.required),
+  amount: Yup.number()
+    .typeError(ValidationStrings.invalidAmount)
+    .required(ValidationStrings.required)
+    .positive(ValidationStrings.negativeAmount),
+  remark: Yup.string().required(ValidationStrings.required),
+});

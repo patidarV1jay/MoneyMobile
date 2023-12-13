@@ -10,6 +10,7 @@ import {
   MoneyTransfer1,
   PanCard,
   PostPaid,
+  UPICollection,
 } from '../modules';
 import ProviderStack from './ProviderStack';
 import { MicroAtm } from '../modules';
@@ -129,6 +130,20 @@ const HomeStack = () => {
         component={ProfileStack}
         options={{
           headerShown: false,
+        }}
+      />
+      <StackHome.Screen
+        name={Routes.UPICollection}
+        component={UPICollection}
+        options={{
+          header: () => (
+            <SearchHeader
+              Icon={ArrowLeft}
+              name={Routes.UPICollection}
+              Flag={false}
+              IsDate={false}
+            />
+          ),
         }}
       />
     </StackHome.Navigator>

@@ -11,3 +11,4 @@ export * from './payment-request';
 export * from './my-commission';
 export * from './balance-return-request';
 export * from './profile'
+export * from './upi-collection'

@@ -1,8 +1,12 @@
 import { Bell, DotsThreeVertical, List } from 'phosphor-react-native';
 import React from 'react';
 import {
-  Modal, StatusBar, Text, TouchableOpacity,
-  TouchableWithoutFeedback, View
+  Modal,
+  StatusBar,
+  Text,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
 } from 'react-native';
 import { ScreenStrings } from '../../constants';
 import { Colors, moderateScale } from '../../theme';
@@ -10,7 +14,14 @@ import styles from './HomeHeaderStyles';
 import useHomeHeader from './useHomeHeader';
 
 const HomeHeader = () => {
-  const { navigation, popup, togglePopup, setPopup, navigateProfile } = useHomeHeader();
+  const {
+    navigation,
+    popup,
+    togglePopup,
+    setPopup,
+    navigateProfile,
+    navigateUpiCollection,
+  } = useHomeHeader();
 
   return (
     <>
@@ -55,9 +66,11 @@ const HomeHeader = () => {
                       <Text style={styles.text}>{ScreenStrings.profile}</Text>
                     </TouchableWithoutFeedback>
                     <Text style={styles.text}>{ScreenStrings.addMoney}</Text>
-                    <Text style={styles.text}>
-                      {ScreenStrings.upiCollection}
-                    </Text>
+                    <TouchableWithoutFeedback onPress={navigateUpiCollection}>
+                      <Text style={styles.text}>
+                        {ScreenStrings.upiCollection}
+                      </Text>
+                    </TouchableWithoutFeedback>
                   </View>
                 </View>
                 <View

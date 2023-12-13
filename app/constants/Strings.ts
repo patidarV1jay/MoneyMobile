@@ -59,7 +59,8 @@ export const ScreenStrings = {
   changePassword: 'Change Password',
   update: 'Update Password',
   permanentAddress: 'Permanent Address',
-  presentAddress: "Present Address"
+  presentAddress: 'Present Address',
+  upiQrCode: 'UPI QR Code',
 };
 
 export const ValidationStrings = {
@@ -70,7 +71,7 @@ export const ValidationStrings = {
   noMatch: 'Password does not match.',
   aadhaarInvalid: 'Aadhar number is not valid',
   phoneInvalid: 'Phone Number is not valid',
-  negativeAmount: "Amount can't start with a minus",
+  negativeAmount: "Amount can't be negative.",
   invalidAmount: 'Please enter a valid amount.',
 };
 
@@ -89,4 +90,7 @@ export const Placeholder = {
   pinCode: 'Pin Code',
   district: 'District',
   shopName: 'Shop Name',
+  upiId: 'Enter UPI ID',
+  amount: 'Amount',
+  remark: 'Remark',
 };

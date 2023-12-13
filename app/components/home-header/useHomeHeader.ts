@@ -7,8 +7,11 @@ const useHomeHeader = () => {
   const [popup, setPopup] = useState(false);
   const navigation = useNavigation<DrawerNavigationProp<ParamListBase>>();
   const navigateProfile = () => {
-    setPopup(false)
+    setPopup(false);
     navigation.navigate(Routes.ProfileStack, { screen: Routes.Profile });
+  };
+  const navigateUpiCollection = () => {
+    navigation.navigate(Routes.UPICollection);
   };
   const togglePopup = () => {
     setPopup(!popup);
@@ -19,6 +22,7 @@ const useHomeHeader = () => {
     togglePopup,
     setPopup,
     navigateProfile,
+    navigateUpiCollection,
   };
 };
 
