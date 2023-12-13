@@ -61,6 +61,20 @@ export const ScreenStrings = {
   permanentAddress: 'Permanent Address',
   presentAddress: 'Present Address',
   upiQrCode: 'UPI QR Code',
+  success: 'Success',
+  customerNumber: 'Customer No.',
+  commissionText: 'Commission',
+  transcationId: 'Transaction ID',
+  dateAndTime: 'Date & Time',
+  dispute: 'Dispute',
+  reportId: 'Report ID',
+  provider: 'Provider',
+  number: 'Number',
+  message: 'Message',
+  close: 'Close',
+  submit: 'Submit',
+  chooseReason: "Choose Reason",
+  view: "View"
 };
 
 export const ValidationStrings = {
@@ -93,4 +107,5 @@ export const Placeholder = {
   upiId: 'Enter UPI ID',
   amount: 'Amount',
   remark: 'Remark',
+  enterMessage:"Enter Message Here...."
 };

@@ -1,9 +1,13 @@
-import { View, Text } from 'react-native';
 import React from 'react';
+import { Text, View } from 'react-native';
+import { FilterWindow, ReceiptModal } from '../../components';
 import styles from './RechargeReportsStyles';
-import { FilterWindow } from '../../components';
+import useRechargeReport from './useRechargeReports';
+import { ScreenStrings } from '../../constants';
 
 const RechargeReports = () => {
+  const { isReceiptVisible, toggleReceiptVisibility, setReceiptVisible } =
+    useRechargeReport();
   return (
     <View style={styles.container}>
       <View style={styles.cardContainer}>
@@ -15,10 +19,17 @@ const RechargeReports = () => {
           </Text>
         </View>
         <View style={styles.successnView}>
-          <Text style={styles.successText}>Success</Text>
-          <Text style={styles.viewText}>View</Text>
+          <Text style={styles.successText}>{ScreenStrings.success}</Text>
+          <Text onPress={toggleReceiptVisibility} style={styles.viewText}>
+            {ScreenStrings.view}
+          </Text>
         </View>
       </View>
+      <ReceiptModal
+        isReceiptVisible={isReceiptVisible}
+        toggleReceiptVisibility={toggleReceiptVisibility}
+        setReceiptVisible={setReceiptVisible}
+      />
       <FilterWindow />
     </View>
   );

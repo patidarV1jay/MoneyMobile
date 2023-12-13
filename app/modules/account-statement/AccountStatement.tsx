@@ -2,8 +2,13 @@ import { View, Text } from 'react-native';
 import React from 'react';
 import { FilterWindow } from '../../components';
 import styles from './AccountStatementStyles';
+import useAccountStatement from './useAccountStatement';
+import { ReceiptModal } from '../../components';
+import { ScreenStrings } from '../../constants';
 
 const AccountStatement = () => {
+  const { toggleReceiptVisibility, setReceiptVisible, isReceiptVisible } =
+    useAccountStatement();
   return (
     <View style={styles.container}>
       <View style={styles.cardContainer}>
@@ -15,10 +20,17 @@ const AccountStatement = () => {
           </Text>
         </View>
         <View style={styles.successnView}>
-          <Text style={styles.successText}>Success</Text>
-          <Text style={styles.viewText}>View</Text>
+          <Text style={styles.successText}>{ScreenStrings.success}</Text>
+          <Text style={styles.viewText} onPress={toggleReceiptVisibility}>
+            {ScreenStrings.view}
+          </Text>
         </View>
       </View>
+      <ReceiptModal
+        isReceiptVisible={isReceiptVisible}
+        toggleReceiptVisibility={toggleReceiptVisibility}
+        setReceiptVisible={setReceiptVisible}
+      />
       <FilterWindow />
     </View>
   );
