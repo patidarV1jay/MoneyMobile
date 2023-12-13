@@ -1,52 +1,12 @@
 import { StyleSheet } from 'react-native';
 import {
-  Colors,
-  horizontalScale,
-  moderateScale,
   verticleScale,
+  moderateScale,
+  horizontalScale,
+  Colors,
 } from '../../theme';
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: Colors.headerColor,
-    flex: 1,
-  },
-  cardContainer: {
-    backgroundColor: Colors.gray,
-    marginHorizontal: horizontalScale(8),
-    marginTop: verticleScale(10),
-    borderRadius: moderateScale(5),
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  rechargeDetailsView: {
-    padding: moderateScale(5),
-    paddingLeft: horizontalScale(10),
-  },
-  text: {
-    fontWeight: '500',
-    color: Colors.dark,
-    paddingVertical: moderateScale(2),
-  },
-  datenTime: {
-    fontWeight: 'bold',
-  },
-  successnView: {
-    paddingRight: horizontalScale(10),
-    justifyContent: 'space-between',
-    paddingVertical: verticleScale(5),
-  },
-  successText: {
-    color: Colors.green,
-    fontWeight: 'bold',
-    fontSize: moderateScale(15),
-  },
-  viewText: {
-    fontSize: moderateScale(18),
-    fontWeight: 'bold',
-    color: Colors.dark,
-    alignSelf: 'flex-end',
-  },
   modalContainer: {
     backgroundColor: Colors.opaque,
     flex: 1,
@@ -138,6 +98,46 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     fontWeight: '500',
     fontSize: moderateScale(15),
+  },
+  disputeText: {
+    fontSize: moderateScale(18),
+    color: Colors.dark,
+    fontWeight: '600',
+    marginBottom: verticleScale(15)
+  },
+  inputView: {
+    borderWidth: 1,
+    padding: moderateScale(8),
+    marginBottom: verticleScale(20)
+  },
+  text: {
+    fontSize: moderateScale(16),
+    fontWeight: '500'
+  },
+  headerText: {
+    fontSize: moderateScale(14),
+    marginBottom: verticleScale(5),
+  },
+  disputeContainer: {
+    padding: moderateScale(10),
+    paddingHorizontal: horizontalScale(15),
+    height: verticleScale(860)
+  },
+  reasonView:{
+    borderWidth:1,
+    padding: moderateScale(8),
+    marginVertical: verticleScale(6),
+    marginBottom: verticleScale(10)
+  },
+  enterMessageView:{
+    borderWidth:1,
+    padding: moderateScale(5),
+    color:Colors.dark,
+    fontWeight:'500'
+  },
+  messageText:{
+    fontWeight:'400',
+    color: Colors.dark
   },
 });
 
