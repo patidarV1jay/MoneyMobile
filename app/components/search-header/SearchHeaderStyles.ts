@@ -9,6 +9,7 @@ import {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.dark,
+    // paddingBottom: verticleScale(10)
   },
   arrowNTitle: {
     flexDirection: 'row',
@@ -48,6 +49,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  pressableRow: {
+    flexDirection: 'row',
+    marginHorizontal: horizontalScale(20),
+    marginTop: verticleScale(-40),
+    marginBottom: verticleScale(20),
+  },
+  centeredText: {
+    color: 'white',
+    alignSelf: 'center',
+    padding: moderateScale(6),
+    fontSize: moderateScale(15),
+  },
+  datePressable: {
+    borderWidth: 1,
+    borderColor: Colors.light,
+    width: '40%',
+  },
+  getPressable: {
+    width: '20%',
+    backgroundColor: Colors.cornFlowerBlue,
+    borderRadius: moderateScale(8),
   },
 });
 
