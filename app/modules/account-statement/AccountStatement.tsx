@@ -1,14 +1,14 @@
-import { View, Text } from 'react-native';
 import React from 'react';
-import { FilterWindow } from '../../components';
+import { Text, View } from 'react-native';
+import { FilterWindow, ReceiptModal } from '../../components';
+import { ScreenStrings } from '../../constants';
 import styles from './AccountStatementStyles';
 import useAccountStatement from './useAccountStatement';
-import { ReceiptModal } from '../../components';
-import { ScreenStrings } from '../../constants';
 
 const AccountStatement = () => {
   const { toggleReceiptVisibility, setReceiptVisible, isReceiptVisible } =
     useAccountStatement();
+
   return (
     <View style={styles.container}>
       <View style={styles.cardContainer}>

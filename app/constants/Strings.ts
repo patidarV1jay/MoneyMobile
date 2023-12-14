@@ -73,8 +73,11 @@ export const ScreenStrings = {
   message: 'Message',
   close: 'Close',
   submit: 'Submit',
-  chooseReason: "Choose Reason",
-  view: "View"
+  chooseReason: 'Choose Reason',
+  view: 'View',
+  get: 'Get',
+  from: 'From',
+  to: 'To',
 };
 
 export const ValidationStrings = {
@@ -107,5 +110,5 @@ export const Placeholder = {
   upiId: 'Enter UPI ID',
   amount: 'Amount',
   remark: 'Remark',
-  enterMessage:"Enter Message Here...."
+  enterMessage: 'Enter Message Here....',
 };
