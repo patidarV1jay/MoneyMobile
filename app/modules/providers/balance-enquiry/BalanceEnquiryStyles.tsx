@@ -52,12 +52,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   contentContainer: {
-    backgroundColor: 'white',
+    backgroundColor: Colors.dark,
   },
   itemContainer: {
-    padding: 6,
-    margin: 6,
-    backgroundColor: '#eee',
+    padding: moderateScale(8),
+    marginHorizontal: horizontalScale(4),
+    backgroundColor: Colors.headerColor,
+    borderRadius: moderateScale(5),
+    marginTop: verticleScale(20),
   },
   deviceText: {
     marginTop: verticleScale(20),
@@ -74,6 +76,52 @@ const styles = StyleSheet.create({
     letterSpacing: horizontalScale(1),
     fontWeight: '500',
   },
+  dropdown: {
+    height: verticleScale(95),
+    borderColor: Colors.dark,
+    borderWidth: 2,
+    borderRadius: moderateScale(5),
+    paddingHorizontal: 8,
+  },
+  label: {
+    position: 'absolute',
+    backgroundColor: Colors.gray,
+    left: 22,
+    top: 8,
+    zIndex: 999,
+    paddingHorizontal: 8,
+    fontSize: 14,
+  },
+  placeholderStyle: {
+    fontSize: moderateScale(15),
+    color: Colors.dark,
+  },
+  selectedTextStyle: {
+    fontSize: moderateScale(15),
+    fontWeight: 'bold',
+    color: Colors.light,
+  },
+  iconStyle: {
+    width: 20,
+    height: 20,
+  },
+  text: {
+    color: Colors.dark,
+    fontWeight: '500',
+    fontSize: moderateScale(15),
+  },
+  listContainerStyle: {
+    backgroundColor: Colors.dark,
+    borderRadius: moderateScale(5),
+  },
+  listItem: {
+    color: Colors.light,
+    fontWeight: '500',
+    fontSize: moderateScale(15),
+  },
+  error:{
+    color: Colors.red
+  }
 });
 
 export default styles;

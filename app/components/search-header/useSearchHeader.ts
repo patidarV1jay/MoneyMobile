@@ -19,10 +19,12 @@ const useSearchHeader = () => {
     name: string,
   ) => {
     const currentDate = selectedDate;
-    name === 'from' && setShowDate(true);
-    name === 'to' && setShoTowDate(true);
-    currentDate && name === 'from' && setDate(currentDate);
-    currentDate && name === 'to' && setToDate(currentDate);
+    if (event.type === 'set') {
+      name === 'from' && setShowDate(true);
+      name === 'to' && setShoTowDate(true);
+      currentDate && name === 'from' && setDate(currentDate);
+      currentDate && name === 'to' && setToDate(currentDate);
+    }
   };
 
   const showMode = (name: string) => {
@@ -31,6 +33,7 @@ const useSearchHeader = () => {
       onChange: (a, b) => onChange(a, b, name),
       onTouchCancel: () => console.log('cancel'),
       is24Hour: true,
+      maximumDate: new Date(),
     });
   };
   return {

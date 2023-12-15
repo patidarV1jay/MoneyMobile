@@ -78,6 +78,13 @@ export const ScreenStrings = {
   get: 'Get',
   from: 'From',
   to: 'To',
+  utr: 'UTR/Bank Reference',
+  amounts: 'Amount',
+  selectDepositedBank: 'Select Deposited Bank',
+  selectPaymentMethod: 'Select Payment Method',
+  paymentDepositdate: 'Payment Deposit Date',
+  dateFormat: 'YYYY-MM-DD',
+  proceedToPay: 'Proceed To Pay',
 };
 
 export const ValidationStrings = {

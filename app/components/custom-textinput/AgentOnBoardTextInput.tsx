@@ -13,15 +13,9 @@ const AgentOnBoardTextInput = ({
   keyboardType,
   inputRef,
   onSubmitEditing,
-  returnKeyType
+  returnKeyType,
 }: AgentOnBoardProps) => {
-  const {
-    handleBlur,
-    handleChange,
-    values,
-    touched,
-    errors,
-  } = formik;
+  const { handleBlur, handleChange, values, touched, errors } = formik;
 
   return (
     <>

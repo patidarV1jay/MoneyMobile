@@ -1,11 +1,13 @@
 import BottomSheet, { BottomSheetFlatList } from '@gorhom/bottom-sheet';
 import React, { useCallback } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
+import { Dropdown } from 'react-native-element-dropdown';
 import { AgentOnBoardTextInput } from '../../../components';
+import { Device, Placeholder, ScreenStrings } from '../../../constants';
+import { useInputRef } from '../../../hooks';
+import { Colors, verticleScale } from '../../../theme';
 import styles from './BalanceEnquiryStyles';
 import useBalanceEnquiry from './useBalanceEnquiry';
-import { useInputRef } from '../../../hooks';
-import { Placeholder, ScreenStrings } from '../../../constants';
 
 interface Item {
   item: string;
@@ -22,6 +24,13 @@ const BalanceEnquiry = () => {
     handleSheetChange,
     selectCityButton,
     isCity,
+    value,
+    setValue,
+    deviceError,
+    setDeviceError,
+    bankError,
+    setbankError,
+    submit,
   } = useBalanceEnquiry();
   const { handleSubmit } = formik;
   const { aadhaarNumberRef, focusNextTextInput } = useInputRef();
@@ -74,15 +83,35 @@ const BalanceEnquiry = () => {
           <View style={styles.dropDownView} onTouchEnd={toggleVisibility}>
             <Text style={styles.selectBankText}>{isCity}</Text>
           </View>
+          {bankError && <Text style={styles.error}>{bankError}</Text>}
           <Text style={styles.deviceText}>{ScreenStrings.device}</Text>
-          <View style={styles.dropDownView} onTouchEnd={toggleVisibility}>
-            <Text style={styles.selectBankText}>{ScreenStrings.selectDevice}</Text>
-          </View>
-          <TouchableOpacity style={styles.scanNowButton}>
+          <Dropdown
+            style={[styles.dropdown]}
+            placeholderStyle={styles.placeholderStyle}
+            selectedTextStyle={styles.selectedTextStyle}
+            iconStyle={styles.iconStyle}
+            itemTextStyle={styles.listItem}
+            containerStyle={styles.listContainerStyle}
+            data={Device}
+            search={false}
+            maxHeight={verticleScale(810)}
+            activeColor={Colors.headerColor}
+            labelField="label"
+            valueField="value"
+            placeholder="Select item"
+            value={value}
+            onChange={item => {
+              setValue(item.value);
+              setDeviceError('');
+            }}
+          />
+          {deviceError && <Text style={styles.error}>{deviceError}</Text>}
+          <TouchableOpacity
+            style={styles.scanNowButton}
+            onPress={() => handleSubmit()}>
             <Text style={styles.scanNowText}>{ScreenStrings.scanNow}</Text>
           </TouchableOpacity>
         </View>
-
         {isBankVisible && (
           <BottomSheet
             ref={sheetRef}

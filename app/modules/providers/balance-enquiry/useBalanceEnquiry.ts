@@ -8,8 +8,11 @@ import { TextInput } from 'react-native';
 const useBalanceEnquiry = () => {
   const [isBankVisible, setIsBankVisible] = useState<boolean>(false);
   const [isCity, setIsCity] = useState<string>('Select Bank');
+  const [value, setValue] = useState<string>('');
   const sheetRef = useRef<BottomSheet>(null);
   const aadhaarNumberRef = useRef<TextInput | null>(null);
+  const [deviceError, setDeviceError] = useState<string>();
+  const [bankError, setbankError] = useState<string>();
 
   const data = useMemo(
     () =>
@@ -32,6 +35,7 @@ const useBalanceEnquiry = () => {
   const selectCityButton = (item: string) => {
     setIsCity(item);
     handleClosePress();
+    setbankError('')
   };
 
   const toggleVisibility = () => {
@@ -48,8 +52,29 @@ const useBalanceEnquiry = () => {
       phone: '',
       aadhaar: '',
     },
-    onSubmit: () => {},
+    onSubmit: () => {
+      submit()
+    },
   });
+
+  const validate = () => {
+    if (isCity === 'Select Bank') {
+      setbankError('Please select a bank');
+      return false;
+    }
+    if (!value) {
+      setDeviceError('Please select a device.');
+      setbankError('');
+      return false;
+    }
+    return true;
+  };
+
+  const submit = () => {
+    if (validate()) {
+      console.log('submit');
+    }
+  };
 
   return {
     formik,
@@ -64,6 +89,13 @@ const useBalanceEnquiry = () => {
     selectCityButton,
     isCity,
     aadhaarNumberRef,
+    value,
+    setValue,
+    bankError,
+    setbankError,
+    deviceError,
+    setDeviceError,
+    submit,
   };
 };
 
