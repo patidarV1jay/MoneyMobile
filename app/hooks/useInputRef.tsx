@@ -20,6 +20,7 @@ const useInputRef = () => {
   const refUpiId = useRef<TextInput | null>(null);
   const refAmount = useRef<TextInput | null>(null);
   const refRemark = useRef<TextInput | null>(null);
+  const refUtr = useRef<TextInput | null>(null);
 
   const focusNextTextInput = (nextRef: MutableRefObject<TextInput | null>) => {
     if (nextRef && nextRef.current) {
@@ -47,6 +48,7 @@ const useInputRef = () => {
     refUpiId,
     refRemark,
     refAmount,
+    refUtr
   };
 };
 

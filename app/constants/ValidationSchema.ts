@@ -89,3 +89,13 @@ export const UpiCollectionSchema = Yup.object().shape({
     .positive(ValidationStrings.negativeAmount),
   remark: Yup.string().required(ValidationStrings.required),
 });
+
+export const FundRequestSchema =Yup.object().shape({
+  amount: Yup.number()
+  .typeError(ValidationStrings.invalidAmount)
+  .required(ValidationStrings.required)
+  .positive(ValidationStrings.negativeAmount),
+  utr: Yup.string()
+  .required(ValidationStrings.required)
+  
+})
