@@ -27,10 +27,13 @@ const useAEPS = () => {
         navigation.navigate(Routes.BalanceEnquiry);
         break;
       case 'Cash Withdrawal':
+        navigation.navigate(Routes.CashWithdrawal);
         break;
       case 'Aadhaar Pay':
+        navigation.navigate(Routes.AadhaarPay);
         break;
       case 'Mini Statement':
+        navigation.navigate(Routes.MiniStatement);
         break;
     }
   };

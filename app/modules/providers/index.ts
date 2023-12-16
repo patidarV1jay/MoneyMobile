@@ -10,3 +10,6 @@ export * from './agent-on-board';
 export * from './aeps-ledger-report';
 export * from './aeps-report';
 export * from './balance-enquiry';
+export * from './cash-withdrawal';
+export * from './aadhaar-pay';
+export * from './mini-statement';

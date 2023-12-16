@@ -1,6 +1,13 @@
 import React from 'react';
-import { KeyboardAvoidingView, ScrollView, View } from 'react-native';
+import {
+  KeyboardAvoidingView,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import { AgentOnBoardTextInput } from '../../../components';
+import { ScreenStrings } from '../../../constants';
 import { useInputRef } from '../../../hooks';
 import styles from './AgentOnBoardStyles';
 import PhotoComponent from './PhotoComponent';
@@ -162,6 +169,9 @@ const AgentOnBoard = () => {
             <PhotoComponent serialNumber={1} photoText="PAN Photo" />
             <PhotoComponent serialNumber={2} photoText="Cancel Check" />
             <PhotoComponent serialNumber={3} photoText="Merchant Proof Photo" />
+            <TouchableOpacity style={styles.submitButton}>
+              <Text style={styles.submitText}>{ScreenStrings.submit}</Text>
+            </TouchableOpacity>
           </ScrollView>
         </View>
       </View>
