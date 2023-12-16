@@ -25,7 +25,7 @@ export const AEPSIcons = [
     source: Images.withdrawal,
   },
   {
-    name: 'Aadhar Pay',
+    name: 'Aadhaar Pay',
     source: Images.withdrawal,
   },
   {

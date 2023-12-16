@@ -4,10 +4,13 @@ import { AepsReportHeader, SearchHeader } from '../components';
 import { Routes } from '../constants';
 import {
   AEPS,
+  AadhaarPay,
   AepsLedgerReport,
   AepsReport,
   AgentOnBoard,
   BalanceEnquiry,
+  CashWithdrawal,
+  MiniStatement,
 } from '../modules';
 
 const StackAEPS = createNativeStackNavigator();
@@ -64,6 +67,48 @@ const AEPSStack = () => {
           header: () => (
             <SearchHeader
               name={Routes.BalanceEnquiry}
+              Icon={ArrowLeft}
+              Flag={false}
+              IsDate={false}
+            />
+          ),
+        }}
+      />
+      <StackAEPS.Screen
+        name={Routes.CashWithdrawal}
+        component={CashWithdrawal}
+        options={{
+          header: () => (
+            <SearchHeader
+              name={Routes.CashWithdrawal}
+              Icon={ArrowLeft}
+              Flag={false}
+              IsDate={false}
+            />
+          ),
+        }}
+      />
+      <StackAEPS.Screen
+        name={Routes.AadhaarPay}
+        component={AadhaarPay}
+        options={{
+          header: () => (
+            <SearchHeader
+              name={Routes.AadhaarPay}
+              Icon={ArrowLeft}
+              Flag={false}
+              IsDate={false}
+            />
+          ),
+        }}
+      />
+      <StackAEPS.Screen
+        name={Routes.MiniStatement}
+        component={MiniStatement}
+        options={{
+          header: () => (
+            <SearchHeader
+              name={Routes.MiniStatement}
               Icon={ArrowLeft}
               Flag={false}
               IsDate={false}

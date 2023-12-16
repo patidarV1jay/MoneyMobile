@@ -47,10 +47,10 @@ const styles = StyleSheet.create({
     paddingVertical: verticleScale(20),
     borderRadius: moderateScale(10),
     marginBottom: verticleScale(20),
-    height: verticleScale(280)
+    height: verticleScale(280),
   },
   userImage: {
-    height: verticleScale(160),
+    height: verticleScale(180),
     width: horizontalScale(80),
     marginLeft: horizontalScale(10),
   },
@@ -58,32 +58,32 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  numberText:{
+  numberText: {
     fontSize: moderateScale(22),
-    marginRight: horizontalScale(35)
+    marginRight: horizontalScale(35),
   },
-  photoText:{
+  photoText: {
     fontSize: moderateScale(16),
     fontWeight: '500',
-    marginRight: horizontalScale(20)
+    marginRight: horizontalScale(20),
   },
-  submitButton:{
+  submitButton: {
     backgroundColor: Colors.dark,
     marginBottom: verticleScale(20),
     padding: moderateScale(10),
-    borderRadius: moderateScale(10)
+    borderRadius: moderateScale(10),
   },
-  submitText:{
+  submitText: {
     color: Colors.light,
-    alignSelf:'center',
+    alignSelf: 'center',
     fontWeight: '500',
     fontSize: moderateScale(18),
-    letterSpacing: horizontalScale(2)
+    letterSpacing: horizontalScale(2),
   },
-  modalContainer:{
-    justifyContent:'center',
-    alignItems:'center'
-  }
+  modalContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
 
 export default styles;
