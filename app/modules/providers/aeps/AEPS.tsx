@@ -2,6 +2,7 @@ import React from 'react';
 import {
   FlatList,
   Image,
+  Pressable,
   Text,
   TouchableWithoutFeedback,
   View,
@@ -18,6 +19,8 @@ const AEPS = () => {
     navigateAepsLedgerReport,
     navigateAepsReport,
     navigateBankOperations,
+    navigateWallet,
+    navigateBank,
   } = useAEPS();
   return (
     <View style={styles.container}>
@@ -43,14 +46,14 @@ const AEPS = () => {
       </View>
       <Text style={styles.payoutText}>Payout</Text>
       <View style={styles.payoutView}>
-        <View>
+        <Pressable onPress={navigateWallet}>
           <Image source={Images.wallet} style={styles.itemImage} />
           <Text style={styles.itemNameText}>Move to Wallet</Text>
-        </View>
-        <View>
+        </Pressable>
+        <Pressable onPress={navigateBank}>
           <Image source={Images.bank} style={styles.itemImage} />
           <Text style={styles.itemNameText}>Move to Bank</Text>
-        </View>
+        </Pressable>
       </View>
       <Section title="AEPS Ledger Report" onPress={navigateAepsLedgerReport} />
       <Section title="AEPS Report" onPress={navigateAepsReport} />

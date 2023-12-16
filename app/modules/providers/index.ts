@@ -13,3 +13,6 @@ export * from './balance-enquiry';
 export * from './cash-withdrawal';
 export * from './aadhaar-pay';
 export * from './mini-statement';
+export * from './move-to-wallet';
+export * from './move-to-bank';
+export * from './add-beneficiary'

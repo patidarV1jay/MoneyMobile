@@ -90,12 +90,27 @@ export const UpiCollectionSchema = Yup.object().shape({
   remark: Yup.string().required(ValidationStrings.required),
 });
 
-export const FundRequestSchema =Yup.object().shape({
+export const FundRequestSchema = Yup.object().shape({
   amount: Yup.number()
-  .typeError(ValidationStrings.invalidAmount)
-  .required(ValidationStrings.required)
-  .positive(ValidationStrings.negativeAmount),
-  utr: Yup.string()
-  .required(ValidationStrings.required)
-  
-})
+    .typeError(ValidationStrings.invalidAmount)
+    .required(ValidationStrings.required)
+    .positive(ValidationStrings.negativeAmount),
+  utr: Yup.string().required(ValidationStrings.required),
+});
+
+export const MoveToWalletSchema = Yup.object().shape({
+  password: Yup.string()
+    .required(ValidationStrings.required)
+    .min(8, ValidationStrings.min),
+  amount: Yup.number()
+    .typeError(ValidationStrings.invalidAmount)
+    .required(ValidationStrings.required)
+    .positive(ValidationStrings.negativeAmount),
+  remark: Yup.string().required(ValidationStrings.required),
+});
+
+export const BeneficiarySchema = Yup.object().shape({
+  ifsc: Yup.string().required(ValidationStrings.required),
+  accountNumber: Yup.string().required(ValidationStrings.required),
+  beneficiaryName: Yup.string().required(ValidationStrings.required),
+});
