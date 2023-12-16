@@ -85,6 +85,12 @@ export const ScreenStrings = {
   paymentDepositdate: 'Payment Deposit Date',
   dateFormat: 'YYYY-MM-DD',
   proceedToPay: 'Proceed To Pay',
+  remarks: 'Remark',
+  search: 'Search',
+  selectBank: 'Select Bank',
+  ifsc: 'IFSC',
+  accountNumber: 'Account Number',
+  beneficiaryName: 'Beneficiary Name',
 };
 
 export const ValidationStrings = {
@@ -118,4 +124,8 @@ export const Placeholder = {
   amount: 'Amount',
   remark: 'Remark',
   enterMessage: 'Enter Message Here....',
+  loginPassword: 'Login Password',
+  ifsc: 'Enter IFSC',
+  accountNumber: 'Enter Account Number',
+  beneficiaryName: 'Beneficiary Name',
 };

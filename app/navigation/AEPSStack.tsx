@@ -5,12 +5,15 @@ import { Routes } from '../constants';
 import {
   AEPS,
   AadhaarPay,
+  AddBenefiacary,
   AepsLedgerReport,
   AepsReport,
   AgentOnBoard,
   BalanceEnquiry,
   CashWithdrawal,
   MiniStatement,
+  MoveToBank,
+  MoveToWallet,
 } from '../modules';
 
 const StackAEPS = createNativeStackNavigator();
@@ -109,6 +112,48 @@ const AEPSStack = () => {
           header: () => (
             <SearchHeader
               name={Routes.MiniStatement}
+              Icon={ArrowLeft}
+              Flag={false}
+              IsDate={false}
+            />
+          ),
+        }}
+      />
+      <StackAEPS.Screen
+        name={Routes.MoveToWallet}
+        component={MoveToWallet}
+        options={{
+          header: () => (
+            <SearchHeader
+              name={Routes.MoveToWallet}
+              Icon={ArrowLeft}
+              Flag={false}
+              IsDate={false}
+            />
+          ),
+        }}
+      />
+      <StackAEPS.Screen
+        name={Routes.MoveToBank}
+        component={MoveToBank}
+        options={{
+          header: () => (
+            <SearchHeader
+              name={Routes.MoveToBank}
+              Icon={ArrowLeft}
+              Flag={false}
+              IsDate={false}
+            />
+          ),
+        }}
+      />
+      <StackAEPS.Screen
+        name={Routes.AddBeneficiary}
+        component={AddBenefiacary}
+        options={{
+          header: () => (
+            <SearchHeader
+              name={Routes.AddBeneficiary}
               Icon={ArrowLeft}
               Flag={false}
               IsDate={false}

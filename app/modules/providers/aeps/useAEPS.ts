@@ -37,11 +37,19 @@ const useAEPS = () => {
         break;
     }
   };
+  const navigateWallet = () => {
+    navigation.navigate(Routes.MoveToWallet);
+  };
+  const navigateBank = () =>{
+    navigation.navigate(Routes.MoveToBank)
+  }
   return {
     navigateAgentOnBoard,
     navigateAepsLedgerReport,
     navigateAepsReport,
     navigateBankOperations,
+    navigateWallet,
+    navigateBank
   };
 };
 

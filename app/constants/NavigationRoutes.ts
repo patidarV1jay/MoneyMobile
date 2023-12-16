@@ -57,4 +57,7 @@ export enum Routes {
   Kyc = 'KYC',
   PersonalInformation = 'Personal Information',
   AddressDetails = 'Address Details',
+  MoveToWallet = 'Move To Wallet',
+  MoveToBank = 'Move To Bank',
+  AddBeneficiary = 'Add Beneficiary',
 }

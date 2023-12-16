@@ -35,7 +35,7 @@ const useBalanceEnquiry = () => {
   const selectCityButton = (item: string) => {
     setIsCity(item);
     handleClosePress();
-    setbankError('')
+    setbankError('');
   };
 
   const toggleVisibility = () => {
@@ -53,7 +53,7 @@ const useBalanceEnquiry = () => {
       aadhaar: '',
     },
     onSubmit: () => {
-      submit()
+      submit();
     },
   });
 
