@@ -1,8 +1,7 @@
 import BottomSheet from '@gorhom/bottom-sheet';
-import { isValidElement, useCallback, useRef, useState } from 'react';
-import { useMemo } from 'react';
-import { Keyboard } from 'react-native';
 import { useFormik } from 'formik';
+import { useCallback, useMemo, useRef, useState } from 'react';
+import { Keyboard } from 'react-native';
 import { BeneficiarySchema } from '../../../constants';
 
 const useAddBeneficiary = () => {

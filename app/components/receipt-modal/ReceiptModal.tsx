@@ -1,25 +1,39 @@
+import { CaretDown, CaretUp } from 'phosphor-react-native';
 import React, { Dispatch, SetStateAction } from 'react';
-import { Image, Modal, Text, TouchableOpacity, View } from 'react-native';
+import {
+  Image,
+  Modal,
+  Text,
+  TouchableOpacity,
+  View
+} from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
 import { Images } from '../../assets';
 import { Placeholder, ScreenStrings } from '../../constants';
+import { Colors, moderateScale } from '../../theme';
 import ReceiptCard from './ReceiptCard';
 import styles from './ReceiptModalStyles';
 import useReceiptModal from './useReceiptModal';
-import { TextInput } from 'react-native-gesture-handler';
-import { Colors } from '../../theme';
 
 interface Props {
   isReceiptVisible: boolean;
   toggleReceiptVisibility: () => void;
   setReceiptVisible: Dispatch<SetStateAction<boolean>>;
 }
-
 const ReceiptModal = ({
   isReceiptVisible,
   toggleReceiptVisibility,
   setReceiptVisible,
 }: Props) => {
-  const { toggleDispute, isDisputeVisisble } = useReceiptModal();
+  const {
+    toggleDispute,
+    isDisputeVisisble,
+    toggleReason,
+    isReason,
+    selectedReason,
+    setReason,
+    submit,
+  } = useReceiptModal();
 
   const renderCard = (title: string, amount: string) => (
     <View>
@@ -107,8 +121,41 @@ const ReceiptModal = ({
             <View style={styles.inputView}>
               <Text style={styles.text}>294286</Text>
             </View>
-            <View style={styles.reasonView}>
-              <Text>{ScreenStrings.chooseReason}</Text>
+            <View>
+              <View style={styles.reasonView} onTouchEnd={toggleReason}>
+                <Text style={[styles.text,styles.textSize]}>
+                  {selectedReason}
+                </Text>
+                {!isReason ? (
+                  <CaretDown
+                    size={moderateScale(20)}
+                    weight="bold"
+                    color={Colors.lightGray}
+                  />
+                ) : (
+                  <CaretUp
+                    size={moderateScale(20)}
+                    weight="bold"
+                    color={Colors.lightGray}
+                  />
+                )}
+              </View>
+              {isReason && (
+                <View style={styles.dropDownView}>
+                  <Text
+                    style={styles.reasonText}
+                    onPress={() => setReason(ScreenStrings.amountNotCredited)}>
+                    {ScreenStrings.amountNotCredited}
+                  </Text>
+                  <Text
+                    style={styles.reasonText}
+                    onPress={() =>
+                      setReason(ScreenStrings.wrongBalanceRecharge)
+                    }>
+                    {ScreenStrings.wrongBalanceRecharge}
+                  </Text>
+                </View>
+              )}
             </View>
             <Text style={[styles.headerText, styles.messageText]}>
               {ScreenStrings.message}
@@ -116,10 +163,13 @@ const ReceiptModal = ({
             <TextInput
               placeholder={Placeholder.enterMessage}
               style={styles.enterMessageView}
-              placeholderTextColor={Colors.dark}
+              placeholderTextColor={Colors.opaque}
+              autoCapitalize="none"
             />
             <View style={styles.buttonView}>
-              <TouchableOpacity style={styles.commonStylesButton}>
+              <TouchableOpacity
+                style={styles.commonStylesButton}
+                onPress={submit}>
                 <Text style={styles.buttonText}>{ScreenStrings.submit}</Text>
               </TouchableOpacity>
               <TouchableOpacity

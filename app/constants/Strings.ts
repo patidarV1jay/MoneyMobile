@@ -91,6 +91,15 @@ export const ScreenStrings = {
   ifsc: 'IFSC',
   accountNumber: 'Account Number',
   beneficiaryName: 'Beneficiary Name',
+  amountNotCredited: 'Amount Not Credited',
+  wrongBalanceRecharge: 'Wrong Balance Recharge',
+  reasonNotSelected: 'Please, select a reason.',
+  approved: 'Approved',
+  rejected: 'Rejected',
+  enterPassword: 'Please Enter Password',
+  psa: 'PSA',
+  noUserId: 'Please Enter User ID',
+  noQuantity: 'Please Select a Quantity',
 };
 
 export const ValidationStrings = {

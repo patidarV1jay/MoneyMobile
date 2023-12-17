@@ -20,6 +20,9 @@ const PanCard = () => {
     count,
     setCount,
     setQuantity,
+    submit,
+    setPsaText,
+    psaText,
   } = usePanCard();
 
   return (
@@ -29,6 +32,8 @@ const PanCard = () => {
           <Text style={styles.userIDText}>{ScreenStrings.utitslUserId}</Text>
           <TextInput
             style={styles.textinputStyle}
+            value={psaText}
+            onChangeText={value => setPsaText(value)}
             onTouchEnd={() => setDropDownVisible(false)}
           />
           <View style={styles.dropDownView}>
@@ -44,17 +49,20 @@ const PanCard = () => {
                 </Text>
               )}
               {dropDownVisible ? (
-                <CaretUp size={22} weight="fill" />
+                <CaretUp size={moderateScale(22)} weight="fill" />
               ) : (
-                <CaretDown size={moderateScale(22)} weight="fill" />
+                <CaretDown
+                  size={moderateScale(moderateScale(22))}
+                  weight="fill"
+                />
               )}
             </TouchableWithoutFeedback>
 
             <TouchableOpacity style={styles.psaButton}>
-              <Text style={styles.psaText}>PSA</Text>
+              <Text style={styles.psaText}>{ScreenStrings.psa}</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.submitButton}>
-              <Text style={styles.submitText}>Submit</Text>
+            <TouchableOpacity style={styles.submitButton} onPress={submit}>
+              <Text style={styles.submitText}>{ScreenStrings.submit}</Text>
             </TouchableOpacity>
             {dropDownVisible && (
               <View style={styles.viewAboveFlatlist}>
