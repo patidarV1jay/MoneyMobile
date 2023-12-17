@@ -76,6 +76,9 @@ const styles = StyleSheet.create({
   listContainerStyle: {
     backgroundColor: Colors.dark,
     borderRadius: moderateScale(5),
+    paddingHorizontal: horizontalScale(10),
+    paddingVertical: verticleScale(10),
+
   },
   listItem: {
     color: Colors.light,

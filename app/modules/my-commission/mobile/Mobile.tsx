@@ -19,7 +19,9 @@ interface Item {
 
 const Mobile = () => {
   const { toggleCommissionVisibility, data } = useMyMobile();
-  const renderHeader = (label: string) => (
+  const renderHeader: (label: string) => React.JSX.Element = (
+    label: string,
+  ) => (
     <View style={styles.columnHeader}>
       <Text style={styles.columnHeaderText}>{label}</Text>
     </View>

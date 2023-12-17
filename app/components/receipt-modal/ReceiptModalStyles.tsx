@@ -103,16 +103,18 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(18),
     color: Colors.dark,
     fontWeight: '600',
-    marginBottom: verticleScale(15)
+    marginBottom: verticleScale(15),
   },
   inputView: {
     borderWidth: 1,
     padding: moderateScale(8),
-    marginBottom: verticleScale(20)
+    marginBottom: verticleScale(20),
+    borderRadius: moderateScale(5),
   },
   text: {
     fontSize: moderateScale(16),
-    fontWeight: '500'
+    fontWeight: '500',
+    color: Colors.opaque
   },
   headerText: {
     fontSize: moderateScale(14),
@@ -121,23 +123,47 @@ const styles = StyleSheet.create({
   disputeContainer: {
     padding: moderateScale(10),
     paddingHorizontal: horizontalScale(15),
-    height: verticleScale(860)
+    height: verticleScale(860),
   },
-  reasonView:{
-    borderWidth:1,
-    padding: moderateScale(8),
+  reasonView: {
+    borderWidth: 1,
+    padding: moderateScale(9),
     marginVertical: verticleScale(6),
-    marginBottom: verticleScale(10)
+    marginBottom: verticleScale(10),
+    borderRadius: moderateScale(5),
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
-  enterMessageView:{
-    borderWidth:1,
+  enterMessageView: {
+    borderWidth: 1,
     padding: moderateScale(5),
-    color:Colors.dark,
-    fontWeight:'500'
+    color: Colors.light,
+    fontWeight: '500',
+    borderRadius: moderateScale(5),
+    fontSize: moderateScale(15),
   },
-  messageText:{
-    fontWeight:'400',
-    color: Colors.dark
+  messageText: {
+    fontWeight: '400',
+  },
+  dropDownView: {
+    backgroundColor: Colors.lightGray,
+    position: 'absolute',
+    top: verticleScale(94),
+    zIndex: 1,
+    borderRadius: moderateScale(5),
+    padding: moderateScale(10),
+  },
+  reasonText: {
+    color: 'white',
+    padding: moderateScale(5),
+    fontWeight: '500',
+    fontSize: moderateScale(14),
+    paddingVertical: moderateScale(12)
+  },
+  textSize: {
+    fontSize: moderateScale(15),
+    color: Colors.light,
   },
 });
 

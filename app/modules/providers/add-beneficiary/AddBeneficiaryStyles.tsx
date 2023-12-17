@@ -21,10 +21,11 @@ const styles = StyleSheet.create({
   },
   bankText:{
     fontSize: moderateScale(15),
-    marginBottom: verticleScale(5)
+    marginBottom: verticleScale(5),
   },
   selectedBank:{
-     fontSize: moderateScale(15)
+     fontSize: moderateScale(15),
+     color: Colors.light
   },
   itemContainer: {
     padding: moderateScale(8),

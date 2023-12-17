@@ -99,6 +99,11 @@ const styles = StyleSheet.create({
     borderRadius: moderateScale(5),
     borderColor: Colors.dark,
     marginBottom: verticleScale(10),
+    paddingLeft: horizontalScale(5),
+    fontWeight: '500',
+    color: Colors.dark,
+    fontSize: moderateScale(15),
+    height: verticleScale(95),
   },
   input: {
     height: 40,
@@ -111,6 +116,34 @@ const styles = StyleSheet.create({
   error: {
     color: 'red',
     marginTop: 10,
+  },
+  status: {
+    color: Colors.light,
+    fontWeight: '500',
+    fontSize: moderateScale(15),
+    padding: moderateScale(8),
+  },
+  dropdown: {
+    backgroundColor: Colors.lightGray,
+    position: 'absolute',
+    top: verticleScale(92),
+    padding: moderateScale(10),
+    width: '50%',
+    borderRadius: moderateScale(5),
+  },
+  centeredText: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: horizontalScale(5),
+  },
+  selectedStatus: {
+    fontWeight: '500',
+    color: Colors.dark,
+    fontSize: moderateScale(15),
+  },
+  zIndex: {
+    zIndex: 1,
   },
 });
 
