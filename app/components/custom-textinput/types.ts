@@ -23,6 +23,9 @@ export interface Props {
   Icon: ComponentType<IconComponentProps>;
   formik: FormikProps;
   secureTextEntry: boolean;
+  onSubmitEditing?: () => void;
+  inputRef?: MutableRefObject<TextInput | null>;
+  returnKeyType?: ReturnKeyTypeOptions;
 }
 
 export interface AgentOnBoardProps {

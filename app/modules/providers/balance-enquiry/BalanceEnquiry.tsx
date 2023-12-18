@@ -1,6 +1,6 @@
 import BottomSheet, { BottomSheetFlatList } from '@gorhom/bottom-sheet';
 import React, { useCallback } from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Keyboard, Text, TouchableOpacity, View } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
 import { AgentOnBoardTextInput } from '../../../components';
 import { Device, Placeholder, ScreenStrings } from '../../../constants';
@@ -70,13 +70,14 @@ const BalanceEnquiry = () => {
               placeholder={Placeholder.aadhaarNumber}
               style={styles.textInputStyles}
               formik={formik}
-              name="aadhar"
+              name="aadhaar"
               styleView={styles.textInputView}
               styleErrorView={styles.errorView}
               styleErrorText={styles.errorText}
               secureTextEntry={false}
               keyboardType="number-pad"
               returnKeyType="done"
+              onSubmitEditing={() => Keyboard.dismiss()}
             />
           </View>
           <Text>Bank</Text>

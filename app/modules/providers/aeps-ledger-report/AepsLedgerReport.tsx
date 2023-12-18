@@ -8,7 +8,8 @@ const AepsLedgerReport = () => {
   useEffect(() => {
     Orientation.lockToLandscape();
     return () => Orientation.lockToPortrait();
-  });
+  }, []);
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.sheetHeader}>

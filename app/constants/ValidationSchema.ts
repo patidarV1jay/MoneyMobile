@@ -51,9 +51,13 @@ export const BalanceEnquirySchema = Yup.object().shape({
   phone: Yup.string()
     .matches(phoneRegExp, ValidationStrings.phoneInvalid)
     .required(ValidationStrings.required),
-  aadhar: Yup.string()
+  aadhaar: Yup.string()
     .matches(aadhaarRegExp, ValidationStrings.aadhaarInvalid)
     .required(ValidationStrings.required),
+  amount: Yup.number()
+    .typeError(ValidationStrings.invalidAmount)
+    .required(ValidationStrings.required)
+    .min(1, ValidationStrings.amountGreaterThanZero),
 });
 
 export const UpdatePasswordSchema = Yup.object().shape({
