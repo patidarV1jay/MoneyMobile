@@ -99,6 +99,12 @@ const styles = StyleSheet.create({
   customTextInputView: {
     marginBottom: verticleScale(40),
   },
+  secureEntry: {
+    alignSelf: 'flex-end',
+    position: 'absolute',
+    top: verticleScale(20),
+    right: horizontalScale(20),
+  },
 });
 
 export default styles;

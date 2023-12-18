@@ -5,7 +5,7 @@ import { Keyboard } from 'react-native';
 import { BalanceEnquirySchema } from '../../../constants';
 import { TextInput } from 'react-native';
 
-const useCashWithdrawal = () => {
+const useMiniStatement = () => {
   const [isBankVisible, setIsBankVisible] = useState<boolean>(false);
   const [isCity, setIsCity] = useState<string>('Select Bank');
   const [value, setValue] = useState<string>('');
@@ -51,7 +51,6 @@ const useCashWithdrawal = () => {
     initialValues: {
       phone: '',
       aadhaar: '',
-      amount: '',
     },
     onSubmit: () => {
       submit();
@@ -100,4 +99,4 @@ const useCashWithdrawal = () => {
   };
 };
 
-export default useCashWithdrawal;
+export default useMiniStatement;

@@ -112,6 +112,7 @@ export const ValidationStrings = {
   phoneInvalid: 'Phone Number is not valid',
   negativeAmount: "Amount can't be negative.",
   invalidAmount: 'Please enter a valid amount.',
+  amountGreaterThanZero: 'Amount should be greater than 0.',
 };
 
 export const Placeholder = {

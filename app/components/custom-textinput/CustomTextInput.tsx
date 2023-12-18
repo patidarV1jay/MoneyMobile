@@ -12,16 +12,18 @@ const CustomTextInput = ({
   styleErrorText,
   styleErrorView,
   secureTextEntry,
+  inputRef,
+  onSubmitEditing,
+  returnKeyType
 }: Props) => {
-  const { handleBlur, handleChange, values, touched, errors } =
-    formik;
+  const { handleBlur, handleChange, values, touched, errors } = formik;
 
   return (
-    
     <>
       <View style={styleView}>
         <Icon size={moderateScale(25)} color={Colors.light} />
         <TextInput
+          ref={inputRef}
           placeholder={placeholder}
           placeholderTextColor={Colors.offShade}
           style={style}
@@ -30,6 +32,8 @@ const CustomTextInput = ({
           onBlur={handleBlur(name)}
           autoCapitalize="none"
           secureTextEntry={secureTextEntry}
+          onSubmitEditing={onSubmitEditing}
+          returnKeyType={returnKeyType}
         />
       </View>
       <View style={styleErrorView}>

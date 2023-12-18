@@ -1,4 +1,4 @@
-import { At, Password } from 'phosphor-react-native';
+import { At, Eye, EyeSlash, Password } from 'phosphor-react-native';
 import React, { FC } from 'react';
 import {
   Image,
@@ -11,16 +11,18 @@ import {
 import { Images } from '../../../assets';
 import { CustomTextInput } from '../../../components';
 import { Routes, ScreenStrings } from '../../../constants';
+import { useInputRef } from '../../../hooks';
+import { Colors, verticleScale } from '../../../theme';
 import styles from './SigninStyles';
 import useSignin from './useSignin';
-import { Colors, verticleScale } from '../../../theme';
 
 const Signin: FC = () => {
-  const { navigation, formik } = useSignin();
+  const { navigation, formik, isSecureEntry, toggleSecureEntry } = useSignin();
   const { handleSubmit } = formik;
   const navigateHome = () => {
     navigation.replace(Routes.DrawerNav, { screen: Routes.HomeScreen });
   };
+  const { refPassword, focusNextTextInput } = useInputRef();
 
   return (
     <>
@@ -44,19 +46,35 @@ const Signin: FC = () => {
                 styleErrorView={styles.errorView}
                 styleErrorText={styles.errorText}
                 secureTextEntry={false}
+                returnKeyType="next"
+                onSubmitEditing={() => focusNextTextInput(refPassword)}
               />
             </View>
-            <CustomTextInput
-              placeholder="Password"
-              style={styles.textInputStyles}
-              formik={formik}
-              name="password"
-              styleView={styles.textInputView}
-              Icon={Password}
-              styleErrorView={styles.errorView}
-              styleErrorText={styles.errorText}
-              secureTextEntry={true}
-            />
+            <View>
+              <CustomTextInput
+                inputRef={refPassword}
+                placeholder="Password"
+                style={styles.textInputStyles}
+                formik={formik}
+                name="password"
+                styleView={styles.textInputView}
+                Icon={Password}
+                styleErrorView={styles.errorView}
+                styleErrorText={styles.errorText}
+                secureTextEntry={isSecureEntry}
+                returnKeyType="done"
+                onSubmitEditing={() => handleSubmit()}
+              />
+              {isSecureEntry ? (
+                <View style={styles.secureEntry} onTouchEnd={toggleSecureEntry}>
+                  <Eye color={Colors.light} />
+                </View>
+              ) : (
+                <View style={styles.secureEntry} onTouchEnd={toggleSecureEntry}>
+                  <EyeSlash color={Colors.light} />
+                </View>
+              )}
+            </View>
             <TouchableOpacity
               style={styles.loginButton}
               onPress={handleSubmit as (event: HTMLElement) => void}>
