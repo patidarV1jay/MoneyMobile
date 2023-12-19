@@ -100,6 +100,8 @@ export const ScreenStrings = {
   psa: 'PSA',
   noUserId: 'Please Enter User ID',
   noQuantity: 'Please Select a Quantity',
+  takePicture: 'Take Picture',
+  uploadFromGallery: 'Upload From Gallery',
 };
 
 export const ValidationStrings = {

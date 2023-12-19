@@ -81,8 +81,32 @@ const styles = StyleSheet.create({
     letterSpacing: horizontalScale(2),
   },
   modalContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
+  modalContentContainer: {
+    width: '100%',
+    height: '30%',
+    backgroundColor: Colors.dark,
+    borderTopRightRadius: moderateScale(15),
+    borderTopLeftRadius: moderateScale(15),
+    flexDirection: 'row',
+  },
+  imagePickerText: {
+    fontWeight: '500',
+    color: Colors.light,
+    padding: moderateScale(14),
+    fontSize: moderateScale(15),
+  },
+  imagePickerButton: {
+    backgroundColor: Colors.headerColor,
+    marginHorizontal: horizontalScale(15),
+    borderRadius: moderateScale(4),
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  closeView: {
+    flex: 1,
   },
 });
 
