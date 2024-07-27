@@ -9,10 +9,10 @@ import {
 const useFundRequest = () => {
   const [error, setError] = useState<string>('');
   const [errorPayment, seterrorPayment] = useState<string>('');
-  const [errorDate, seterrorDate] = useState<string>('');
   const [value, setValue] = useState('');
   const [value2, setValue2] = useState('');
   const [date, setDate] = useState<Date>(new Date());
+  const [errorDate, seterrorDate] = useState<string>('');
   const [showDate, setShowDate] = useState<boolean>(false);
 
   const validate = () => {

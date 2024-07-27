@@ -1,5 +1,6 @@
 import { Text, TextInput, View } from 'react-native';
 import { AgentOnBoardProps } from './types';
+import { Colors } from '../../theme';
 
 const AgentOnBoardTextInput = ({
   placeholder,
@@ -16,14 +17,13 @@ const AgentOnBoardTextInput = ({
   returnKeyType,
 }: AgentOnBoardProps) => {
   const { handleBlur, handleChange, values, touched, errors } = formik;
-
   return (
     <>
       <View style={styleView}>
         <TextInput
           placeholder={placeholder}
           style={style}
-          value={values.name}
+          value={values[name]}
           onChangeText={handleChange(name)}
           onBlur={handleBlur(name)}
           autoCapitalize="none"
@@ -33,6 +33,7 @@ const AgentOnBoardTextInput = ({
           ref={inputRef}
           onSubmitEditing={onSubmitEditing}
           blurOnSubmit={false}
+          placeholderTextColor={Colors.gray}
         />
       </View>
       <View style={styleErrorView}>

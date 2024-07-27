@@ -12,12 +12,12 @@ const useUPICollection = () => {
 
   const logInColorInterpolate = animation.interpolate({
     inputRange: [0, width],
-    outputRange: [Colors.cornFlowerBlue, Colors.light],
+    outputRange: [Colors.cornFlowerBlue, Colors.gray],
   });
 
   const signupColorInterpolate = animation.interpolate({
     inputRange: [0, width],
-    outputRange: [Colors.light, Colors.cornFlowerBlue],
+    outputRange: [Colors.gray, Colors.cornFlowerBlue],
   });
 
   const borderColorLogin = animation.interpolate({

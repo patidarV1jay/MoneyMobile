@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './MoneyTransfer1Styles';
 import { TextInput } from 'react-native';
 import useMoneyTransfer1 from './useMoneyTransfer';
+import { Colors } from '../../../theme';
 
 const MoneyTransfer1 = () => {
   const { formik } = useMoneyTransfer1();
@@ -18,9 +19,14 @@ const MoneyTransfer1 = () => {
           onChangeText={handleChange('phone')}
           onBlur={handleBlur('phone')}
           value={values.phone}
+          placeholderTextColor={Colors.gray}
         />
-        {errors['phone'] && touched['phone'] && <Text style={styles.errorText}>{errors['phone']}</Text>}
-        <TouchableOpacity style={styles.validateButton} onPress={handleSubmit}>
+        {errors['phone'] && touched['phone'] && (
+          <Text style={styles.errorText}>{errors['phone']}</Text>
+        )}
+        <TouchableOpacity
+          style={styles.validateButton}
+          onPress={() => handleSubmit()}>
           <Text style={styles.validateText}>VALIDATE</Text>
         </TouchableOpacity>
       </View>

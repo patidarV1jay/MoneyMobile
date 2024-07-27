@@ -33,7 +33,6 @@ const UPICollection = () => {
             style={[
               styles.loginButton,
               {
-                // backgroundColor: logInColorInterpolate,
                 borderColor: borderColorLogin,
               },
             ]}>
@@ -41,15 +40,6 @@ const UPICollection = () => {
               style={[styles.upiQrCodeText, { color: logInColorInterpolate }]}>
               {ScreenStrings.upiQrCode}
             </Animated.Text>
-            {/* <Animated.View
-              style={{
-                borderWidth: 5,
-                borderColor: 'green',
-                width: '100%',
-                opacity: interpolateOpacityLogin,
-                transform: [{ translateX: translatehrlogin }],
-              }}
-            /> */}
           </Animated.View>
         </TouchableWithoutFeedback>
         <TouchableWithoutFeedback
@@ -61,7 +51,6 @@ const UPICollection = () => {
             style={[
               styles.signupButton,
               {
-                // backgroundColor: signupColorInterpolate,
                 borderColor: borderColorSignup,
               },
             ]}>
@@ -69,15 +58,6 @@ const UPICollection = () => {
               style={[styles.upiQrCodeText, { color: signupColorInterpolate }]}>
               {ScreenStrings.upiCollection}
             </Animated.Text>
-            {/* <Animated.View
-              style={{
-                borderWidth: 5,
-                borderColor: 'green',
-                width: '100%',
-                opacity: interpolateOpacitySignup,
-                transform: [{ translateX: translatehrsignup }],
-              }}
-            /> */}
           </Animated.View>
         </TouchableWithoutFeedback>
       </View>
@@ -101,7 +81,7 @@ const UPICollection = () => {
         <View style={styles.qrCodeContainer}>
           <Text>hey</Text>
         </View>
-         <UpiCollectionForm />
+        <UpiCollectionForm />
       </ScrollView>
     </View>
   );

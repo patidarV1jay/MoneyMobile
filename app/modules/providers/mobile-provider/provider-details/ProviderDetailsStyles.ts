@@ -19,13 +19,17 @@ const styles = StyleSheet.create({
     fontWeight:'500'
   },
   providerText:{
-    marginBottom:verticleScale(10)
+    marginBottom:verticleScale(10),
+    color: Colors.gray
   },
   textinputStyles: {
-    backgroundColor: Colors.gray,
+    backgroundColor: Colors.fadeWhite,
     padding: moderateScale(8),
     borderRadius: moderateScale(5),
-    marginBottom:verticleScale(20)
+    marginBottom:verticleScale(20),
+    color: Colors.dark,
+    height: verticleScale(95),
+    justifyContent:'center'
   },
 });
 

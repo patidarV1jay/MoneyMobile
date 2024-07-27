@@ -9,18 +9,18 @@ import {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.headerColor,
+    backgroundColor: Colors.light,
   },
   cotainerHoldingKeyboardView: {
     marginTop: verticleScale(20),
     marginHorizontal: horizontalScale(10),
   },
   textInputStyles: {
-    borderWidth: 2,
+    borderWidth: moderateScale(1),
     borderColor: Colors.dark,
     flex: 1,
     fontSize: moderateScale(15),
-    color: Colors.light,
+    color: Colors.dark,
     padding: verticleScale(15),
     borderRadius: moderateScale(5),
     fontWeight: '500',
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     marginRight: horizontalScale(20),
   },
   submitButton: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.cornFlowerBlue,
     marginBottom: verticleScale(20),
     padding: moderateScale(10),
     borderRadius: moderateScale(10),
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(15),
   },
   imagePickerButton: {
-    backgroundColor: Colors.headerColor,
+    backgroundColor: Colors.dark,
     marginHorizontal: horizontalScale(15),
     borderRadius: moderateScale(4),
     justifyContent: 'center',

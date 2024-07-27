@@ -142,7 +142,7 @@ const useAgentOnBoard = () => {
             ],
           );
 
-          console.log(result, 'belock');
+          console.log(result);
       }
     } catch (error) {}
   };

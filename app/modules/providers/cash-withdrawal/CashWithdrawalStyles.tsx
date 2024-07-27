@@ -9,14 +9,14 @@ import {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: Colors.headerColor,
+    backgroundColor: Colors.light,
   },
   textInputStyles: {
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: Colors.dark,
     flex: 1,
     fontSize: moderateScale(15),
-    color: Colors.light,
+    color: Colors.dark,
     padding: verticleScale(15),
     borderRadius: moderateScale(5),
     fontWeight: '500',
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     marginHorizontal: horizontalScale(10),
   },
   dropDownView: {
-    borderWidth: moderateScale(2),
+    borderWidth: moderateScale(1),
     borderRadius: moderateScale(5),
     height: verticleScale(90),
     justifyContent: 'center',
@@ -47,6 +47,8 @@ const styles = StyleSheet.create({
   selectBankText: {
     fontSize: moderateScale(15),
     padding: moderateScale(5),
+    color: Colors.dark,
+    fontWeight: '500',
   },
   container: {
     flex: 1,
@@ -65,7 +67,7 @@ const styles = StyleSheet.create({
     marginTop: verticleScale(20),
   },
   scanNowButton: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.cornFlowerBlue,
     padding: moderateScale(12),
     marginTop: verticleScale(80),
     borderRadius: moderateScale(10),
@@ -79,7 +81,7 @@ const styles = StyleSheet.create({
   dropdown: {
     height: verticleScale(95),
     borderColor: Colors.dark,
-    borderWidth: 2,
+    borderWidth: moderateScale(1),
     borderRadius: moderateScale(5),
     paddingHorizontal: 8,
   },
@@ -98,8 +100,8 @@ const styles = StyleSheet.create({
   },
   selectedTextStyle: {
     fontSize: moderateScale(15),
-    fontWeight: 'bold',
-    color: Colors.light,
+    fontWeight: '500',
+    color: Colors.dark,
   },
   iconStyle: {
     width: 20,
@@ -111,11 +113,11 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(15),
   },
   listContainerStyle: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.fadeWhite,
     borderRadius: moderateScale(5),
   },
   listItem: {
-    color: Colors.light,
+    color: Colors.dark,
     fontWeight: '500',
     fontSize: moderateScale(15),
   },

@@ -1,0 +1,1 @@
+export {default as getChangePassword} from "./ChangePasswordService"

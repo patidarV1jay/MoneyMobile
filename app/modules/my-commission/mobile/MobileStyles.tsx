@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   renderTableText: {
-    color: Colors.light,
+    color: Colors.dark,
     padding: moderateScale(2),
   },
   idText: {
@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   providerName: {
-    color: Colors.light,
-    fontWeight: 'bold',
+    color: Colors.dark,
+    fontWeight: '500',
     fontSize: moderateScale(15),
     textTransform: 'uppercase',
   },

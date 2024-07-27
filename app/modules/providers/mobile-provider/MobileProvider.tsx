@@ -3,6 +3,8 @@ import { Text, View } from 'react-native';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import styles from './MobileProviderStyles';
 import useMobileProvider from './useMobileProvider';
+import { CaretRight } from 'phosphor-react-native';
+import { moderateScale } from '../../../theme';
 
 const MobileProvider = () => {
   const { navigateProviderDetails } = useMobileProvider();
@@ -12,6 +14,7 @@ const MobileProvider = () => {
         style={styles.list}
         onPress={navigateProviderDetails}>
         <Text style={styles.providerNameText}>Airtel</Text>
+        <CaretRight size={moderateScale(19)} weight='bold'/>
       </TouchableWithoutFeedback>
     </View>
   );

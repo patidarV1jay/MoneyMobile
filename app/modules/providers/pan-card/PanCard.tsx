@@ -77,6 +77,7 @@ const PanCard = () => {
                       </TouchableOpacity>
                     );
                   }}
+                  showsVerticalScrollIndicator={false}
                 />
               </View>
             )}

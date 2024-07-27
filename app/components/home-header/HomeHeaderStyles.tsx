@@ -8,7 +8,7 @@ import {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.primary,
     position: 'relative',
   },
   directionRow: {
@@ -21,9 +21,9 @@ const styles = StyleSheet.create({
     marginVertical: verticleScale(25),
   },
   textAppName: {
-    fontWeight: 'bold',
-    fontSize: moderateScale(20),
-    color: Colors.light,
+    fontWeight: '500',
+    fontSize: moderateScale(18),
+    color: Colors.dark,
     marginLeft: horizontalScale(30),
   },
   iconBell: {
@@ -36,19 +36,20 @@ const styles = StyleSheet.create({
     marginVertical: verticleScale(20),
   },
   textStyles: {
-    color: Colors.light,
+    color: Colors.dark,
     fontSize: moderateScale(14),
   },
   textBalance: {
-    fontSize: moderateScale(20),
+    fontSize: moderateScale(18),
   },
   popupContainer: {
-    backgroundColor: Colors.gray,
+    backgroundColor: Colors.fadeWhite,
     height: verticleScale(270),
     width: horizontalScale(150),
     borderRadius: moderateScale(4),
     marginRight: horizontalScale(10),
     marginTop: verticleScale(14),
+    elevation: 2
   },
   closeModalContainer: {
     flex: 1,

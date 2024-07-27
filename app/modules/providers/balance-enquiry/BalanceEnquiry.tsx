@@ -50,7 +50,9 @@ const BalanceEnquiry = () => {
       <View style={styles.container}>
         <View style={styles.viewContainingTextInputs}>
           <View onTouchEnd={handleClosePress}>
-            <Text>{ScreenStrings.customerMobileNumber}</Text>
+            <Text style={[styles.heading, styles.topSpace]}>
+              {ScreenStrings.customerMobileNumber}
+            </Text>
             <AgentOnBoardTextInput
               placeholder={Placeholder.phoneNumber}
               style={styles.textInputStyles}
@@ -64,7 +66,9 @@ const BalanceEnquiry = () => {
               onSubmitEditing={() => focusNextTextInput(aadhaarNumberRef)}
               returnKeyType="next"
             />
-            <Text>{ScreenStrings.customeraadhaarNumber}</Text>
+            <Text style={[styles.heading, styles.topSpace]}>
+              {ScreenStrings.customeraadhaarNumber}
+            </Text>
             <AgentOnBoardTextInput
               inputRef={aadhaarNumberRef}
               placeholder={Placeholder.aadhaarNumber}
@@ -80,12 +84,14 @@ const BalanceEnquiry = () => {
               onSubmitEditing={() => Keyboard.dismiss()}
             />
           </View>
-          <Text>Bank</Text>
+          <Text style={[styles.topSpace, styles.heading]}>Bank</Text>
           <View style={styles.dropDownView} onTouchEnd={toggleVisibility}>
             <Text style={styles.selectBankText}>{isCity}</Text>
           </View>
           {bankError && <Text style={styles.error}>{bankError}</Text>}
-          <Text style={styles.deviceText}>{ScreenStrings.device}</Text>
+          <Text style={[styles.deviceText, styles.heading]}>
+            {ScreenStrings.device}
+          </Text>
           <Dropdown
             style={[styles.dropdown]}
             placeholderStyle={styles.placeholderStyle}
@@ -96,7 +102,7 @@ const BalanceEnquiry = () => {
             data={Device}
             search={false}
             maxHeight={verticleScale(810)}
-            activeColor={Colors.headerColor}
+            activeColor={Colors.light}
             labelField="label"
             valueField="value"
             placeholder="Select item"

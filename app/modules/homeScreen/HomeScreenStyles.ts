@@ -12,14 +12,16 @@ const cardWidth = width / 3;
 
 const styles = StyleSheet.create({
   textColor: {
-    color: Colors.light,
+    color: Colors.dark,
+    fontWeight: '500',
+
   },
   mainContainer: {
     flex: 1,
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.primary,
   },
   scrollContainer: {
-    backgroundColor: Colors.headerColor,
+    backgroundColor: Colors.light,
     borderTopLeftRadius: moderateScale(40),
     borderTopRightRadius: moderateScale(40),
   },
@@ -35,15 +37,15 @@ const styles = StyleSheet.create({
     width: cardWidth,
     marginHorizontal: horizontalScale(10),
     marginTop: verticleScale(-30),
-    alignItems:'center'
+    alignItems: 'center',
   },
   containerWithFlatlist: {
     marginTop: verticleScale(60),
   },
-  itemName:{
-    marginTop:verticleScale(-15),
-    fontSize: moderateScale(11)
-  }
+  itemName: {
+    marginTop: verticleScale(-15),
+    fontSize: moderateScale(11),
+  },
 });
 
 export default styles;

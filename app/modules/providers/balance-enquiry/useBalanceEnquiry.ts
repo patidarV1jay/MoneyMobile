@@ -2,7 +2,7 @@ import BottomSheet from '@gorhom/bottom-sheet';
 import { useFormik } from 'formik';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import { Keyboard } from 'react-native';
-import { BalanceEnquirySchema } from '../../../constants';
+import { BalanceEnquirySchema, SchemaBalanceEnquiry } from '../../../constants';
 import { TextInput } from 'react-native';
 
 const useBalanceEnquiry = () => {
@@ -12,7 +12,7 @@ const useBalanceEnquiry = () => {
   const sheetRef = useRef<BottomSheet>(null);
   const aadhaarNumberRef = useRef<TextInput | null>(null);
   const [deviceError, setDeviceError] = useState<string>();
-  const [bankError, setbankError] = useState<string>();
+  const [bankError, setbankError] = useState<string>('');
 
   const data = useMemo(
     () =>
@@ -47,20 +47,22 @@ const useBalanceEnquiry = () => {
   };
 
   const formik = useFormik({
-    validationSchema: BalanceEnquirySchema,
+    validationSchema: SchemaBalanceEnquiry,
     initialValues: {
       phone: '',
       aadhaar: '',
     },
     onSubmit: () => {
-      submit();
+       if(validate()){
+          console.log('he')
+       }
     },
   });
 
   const validate = () => {
     if (isCity === 'Select Bank') {
-      setbankError('Please select a bank');
-      return false;
+      console.log('jwy')
+      return setbankError('Please select a bank');
     }
     if (!value) {
       setDeviceError('Please select a device.');
@@ -71,6 +73,7 @@ const useBalanceEnquiry = () => {
   };
 
   const submit = () => {
+    console.log('je')
     if (validate()) {
       console.log('submit');
     }

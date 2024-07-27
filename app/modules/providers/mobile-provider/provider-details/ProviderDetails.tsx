@@ -19,7 +19,6 @@ const ProviderDetails = () => {
         <KeyboardAvoidingView behavior="position">
           <Text>Mobile Number</Text>
           <TextInput
-            placeholder="Mobile Number"
             onChangeText={handleChange('phone')}
             onBlur={handleBlur('phone')}
             value={values.phone}
@@ -35,7 +34,6 @@ const ProviderDetails = () => {
           </TouchableWithoutFeedback>
           <Text>Amount</Text>
           <TextInput
-            placeholder="Amount"
             onChangeText={handleChange('amount')}
             onBlur={handleBlur('amount')}
             value={values.amount}

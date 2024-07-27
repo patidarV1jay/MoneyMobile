@@ -20,7 +20,7 @@ export interface Props {
   styleView: StyleProp<TextStyle>;
   styleErrorView: StyleProp<Text>;
   styleErrorText: StyleProp<TextStyle>;
-  Icon: ComponentType<IconComponentProps>;
+  Icon?: ComponentType<IconComponentProps>;
   formik: FormikProps;
   secureTextEntry: boolean;
   onSubmitEditing?: () => void;

@@ -50,9 +50,10 @@ const styles = StyleSheet.create({
     flex: 1,
     width,
     backgroundColor: Colors.headerColor,
+    marginTop: verticleScale(20)
   },
   textInputStyles: {
-    borderWidth: 2,
+    borderWidth: moderateScale(1),
     borderColor: Colors.dark,
     flex: 1,
     fontSize: moderateScale(15),
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
     marginTop: verticleScale(30),
   },
   proceedButton: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.cornFlowerBlue,
     borderRadius: moderateScale(5),
     marginTop: verticleScale(20)
   },

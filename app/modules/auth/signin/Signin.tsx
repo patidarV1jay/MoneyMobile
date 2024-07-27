@@ -26,7 +26,7 @@ const Signin: FC = () => {
 
   return (
     <>
-      <StatusBar backgroundColor={Colors.headerColor} />
+      <StatusBar backgroundColor={Colors.primary} barStyle="dark-content" />
       <View style={styles.container}>
         <KeyboardAvoidingView
           style={styles.keyboardContainer}
@@ -67,11 +67,11 @@ const Signin: FC = () => {
               />
               {isSecureEntry ? (
                 <View style={styles.secureEntry} onTouchEnd={toggleSecureEntry}>
-                  <Eye color={Colors.light} />
+                  <Eye color={Colors.dark} weight='bold'/>
                 </View>
               ) : (
                 <View style={styles.secureEntry} onTouchEnd={toggleSecureEntry}>
-                  <EyeSlash color={Colors.light} />
+                  <EyeSlash color={Colors.dark} weight='bold'/>
                 </View>
               )}
             </View>

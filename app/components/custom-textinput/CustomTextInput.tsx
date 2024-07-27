@@ -14,14 +14,14 @@ const CustomTextInput = ({
   secureTextEntry,
   inputRef,
   onSubmitEditing,
-  returnKeyType
+  returnKeyType,
 }: Props) => {
   const { handleBlur, handleChange, values, touched, errors } = formik;
 
   return (
     <>
       <View style={styleView}>
-        <Icon size={moderateScale(25)} color={Colors.light} />
+        {Icon && <Icon size={moderateScale(25)} color={Colors.dark} />}
         <TextInput
           ref={inputRef}
           placeholder={placeholder}

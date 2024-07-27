@@ -12,25 +12,25 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.headerColor,
   },
   textinputStyle: {
-    backgroundColor: Colors.gray,
+    backgroundColor: Colors.fadeWhite,
     borderRadius: moderateScale(10),
-    marginTop: verticleScale(10),
     paddingHorizontal: horizontalScale(10),
     color: Colors.dark,
     fontWeight: '500',
     fontSize: moderateScale(16),
   },
   textInputView: {
-    margin: moderateScale(10),
+    marginHorizontal: horizontalScale(10),
   },
   userIDText: {
-    color: Colors.light,
+    color: Colors.gray,
     fontWeight: '500',
     fontSize: moderateScale(15),
+    marginTop: verticleScale(25),
   },
   quantityView: {
-    backgroundColor: Colors.gray,
-    height: verticleScale(80),
+    backgroundColor: Colors.fadeWhite,
+    height: verticleScale(100),
     borderRadius: moderateScale(10),
     justifyContent: 'space-between',
     marginVertical: verticleScale(10),
@@ -41,9 +41,7 @@ const styles = StyleSheet.create({
   selectQuantity: {
     fontWeight: '500',
   },
-  dropDownView: {
-    marginTop: verticleScale(30),
-  },
+  dropDownView: {},
   textItem: {
     color: Colors.dark,
     fontWeight: '500',
@@ -51,7 +49,7 @@ const styles = StyleSheet.create({
   },
   viewAboveFlatlist: {
     height: verticleScale(800),
-    backgroundColor: Colors.gray,
+    backgroundColor: Colors.fadeWhite,
     width: '50%',
     borderRadius: moderateScale(10),
     paddingHorizontal: horizontalScale(10),
@@ -80,8 +78,7 @@ const styles = StyleSheet.create({
     letterSpacing: horizontalScale(2),
   },
   psaButton: {
-    backgroundColor: Colors.dark,
-    borderWidth: 2,
+    backgroundColor: Colors.cornFlowerBlue,
     position: 'absolute',
     alignSelf: 'flex-end',
     paddingHorizontal: horizontalScale(25),
@@ -90,7 +87,7 @@ const styles = StyleSheet.create({
     borderRadius: moderateScale(10),
   },
   submitButton: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.cornFlowerBlue,
     borderRadius: moderateScale(10),
     position: 'absolute',
     paddingHorizontal: horizontalScale(25),

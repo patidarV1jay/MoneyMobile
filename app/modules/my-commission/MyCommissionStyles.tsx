@@ -20,16 +20,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textnCaret: {
-    borderBottomWidth: 2,
+    borderBottomWidth: moderateScale(1),
     flex: 1,
     padding: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    borderColor: Colors.gray,
+    marginRight: horizontalScale(10)
   },
   text: {
-    color: 'white',
+    color: Colors.dark,
     fontWeight: 'bold',
-    fontSize: moderateScale(14),
+    fontSize: moderateScale(16),
   },
 });
 

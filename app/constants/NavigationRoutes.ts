@@ -60,4 +60,7 @@ export enum Routes {
   MoveToWallet = 'Move To Wallet',
   MoveToBank = 'Move To Bank',
   AddBeneficiary = 'Add Beneficiary',
+  VerifyOtp = 'Verify OTP',
+  PasswordReset = 'Password Reset',
+  AuthStack = 'AuthStack',
 }

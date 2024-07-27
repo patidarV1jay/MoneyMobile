@@ -29,8 +29,6 @@ const CashWithdrawal = () => {
     deviceError,
     setDeviceError,
     bankError,
-    setbankError,
-    submit,
   } = useCashWithdrawal();
   const { handleSubmit } = formik;
   const { aadhaarNumberRef, focusNextTextInput, refAmount } = useInputRef();
@@ -111,7 +109,7 @@ const CashWithdrawal = () => {
             data={Device}
             search={false}
             maxHeight={verticleScale(810)}
-            activeColor={Colors.headerColor}
+            activeColor={Colors.light}
             labelField="label"
             valueField="value"
             placeholder="Select item"

@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
   flatlistContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: Colors.gray,
+    backgroundColor: Colors.fadeWhite,
     margin: moderateScale(10),
     borderRadius: moderateScale(10),
   },
   itemNameText: {
-    color: Colors.light,
+    color: Colors.dark,
     fontWeight: '500',
     fontSize: moderateScale(15),
   },
