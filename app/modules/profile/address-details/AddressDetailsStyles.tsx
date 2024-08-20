@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     margin: moderateScale(8),
   },
   textInputStyles: {
-    borderWidth: 2,
+    borderWidth: moderateScale(1),
     borderColor: Colors.dark,
     flex: 1,
     fontSize: moderateScale(15),

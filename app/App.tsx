@@ -6,6 +6,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { FilterToggle } from './hooks';
 import { RootStack } from './navigation';
 import { persistor, store } from './redux';
+import { Colors } from './theme';
 
 const App = () => {
   const [viewFilter, setViewFilters] = useState<boolean>(false);
@@ -14,7 +15,7 @@ const App = () => {
     <FilterToggle.Provider value={{ viewFilter, setViewFilters }}>
       <NavigationContainer>
         <Provider store={store}>
-          <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
+          <PersistGate loading={<ActivityIndicator size="large" color={Colors.cornFlowerBlue}/>} persistor={persistor}>
             <RootStack />
           </PersistGate>
         </Provider>

@@ -115,6 +115,7 @@ export const ValidationStrings = {
   negativeAmount: "Amount can't be negative.",
   invalidAmount: 'Please enter a valid amount.',
   amountGreaterThanZero: 'Amount should be greater than 0.',
+  panInvalid:'Enter a valid pan number.'
 };
 
 export const Placeholder = {

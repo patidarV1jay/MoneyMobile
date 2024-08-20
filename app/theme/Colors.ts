@@ -8,8 +8,12 @@ export default {
   light: '#FFFFFF',
   red: '#FF0000',
   opaque: '#22242689',
-  headerColor: '#222426',
+  // headerColor: '#222426',
   textColor: '#4CACBC',
   offShade: '#C2C4C6',
   green: '#006600',
+  fadeWhite: '#F2EFEE',
+  primary: '#D2E0FB',
+  secondary: '#FBF3D5',
+  headerColor: '#ffffff',
 };

@@ -12,12 +12,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   cardContainer: {
-    backgroundColor: Colors.gray,
+    backgroundColor: Colors.light,
     marginHorizontal: horizontalScale(8),
     marginTop: verticleScale(10),
     borderRadius: moderateScale(5),
     flexDirection: 'row',
     justifyContent: 'space-between',
+    elevation: 2
   },
   rechargeDetailsView: {
     padding: moderateScale(5),
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(15),
   },
   viewText:{
-    fontSize: moderateScale(18),
+    fontSize: moderateScale(16),
     fontWeight: 'bold',
     color: Colors.dark,
     alignSelf: 'flex-end'

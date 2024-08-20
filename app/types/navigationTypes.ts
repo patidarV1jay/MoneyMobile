@@ -5,6 +5,7 @@ export type RootStackParamList = {
   DrawerNav: { screen: String };
   IncomeReport: undefined;
   MoneyTransferReport: undefined;
+  VerifyOtp: undefined
 };
 
 export interface FormikProps {

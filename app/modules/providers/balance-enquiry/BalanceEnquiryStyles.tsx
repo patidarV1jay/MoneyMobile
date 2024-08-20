@@ -9,14 +9,22 @@ import {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: Colors.headerColor,
+    backgroundColor: Colors.light,
+  },
+  heading: {
+    color: Colors.gray,
+    fontWeight:'500',
+    fontSize: moderateScale(14)
+  },
+  topSpace:{
+    marginTop: verticleScale(15)
   },
   textInputStyles: {
-    borderWidth: 2,
-    borderColor: Colors.dark,
+    borderWidth: moderateScale(1),
+    borderColor: Colors.gray,
     flex: 1,
     fontSize: moderateScale(15),
-    color: Colors.light,
+    color: Colors.dark,
     padding: verticleScale(15),
     borderRadius: moderateScale(5),
     fontWeight: '500',
@@ -39,10 +47,12 @@ const styles = StyleSheet.create({
     marginHorizontal: horizontalScale(10),
   },
   dropDownView: {
-    borderWidth: moderateScale(2),
+    borderWidth: moderateScale(1),
     borderRadius: moderateScale(5),
     height: verticleScale(90),
     justifyContent: 'center',
+    borderColor: Colors.gray,
+    marginBottom: verticleScale(20)
   },
   selectBankText: {
     fontSize: moderateScale(15),
@@ -52,20 +62,21 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   contentContainer: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.primary,
   },
   itemContainer: {
     padding: moderateScale(8),
     marginHorizontal: horizontalScale(4),
-    backgroundColor: Colors.headerColor,
+    backgroundColor: Colors.light,
     borderRadius: moderateScale(5),
     marginTop: verticleScale(20),
   },
   deviceText: {
     marginTop: verticleScale(20),
+    color: Colors.gray,
   },
   scanNowButton: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.cornFlowerBlue,
     padding: moderateScale(12),
     marginTop: verticleScale(80),
     borderRadius: moderateScale(10),
@@ -78,8 +89,8 @@ const styles = StyleSheet.create({
   },
   dropdown: {
     height: verticleScale(95),
-    borderColor: Colors.dark,
-    borderWidth: 2,
+    borderColor: Colors.gray,
+    borderWidth: moderateScale(1),
     borderRadius: moderateScale(5),
     paddingHorizontal: 8,
   },
@@ -99,7 +110,7 @@ const styles = StyleSheet.create({
   selectedTextStyle: {
     fontSize: moderateScale(15),
     fontWeight: 'bold',
-    color: Colors.light,
+    color: Colors.dark,
   },
   iconStyle: {
     width: 20,
@@ -111,17 +122,18 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(15),
   },
   listContainerStyle: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.fadeWhite,
     borderRadius: moderateScale(5),
+    elevation: 2
   },
   listItem: {
-    color: Colors.light,
+    color: Colors.dark,
     fontWeight: '500',
     fontSize: moderateScale(15),
   },
-  error:{
-    color: Colors.red
-  }
+  error: {
+    color: Colors.red,
+  },
 });
 
 export default styles;

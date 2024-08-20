@@ -3,6 +3,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { persistReducer, persistStore } from 'redux-persist';
 import { signinReducer } from './signin';
+import { MoneyTransfer1Reducer } from './money-transfer-1';
 
 const persistConfig = {
   key: 'root',
@@ -11,6 +12,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   signin: signinReducer,
+  MoneyTransfer1Reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

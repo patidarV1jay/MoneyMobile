@@ -9,37 +9,37 @@ import {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#222426',
+    backgroundColor: '#D2E0FB',
   },
   keyboardContainer: {
     flex: 1,
   },
   signinImage: {
-    height: verticleScale(760),
+    height: verticleScale(600),
     alignSelf: 'center',
     aspectRatio: 1,
   },
   siginContainer: {
-    backgroundColor: 'black',
+    backgroundColor: Colors.light,
     height: '100%',
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
+    borderTopLeftRadius: moderateScale(40),
+    borderTopRightRadius: moderateScale(40),
   },
   appNameText: {
-    color: Colors.light,
-    fontSize: moderateScale(20),
+    color: Colors.dark,
+    fontSize: moderateScale(18),
     fontWeight: '500',
     margin: moderateScale(18),
     marginLeft: moderateScale(30),
-    marginBottom: verticleScale(70),
+    marginBottom: verticleScale(50),
   },
   textInputStyles: {
     borderBottomWidth: 2,
-    borderColor: Colors.light,
+    borderColor: Colors.offShade,
     flex: 1,
     marginHorizontal: horizontalScale(5),
     fontSize: moderateScale(18),
-    color: Colors.light,
+    color: Colors.dark,
     padding: moderateScale(5),
     paddingBottom: verticleScale(15),
     marginRight: horizontalScale(20),
@@ -53,16 +53,13 @@ const styles = StyleSheet.create({
   textInputPasswordView: {
     marginTop: verticleScale(30),
   },
-  emptyView: {
-    height: verticleScale(110),
-  },
   loginButton: {
-    backgroundColor: Colors.gray,
     borderRadius: moderateScale(10),
     marginVertical: verticleScale(70),
     alignItems: 'center',
     padding: moderateScale(7),
     marginHorizontal: horizontalScale(20),
+    backgroundColor: Colors.cornFlowerBlue,
   },
   loginText: {
     alignSelf: 'center',
@@ -80,22 +77,19 @@ const styles = StyleSheet.create({
     color: Colors.red,
   },
   newUserText: {
-    color: Colors.light,
+    color: Colors.dark,
     fontWeight: '500',
     fontSize: moderateScale(14),
   },
   registerText: {
     color: Colors.cornFlowerBlue,
     fontWeight: 'bold',
-    fontSize: moderateScale(20),
+    fontSize: moderateScale(18),
   },
   registerButton: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Colors.dark,
-    marginBottom: verticleScale(20),
   },
-
   customTextInputView: {
     marginBottom: verticleScale(40),
   },

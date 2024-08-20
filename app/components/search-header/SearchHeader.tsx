@@ -35,14 +35,14 @@ const SearchHeader = ({ Icon, name, Filter, Flag, IsDate }: Props) => {
         <View style={styles.arrowNTitle}>
           {Icon && (
             <Pressable onPress={navigation.goBack}>
-              <Icon size={moderateScale(25)} color={Colors.light} />
+              <Icon size={moderateScale(25)} color={Colors.dark} />
             </Pressable>
           )}
           <Text style={styles.titleText}>{name}</Text>
         </View>
         {Filter && (
           <Pressable onPress={toggleFilter}>
-            <Filter size={moderateScale(25)} color={Colors.light} />
+            <Filter size={moderateScale(25)} color={Colors.dark} />
           </Pressable>
         )}
       </View>
@@ -52,12 +52,12 @@ const SearchHeader = ({ Icon, name, Filter, Flag, IsDate }: Props) => {
             <MagnifyingGlass
               size={moderateScale(25)}
               weight="bold"
-              color={Colors.light}
+              color={Colors.dark}
             />
             <TextInput
               placeholder={Placeholder.searchHeaderPlaceholder}
               style={styles.textInput}
-              placeholderTextColor={Colors.offShade}
+              placeholderTextColor={Colors.gray}
             />
           </View>
           {IsDate && (

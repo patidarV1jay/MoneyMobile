@@ -8,8 +8,7 @@ import {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Colors.dark,
-    // paddingBottom: verticleScale(10)
+    backgroundColor: Colors.primary,
   },
   arrowNTitle: {
     flexDirection: 'row',
@@ -22,7 +21,7 @@ const styles = StyleSheet.create({
     marginLeft: horizontalScale(20),
     fontWeight: '500',
     fontSize: moderateScale(18),
-    color: Colors.light,
+    color: Colors.dark,
   },
   textInputView: {
     flexDirection: 'row',

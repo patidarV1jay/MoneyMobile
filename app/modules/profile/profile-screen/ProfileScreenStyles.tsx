@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.headerColor,
   },
   button: {
-    backgroundColor: Colors.gray,
+    backgroundColor: Colors.fadeWhite,
     padding: moderateScale(15),
     margin: moderateScale(10),
     borderRadius: moderateScale(5),

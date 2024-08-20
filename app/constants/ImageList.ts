@@ -3,7 +3,7 @@ import { Images } from '../assets';
 export default [
   { name: 'Mobile', source: Images.mobile },
   { name: 'DTH', source: Images.dth },
-  { name: 'Postpaid', source: Images.mobile },
+  { name: 'Postpaid', source: Images.postmobile },
   { name: 'Electricity', source: Images.bulb },
   { name: 'Landline', source: Images.landline },
   { name: 'Water', source: Images.water },

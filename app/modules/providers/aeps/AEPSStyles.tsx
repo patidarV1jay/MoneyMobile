@@ -11,7 +11,7 @@ const width = windowWidth - horizontalScale(10);
 const cardWidth = width / 2;
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Colors.headerColor,
+    backgroundColor: Colors.light,
     height: '100%',
   },
   itemImage: {
@@ -19,15 +19,16 @@ const styles = StyleSheet.create({
     width: horizontalScale(70),
   },
   itemNameText: {
-    color: Colors.light,
+    color: Colors.dark,
     marginTop: verticleScale(-15),
+    fontWeight: '500',
   },
   flatlistContainer: {
     alignItems: 'center',
     width: cardWidth,
   },
   payoutText: {
-    color: Colors.light,
+    color: Colors.dark,
     fontWeight: 'bold',
     fontSize: moderateScale(16),
     marginLeft: horizontalScale(10),
@@ -37,11 +38,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginBottom: verticleScale(100),
-    marginTop: verticleScale(20)
+    marginTop: verticleScale(20),
   },
   ledgerText: {
-    color: Colors.light,
-    fontSize: moderateScale(13),
+    color: Colors.dark,
+    fontSize: moderateScale(14),
+    fontWeight: '500'
   },
   bottomSectionView: {
     flexDirection: 'row',
@@ -50,8 +52,8 @@ const styles = StyleSheet.create({
   },
   line: {
     flex: 1,
-    borderBottomWidth: moderateScale(3),
-    borderColor: Colors.dark,
+    borderBottomWidth: moderateScale(1),
+    borderColor: Colors.gray,
     marginHorizontal: horizontalScale(12),
     marginTop: verticleScale(20),
   },

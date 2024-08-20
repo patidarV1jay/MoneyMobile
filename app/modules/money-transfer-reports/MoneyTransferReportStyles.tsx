@@ -12,10 +12,12 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.headerColor,
   },
   cardContainer: {
-    backgroundColor: Colors.gray,
+    backgroundColor: Colors.light,
     padding: moderateScale(5),
     marginHorizontal: horizontalScale(10),
-    borderRadius: moderateScale(10)
+    borderRadius: moderateScale(10),
+    elevation: 2,
+    marginTop: verticleScale(5),
   },
   banknDetailsView: {
     flexDirection: 'row',
@@ -38,7 +40,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     fontWeight: '500',
     fontSize: moderateScale(18),
-    marginRight: horizontalScale(10)
+    marginRight: horizontalScale(10),
   },
   greenTicknView: {
     marginRight: horizontalScale(10),

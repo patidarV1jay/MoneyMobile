@@ -1,4 +1,8 @@
-import { CommonActions, ParamListBase, useNavigation } from '@react-navigation/native';
+import {
+  CommonActions,
+  ParamListBase,
+  useNavigation,
+} from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import Share from 'react-native-share';
 import { Routes, options } from '../../constants';
@@ -7,13 +11,12 @@ import { RootStackParamList } from '../../types';
 
 const useCustomDrawer = () => {
   const dispatch = useAppDispatch();
-  const navigation =
-    useNavigation<NativeStackNavigationProp<ParamListBase>>();
+  const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
   const signOut = () => {
     const resetAction = CommonActions.reset({
       index: 0,
-      routes: [{ name: Routes.Signin }],
+      routes: [{ name: Routes.AuthStack }],
     });
     navigation.dispatch(resetAction);
     dispatch(logOut());
@@ -23,7 +26,7 @@ const useCustomDrawer = () => {
     try {
       await Share.open(options);
     } catch (error) {
-      return error
+      return error;
     }
   };
 

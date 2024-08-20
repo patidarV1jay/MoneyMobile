@@ -12,14 +12,15 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.headerColor,
   },
   textInputStyles: {
-    borderWidth: 2,
+    borderWidth: moderateScale(1),
     borderColor: Colors.dark,
     flex: 1,
     fontSize: moderateScale(15),
-    color: Colors.light,
+    color: Colors.dark,
     padding: verticleScale(15),
     borderRadius: moderateScale(5),
     fontWeight: '500',
+    marginBottom: verticleScale(10)
   },
   textInputView: {
     flexDirection: 'row',
@@ -36,9 +37,10 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     margin: moderateScale(10),
+    marginTop: verticleScale(30)
   },
   updateButton: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.cornFlowerBlue,
     padding: moderateScale(12),
     borderRadius: moderateScale(5),
     marginTop: verticleScale(50),

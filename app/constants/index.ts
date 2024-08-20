@@ -15,7 +15,9 @@ export {
   UpiCollectionSchema,
   FundRequestSchema,
   MoveToWalletSchema,
-  BeneficiarySchema
+  BeneficiarySchema,
+  SchemaBalanceEnquiry,
+  KYCSchema
 } from './ValidationSchema';
 export { default as FilterChoice } from './FilterChoice';
 export { MicroatmIcons, AEPSIcons } from './MicroAtmIcons';

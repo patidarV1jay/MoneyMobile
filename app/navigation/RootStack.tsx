@@ -3,17 +3,17 @@ import { Routes } from '../constants';
 import { Signin } from '../modules';
 import DrawerNav from './DrawerNav';
 import { useAppSelector } from '../redux';
+import AuthStack from './AuthStack';
 
 const MainStack = createNativeStackNavigator();
 
 const RootStack = () => {
-  const { isSuccess } = useAppSelector(state => state.signin);
-
+  const { isSuccess, data } = useAppSelector(state => state.signin);
   return (
     <MainStack.Navigator
       screenOptions={{ headerShown: false }}
-      initialRouteName={isSuccess ? Routes.DrawerNav : Routes.Signin}>
-      <MainStack.Screen name={Routes.Signin} component={Signin} />
+      initialRouteName={data.token ? Routes.DrawerNav : Routes.Signin}>
+      <MainStack.Screen name={Routes.AuthStack} component={AuthStack} />
       <MainStack.Screen name={Routes.DrawerNav} component={DrawerNav} />
     </MainStack.Navigator>
   );

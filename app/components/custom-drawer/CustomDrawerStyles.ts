@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     marginLeft: horizontalScale(18),
     fontWeight: 'bold',
     marginVertical: verticleScale(20),
-    color: Colors.light,
+    color: Colors.gray,
   },
   shareButton: {
     marginTop: verticleScale(16),
@@ -39,18 +39,18 @@ const styles = StyleSheet.create({
     marginVertical: verticleScale(20),
   },
   drawerView: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.primary,
     marginTop: verticleScale(-8),
   },
   profileText: {
-    color: Colors.light,
+    color: Colors.dark,
   },
   hrLine: {
     borderWidth: 1,
     flex: 1,
   },
   drawerContentView: {
-    backgroundColor: Colors.headerColor,
+    backgroundColor: Colors.light,
   },
   userImage: {
     height: verticleScale(90),
@@ -58,12 +58,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   labelStyle: {
-    color: Colors.light,
+    color: Colors.dark,
     marginTop: verticleScale(-10),
   },
   bottomLabelStyle: {
     marginTop: verticleScale(-20),
-    color: Colors.light,
+    color: Colors.dark,
   },
 });
 

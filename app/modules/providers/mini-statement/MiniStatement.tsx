@@ -12,6 +12,7 @@ import useMiniStatement from './useMiniStatement';
 interface Item {
   item: string;
 }
+
 const BalanceEnquiry = () => {
   const {
     formik,
@@ -25,12 +26,10 @@ const BalanceEnquiry = () => {
     selectCityButton,
     isCity,
     value,
-    setValue,
+    setValue,     
     deviceError,
     setDeviceError,
     bankError,
-    setbankError,
-    submit,
   } = useMiniStatement();
   const { handleSubmit } = formik;
   const { aadhaarNumberRef, focusNextTextInput } = useInputRef();
@@ -96,7 +95,7 @@ const BalanceEnquiry = () => {
             data={Device}
             search={false}
             maxHeight={verticleScale(810)}
-            activeColor={Colors.headerColor}
+            activeColor={Colors.light}
             labelField="label"
             valueField="value"
             placeholder="Select item"

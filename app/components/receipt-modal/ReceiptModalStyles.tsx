@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   modalContentView: {
     width: '90%',
     height: verticleScale(800),
-    backgroundColor: Colors.gray,
+    backgroundColor: Colors.fadeWhite,
     borderRadius: moderateScale(10),
   },
   modalCloseView: {

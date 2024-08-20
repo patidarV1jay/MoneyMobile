@@ -37,12 +37,12 @@ const Mobile = () => {
           style={[styles.data, styles.icon]}
           onPress={() => toggleCommissionVisibility(item.id)}>
           {!item.flag ? (
-            <Plus size={moderateScale(18)} weight="bold" color={Colors.light} />
+            <Plus size={moderateScale(18)} weight="bold" color={Colors.dark} />
           ) : (
             <Minus
               size={moderateScale(18)}
               weight="bold"
-              color={Colors.light}
+              color={Colors.dark}
             />
           )}
         </TouchableOpacity>

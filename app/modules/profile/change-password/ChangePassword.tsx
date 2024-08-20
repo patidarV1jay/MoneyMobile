@@ -9,14 +9,15 @@ const ChangePassword = () => {
   const { focusNextTextInput, refNewPassword, refCofirmPassword } =
     useInputRef();
   const { formik } = useChangePassword();
+  const { handleSubmit } = formik;
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
         <AgentOnBoardTextInput
-          placeholder={Placeholder.currentPassword}
+          placeholder={Placeholder.email}
           style={styles.textInputStyles}
           formik={formik}
-          name="currentPassword"
+          name="email"
           styleView={styles.textInputView}
           styleErrorView={styles.errorView}
           styleErrorText={styles.errorText}
@@ -49,7 +50,7 @@ const ChangePassword = () => {
           secureTextEntry={false}
           returnKeyType="next"
         />
-        <TouchableOpacity style={styles.updateButton}>
+        <TouchableOpacity style={styles.updateButton} onPress={() =>handleSubmit()}>
           <Text style={styles.updateText}>{ScreenStrings.update}</Text>
         </TouchableOpacity>
       </View>

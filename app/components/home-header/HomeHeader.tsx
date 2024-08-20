@@ -26,9 +26,9 @@ const HomeHeader = () => {
   return (
     <>
       <StatusBar
-        barStyle="light-content"
+        barStyle="dark-content"
         hidden={false}
-        backgroundColor={Colors.dark}
+        backgroundColor={Colors.primary}
         translucent={false}
       />
       <View style={styles.mainContainer}>
@@ -36,9 +36,9 @@ const HomeHeader = () => {
           <View style={styles.directionRow}>
             <TouchableOpacity onPress={navigation.openDrawer}>
               <List
-                size={moderateScale(28)}
+                size={moderateScale(25)}
                 weight="bold"
-                color={Colors.light}
+                color={Colors.dark}
               />
             </TouchableOpacity>
             <Text style={styles.textAppName}>{ScreenStrings.appName}</Text>
@@ -48,9 +48,9 @@ const HomeHeader = () => {
               onPress={navigation.openDrawer}
               style={styles.iconBell}>
               <Bell
-                size={moderateScale(32)}
+                size={moderateScale(25)}
                 weight="bold"
-                color={Colors.light}
+                color={Colors.dark}
               />
             </TouchableOpacity>
 
@@ -82,9 +82,9 @@ const HomeHeader = () => {
 
             <TouchableOpacity onPress={togglePopup}>
               <DotsThreeVertical
-                size={moderateScale(32)}
+                size={moderateScale(25)}
                 weight="bold"
-                color={Colors.light}
+                color={Colors.dark}
               />
             </TouchableOpacity>
           </View>
