@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     color: Colors.dark,
     fontWeight: '500',
     fontSize: moderateScale(15),
+    flex: 1,
   },
   validateButton: {
     backgroundColor: Colors.cornFlowerBlue,
@@ -45,6 +46,27 @@ const styles = StyleSheet.create({
     color: Colors.red,
     fontSize: moderateScale(13),
     marginTop: verticleScale(8),
+  },
+  bottomSpace: {
+    marginBottom: verticleScale(20),
+  },
+  verifyButton: {
+    backgroundColor: Colors.cornFlowerBlue,
+    height: verticleScale(70),
+    flex: 0.3,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: moderateScale(5),
+    marginLeft: horizontalScale(5),
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  verifyText: {
+    padding: 0,
+    color: Colors.light,
+    fontSize: moderateScale(15),
   },
 });
 

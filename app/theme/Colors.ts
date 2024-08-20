@@ -15,5 +15,5 @@ export default {
   fadeWhite: '#F2EFEE',
   primary: '#D2E0FB',
   secondary: '#FBF3D5',
-  headerColor: '#ffffff'
+  headerColor: '#ffffff',
 };

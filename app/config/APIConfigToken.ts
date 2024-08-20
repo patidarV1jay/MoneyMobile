@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { store } from '../redux';
 
-const axiosInstance = axios.create({
+const axiosInstanceToken = axios.create({
   baseURL: 'https://ssmpay.com/dashboard/public/api/',
   validateStatus: function (status) {
     return status >= 200 && status < 300; //
@@ -11,7 +12,8 @@ const axiosInstance = axios.create({
     // 'Accept-Encoding': 'gzip,deflate,br',
     // Connection: 'keep-alive',
     'X-Api-Token': '734g123fhhdxg527831v787d6163k3',
+    Authorization: `Bearer ${store.getState().signin?.data?.token}`,
   },
 });
 
-export default axiosInstance;
+export default axiosInstanceToken;

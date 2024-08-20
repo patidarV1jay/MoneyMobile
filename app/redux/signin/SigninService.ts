@@ -21,7 +21,7 @@ const getSignin = createAsyncThunk(
         userAgent,
         ip,
       });
-      console.log(response.data, 'as');
+      console.log(response.data, 'login');
       return response.data;
     } catch (error: any) {
       console.log(error.response.data, 'hh');

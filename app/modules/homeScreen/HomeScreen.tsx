@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Image, PermissionsAndroid, SafeAreaView, Text, View } from 'react-native';
+import {
+  Image,
+  PermissionsAndroid,
+  SafeAreaView,
+  Text,
+  View,
+} from 'react-native';
 import {
   FlatList,
   ScrollView,
@@ -50,7 +56,7 @@ const HomeScreen = () => {
             console.log(error.code, error.message);
             setLocation(false);
           },
-          {enableHighAccuracy: true, timeout: 15000, maximumAge: 10000},
+          { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 },
         );
       }
     });
@@ -60,7 +66,6 @@ const HomeScreen = () => {
     <SafeAreaView style={styles.mainContainer}>
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.containerWithFlatlist}>
-          <TouchableOpacity style={{backgroundColor : 'black'}} onPress={getLocation}><Text>press</Text></TouchableOpacity>
           <FlatList
             data={ImageList}
             renderItem={({ item }) => {

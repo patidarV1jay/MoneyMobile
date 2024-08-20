@@ -28,9 +28,19 @@ export const ProviderSchema = Yup.object().shape({
 });
 
 export const NumberSchema = Yup.object().shape({
-  phone: Yup.string()
-    .matches(phoneRegExp, ValidationStrings.phoneInvalid)
-    .required(ValidationStrings.required),
+  account: Yup.string()
+    .required(ValidationStrings.required)
+    .min(8, 'Invalid Account Number'),
+  ifsc: Yup.string()
+    .required(ValidationStrings.required)
+    .length(11, 'Invalid IFSC'),
+  recipient_name: Yup.string().trim().required(ValidationStrings.required),
+  amount: Yup.number()
+    .typeError(ValidationStrings.invalidAmount)
+    .required(ValidationStrings.required)
+    .positive(ValidationStrings.negativeAmount),
+  sender_name: Yup.string().trim().required(ValidationStrings.required),
+  remarks: Yup.string().trim().required(ValidationStrings.required),
 });
 
 export const AgentOnBoardSchema = Yup.object().shape({
