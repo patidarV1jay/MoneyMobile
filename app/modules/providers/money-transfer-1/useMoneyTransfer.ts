@@ -5,11 +5,16 @@ import {
   useAppDispatch,
   useAppSelector,
 } from '../../../redux';
-import { store } from '../../../redux';
+import { axiosInstanceToken } from '../../../config';
+import { useState } from 'react';
 
 const useMoneyTransfer1 = () => {
+  const [isVerified, setIsVerified] = useState(false);
   const dispatch = useAppDispatch();
   const { isLoading } = useAppSelector(state => state.MoneyTransfer1Reducer);
+  const { isAccountVerified } = useAppSelector(
+    state => state.VerifyAccountReducer,
+  );
   const getUniqueString = () => {
     const timestamp = Date.now().toString();
     const randomNum = Math.floor(Math.random() * 1000000).toString();
@@ -32,9 +37,30 @@ const useMoneyTransfer1 = () => {
       dispatch(CallMoneyTransfer1({ ...values, transaction_id }));
     },
   });
+
+  const verifyIfsc = async () => {
+    try {
+      setIsVerified(true);
+      const response = await axiosInstanceToken.post('mobile/verify/ifsc', {
+        service_provider_id: 13,
+        ifsc_code: formik.values.ifsc,
+      });
+      setIsVerified(false);
+      console.log(response.data);
+    } catch (error) {
+      setIsVerified(false);
+      console.log(error);
+    }
+  };
+
   return {
     formik,
     isLoading,
+    verifyIfsc,
+    isVerified,
+    getUniqueString,
+    dispatch,
+    isAccountVerified
   };
 };
 
