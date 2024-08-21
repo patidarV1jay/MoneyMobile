@@ -10,9 +10,18 @@ import {
 import { Colors, moderateScale } from '../../../theme';
 import styles from './MoneyTransfer1Styles';
 import useMoneyTransfer1 from './useMoneyTransfer';
+import { callAccountVerify } from '../../../redux';
 
 const MoneyTransfer1 = () => {
-  const { formik, isLoading } = useMoneyTransfer1();
+  const {
+    formik,
+    isLoading,
+    verifyIfsc,
+    isVerified,
+    getUniqueString,
+    dispatch,
+    isAccountVerified,
+  } = useMoneyTransfer1();
   const { handleBlur, handleChange, handleSubmit, errors, touched, values } =
     formik;
   return (
@@ -29,8 +38,22 @@ const MoneyTransfer1 = () => {
               value={values.account}
               placeholderTextColor={Colors.gray}
             />
-            <TouchableOpacity style={styles.verifyButton}>
-              <Text style={styles.verifyText}>Verify</Text>
+            <TouchableOpacity
+              style={styles.verifyButton}
+              onPress={() =>
+                dispatch(
+                  callAccountVerify({
+                    transaction_id: getUniqueString(),
+                    ifsc_code: values.ifsc,
+                    account_number: values.account,
+                  }),
+                )
+              }>
+              {isAccountVerified ? (
+                <ActivityIndicator color={Colors.light} />
+              ) : (
+                <Text style={styles.verifyText}>Verify</Text>
+              )}
             </TouchableOpacity>
           </View>
           {errors['account'] && touched['account'] && (
@@ -48,8 +71,12 @@ const MoneyTransfer1 = () => {
               value={values.ifsc}
               placeholderTextColor={Colors.gray}
             />
-            <TouchableOpacity style={styles.verifyButton}>
-              <Text style={styles.verifyText}>Verify</Text>
+            <TouchableOpacity style={styles.verifyButton} onPress={verifyIfsc}>
+              {isVerified ? (
+                <ActivityIndicator color={Colors.light} />
+              ) : (
+                <Text style={styles.verifyText}>Verify</Text>
+              )}
             </TouchableOpacity>
           </View>
           {errors['ifsc'] && touched['ifsc'] && (
